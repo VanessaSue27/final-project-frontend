@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import DatePicker from 'react-datepicker';
+import TimePicker from 'react-time-picker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 import { user } from '../reducer/user';
 
 export const BabyProfileForm = () => {
-  const [testValue, setTestValue] = useState('');
+  const [babyName, setBabyName] = useState('');
+  const [dateOfBirth, setDateOfBirth] = useState('');
+  const [timeOfBirth, setTimeOfBirth] = useState('');
+  const [gestationalAge, setGestationalAge] = useState(0);
   const username = useSelector((store) => store.user.username);
   const dispatch = useDispatch();
 
@@ -26,16 +32,47 @@ export const BabyProfileForm = () => {
       <h2>{`Welcome, ${username}. Start by filling up these details:`}</h2>
       <h3>INSERT PROPER FORM HERE WHEN READY</h3>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="testInput">
-          <p>Username:</p>
+        <label htmlFor="nameInput">
+          <p>Baby name:</p>
           <input
-            id="testInput"
+            id="nameInput"
             type="text"
-            value={testValue}
-            onChange={(event) => setTestValue(event.target.value)}
+            value={babyName}
+            onChange={(event) => setBabyName(event.target.value)}
+            minLength="3"
+            maxLength="20"
             required />
         </label>
-        <button type="submit">CONTINUE</button>
+
+        <label>
+          <p>Date of Birth:</p>
+          <DatePicker
+            selected={dateOfBirth}
+            onChange={(dateOfBirth) => setDateOfBirth(dateOfBirth)}
+            showWeekNumbers
+            required />
+        </label>
+
+        <label>
+          <p>Time of Birth:</p>
+          <TimePicker
+            onChange={setTimeOfBirth}
+            value={timeOfBirth}
+            required />
+        </label>
+
+        <label>
+          <p>Gestational age (in weeks):</p>
+          <input
+            type="number"
+            min="23"
+            max="50"
+            value={gestationalAge}
+            onChange={(event) => setGestationalAge(event.target.value)}
+            required />
+        </label>
+
+        <button type="submit">SUBMIT</button>
       </form>
     </>
   );

@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
   page: 'signup',
   username: null,
-  accessToken: null,
+  accessToken: localStorage.accessToken || null,
   errorMessage: null
 };
 
@@ -21,11 +21,18 @@ export const user = createSlice({
     },
     setAccessToken: (state, action) => {
       const { accessToken } = action.payload;
+      localStorage.setItem('acessToken', accessToken); 
       state.accessToken = accessToken;
     },
     setErrorMessage: (state, action) => {
       const { errorMessage } = action.payload;
       state.errorMessage = errorMessage;
+    },
+    logout: (state, action) => {
+      state.username = null;
+      state.accessToken = null;
+      state.errorMessage = null;
+      localStorage.removeItem('accessToken');
     }
   }
 });
