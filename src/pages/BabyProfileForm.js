@@ -6,6 +6,8 @@ import 'react-datepicker/dist/react-datepicker.css';
 
 import { user } from '../reducer/user';
 
+const PROFILE_URL = 'https://time-capsule-final.herokuapp.com/profiles';
+
 export const BabyProfileForm = () => {
   const [babyName, setBabyName] = useState('');
   const [dateOfBirth, setDateOfBirth] = useState('');
@@ -16,11 +18,34 @@ export const BabyProfileForm = () => {
   const [sex, setSex] = useState('');
 
   const username = useSelector((store) => store.user.username);
+  const accessToken = useSelector((store) => store.user.accessToken);
   const dispatch = useDispatch();
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    dispatch(user.actions.setPage({ page: 'dashboard' }));
+
+    fetch(PROFILE_URL, {
+      method: 'POST',
+      headers: { 
+        'Content-Type': 'application/json',
+        Authorization: accessToken
+      },
+      body: JSON.stringify({ babyName, dateOfBirth, timeOfBirth, sex, gestationalAge, weight, length })
+    })
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error('Unable to save profile.');
+        } else {
+          return res.json();
+        }
+      })
+      .then((json) => {
+        console.log(json);
+        dispatch(user.actions.setPage({ page: 'dashboard' }));
+      })
+      .catch((error) => {
+        dispatch(user.actions.setErrorMessage({ errorMessage: error.toString() }));
+      });
   };
 
   // When we implement the Baby Profile form properly, fix this connection to the Dashboard
