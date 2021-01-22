@@ -12,9 +12,9 @@ export const BabyProfileForm = () => {
   const [babyName, setBabyName] = useState('');
   const [dateOfBirth, setDateOfBirth] = useState('');
   const [timeOfBirth, setTimeOfBirth] = useState('');
-  const [gestationalAge, setGestationalAge] = useState();
-  const [weight, setWeight] = useState();
-  const [length, setLength] = useState();
+  const [gestationalAge, setGestationalAge] = useState(0);
+  const [weight, setWeight] = useState(0);
+  const [length, setLength] = useState(0);
   const [sex, setSex] = useState('');
 
   const username = useSelector((store) => store.user.username);
@@ -134,7 +134,6 @@ export const BabyProfileForm = () => {
             onChange={(event) => setLength(event.target.value)}
             required />
         </label>
-
         <button type="submit">SUBMIT</button>
       </form>
     </>
