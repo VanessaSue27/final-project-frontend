@@ -10,7 +10,11 @@ export const BabyProfileForm = () => {
   const [babyName, setBabyName] = useState('');
   const [dateOfBirth, setDateOfBirth] = useState('');
   const [timeOfBirth, setTimeOfBirth] = useState('');
-  const [gestationalAge, setGestationalAge] = useState(0);
+  const [gestationalAge, setGestationalAge] = useState();
+  const [weight, setWeight] = useState();
+  const [length, setLength] = useState();
+  const [sex, setSex] = useState('');
+
   const username = useSelector((store) => store.user.username);
   const dispatch = useDispatch();
 
@@ -45,6 +49,19 @@ export const BabyProfileForm = () => {
         </label>
 
         <label>
+          <p>Sex:</p>
+          <select
+            value={sex}
+            onChange={(event) => setSex(event.target.value)}
+            required>
+            <option value="">Select</option>
+            <option value="Girl">Girl</option>
+            <option value="Boy">Boy</option>
+            <option value="Not Disclosed"> Prefer not to disclose</option>
+          </select>
+        </label>
+
+        <label>
           <p>Date of Birth:</p>
           <DatePicker
             selected={dateOfBirth}
@@ -56,7 +73,7 @@ export const BabyProfileForm = () => {
         <label>
           <p>Time of Birth:</p>
           <TimePicker
-            onChange={setTimeOfBirth}
+            onChange={(timeOfBirth) => setTimeOfBirth(timeOfBirth)}
             value={timeOfBirth}
             required />
         </label>
@@ -69,6 +86,27 @@ export const BabyProfileForm = () => {
             max="50"
             value={gestationalAge}
             onChange={(event) => setGestationalAge(event.target.value)}
+            required />
+        </label>
+
+        <label>
+          <p>Weight (in grams):</p>
+          <input
+            type="number"
+            min="500"
+            value={weight}
+            onChange={(event) => setWeight(event.target.value)}
+            required />
+        </label>
+
+        <label>
+          <p>Length (in cm):</p>
+          <input
+            type="number"
+            min="10"
+            max="200"
+            value={length}
+            onChange={(event) => setLength(event.target.value)}
             required />
         </label>
 
