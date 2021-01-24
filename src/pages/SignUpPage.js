@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import { user } from '../reducer/user';
+import rocket from '../assets/rocket.jpg'
+import { InputSection, Form, Button, LandingImage, UserInput, InputLabel, Title, SubTitle } from '../styled-components/SignUpAndLoginStyles'
 
 const SIGNUP_URL = 'https://time-capsule-final.herokuapp.com/users';
 
@@ -37,42 +39,44 @@ export const SignUpPage = () => {
         dispatch(user.actions.setAccessToken({ accessToken: json.accessToken }));
         window.location.href = '/create-profile';
       })
+      // eslint-disable-next-line no-shadow
       .catch((error) => {
         dispatch(user.actions.setErrorMessage({ errorMessage: error.toString() }));
       });
   };
 
   return (
-    <>
-      <h1>Sign up</h1>
-      <form onSubmit={handleSignUp}>
-        <label htmlFor="usernameInput">
-          <p>Username:</p>
-          <input
-            id="usernameInput"
-            type="text"
-            value={name}
-            onChange={(event) => setName(event.target.value)}
-            minLength="3"
-            maxLength="20"
-            required />
-        </label>
-        <label htmlFor="passwordInput">
-          <p>Password:</p>
-          <input
-            id="passwordInput"
-            type="password"
-            value={password}
-            onChange={(event) => setPassword(event.target.value)}
-            minLength="5"
-            maxLength="50"
-            required />
-        </label>
-        <button type="submit">SIGN UP</button>
-      </form>
-      {error && <div>{`${error}`}</div>}
-      <p>Already a user?</p>
-      <Link to="/login">Log in here</Link>
-    </>
+    <InputSection>
+      <Form onSubmit={handleSignUp}>
+        <Title>Time Capsule</Title>
+        <InputLabel>
+            Username
+        </InputLabel>
+        <UserInput
+          id="usernameInput"
+          type="text"
+          value={name}
+          onChange={(event) => setName(event.target.value)}
+          minLength="3"
+          maxLength="20"
+          required />
+        <InputLabel>
+            Password
+        </InputLabel>
+        <UserInput
+          id="passwordInput"
+          type="password"
+          value={password}
+          onChange={(event) => setPassword(event.target.value)}
+          minLength="5"
+          maxLength="50"
+          required />
+        <Button type="submit">SIGN UP</Button>
+        {error && <div>{`${error}`}</div>}
+        <SubTitle>Already a user?</SubTitle>
+        <Link to="/login">Log in here</Link>
+      </Form>
+      <LandingImage src={rocket} alt="rocket" />
+    </InputSection>
   );
 };
