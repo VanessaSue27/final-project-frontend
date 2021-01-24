@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { Form, InputLabel, InputSection, SubTitle, Title, UserInput, Button, LandingImage } from 'styled-components/SignUpAndLoginStyles';
+import { Form, InputLabel, InputSection, SubTitle, Title, UserInput, Button, LandingImage, ButtonLink } from 'styled-components/SignUpAndLoginStyles';
 
 import { user } from '../reducer/user';
 import rocket from '../assets/rocket.jpg'
@@ -73,7 +72,7 @@ export const LogInPage = () => {
         <Button type="submit">LOG IN</Button>
         {error && <div>{`${error}`}</div>}
         <SubTitle>Not a user?</SubTitle>
-        <Link to="/">Create an account here</Link>
+        <ButtonLink to="/">CREATE ACCOUNT</ButtonLink>
       </Form>
       <LandingImage src={rocket} alt="rocket" />
     </InputSection>
