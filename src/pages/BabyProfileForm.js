@@ -26,7 +26,7 @@ export const BabyProfileForm = () => {
 
     fetch(PROFILE_URL, {
       method: 'POST',
-      headers: { 
+      headers: {
         'Content-Type': 'application/json',
         Authorization: accessToken
       },
@@ -59,7 +59,7 @@ export const BabyProfileForm = () => {
     <>
       <h1>Baby Profile Form</h1>
       <h2>{`Welcome, ${username}. Start by filling up these details:`}</h2>
-      <h3>INSERT PROPER FORM HERE WHEN READY</h3>
+      <h3>Add some instructions here on how to fill in this form?</h3>
       <form onSubmit={handleSubmit}>
         <label htmlFor="nameInput">
           <p>Baby name:</p>
