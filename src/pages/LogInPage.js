@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import { user } from '../reducer/user';
 
@@ -16,10 +17,6 @@ export const LogInPage = () => {
   useEffect(() => {
     dispatch(user.actions.setErrorMessage({ errorMessage: null }));
   }, [dispatch]);
-
-  const handleClick = () => {
-    dispatch(user.actions.setPage({ page: 'signup' }));
-  };
 
   const handleLogin = (event) => {
     event.preventDefault();
@@ -38,7 +35,7 @@ export const LogInPage = () => {
       .then((json) => {
         dispatch(user.actions.setUsername({ username: name }));
         dispatch(user.actions.setAccessToken({ accessToken: json.accessToken }));
-        dispatch(user.actions.setPage({ page: 'dashboard' }));
+        window.location.href = '/dashboard';
       })
       .catch((error) => {
         dispatch(user.actions.setErrorMessage({ errorMessage: error.toString() }));
@@ -75,7 +72,9 @@ export const LogInPage = () => {
       </form>
       {error && <div>{`${error}`}</div>}
       <p>Not a user?</p>
-      <button type="button" onClick={handleClick}>Create an account</button>
+      <Link to="/">
+        <button type="button">Create an account</button>
+      </Link>
     </>
   );
 };

@@ -1,8 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  page: 'signup',
-  username: null,
+  username: localStorage.username || null,
   accessToken: localStorage.accessToken || null,
   errorMessage: null
 };
@@ -11,12 +10,9 @@ export const user = createSlice({
   name: 'user',
   initialState,
   reducers: {
-    setPage: (state, action) => {
-      const { page } = action.payload;
-      state.page = page;
-    },
     setUsername: (state, action) => {
       const { username } = action.payload;
+      localStorage.setItem('username', username);
       state.username = username;
     },
     setAccessToken: (state, action) => {
@@ -33,6 +29,7 @@ export const user = createSlice({
       state.accessToken = null;
       state.errorMessage = null;
       localStorage.removeItem('accessToken');
+      localStorage.removeItem('username');
     }
   }
 });

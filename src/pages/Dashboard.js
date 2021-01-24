@@ -1,8 +1,21 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+
+import { user } from '../reducer/user';
 
 export const Dashboard = () => {
+  const dispatch = useDispatch();
+
+  const handleClick = () => {
+    dispatch(user.actions.logout());
+    window.location.href = '/';
+  };
+
   return (
-    <h1>Welcome to the Dashboard!!!</h1>
+    <>
+      <h1>Welcome to the Dashboard!!!</h1>
+      <button type="button" onClick={handleClick}>LOGOUT</button>
+    </>
   );
 };
 

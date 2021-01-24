@@ -40,8 +40,8 @@ export const BabyProfileForm = () => {
         }
       })
       .then((json) => {
-        console.log(json);
-        dispatch(user.actions.setPage({ page: 'dashboard' }));
+        console.log(json); // Shows in console a message saying the profile was saved successfully
+        window.location.href = '/dashboard';
       })
       .catch((error) => {
         dispatch(user.actions.setErrorMessage({ errorMessage: error.toString() }));
