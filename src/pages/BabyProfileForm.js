@@ -5,7 +5,6 @@ import TimePicker from 'react-time-picker';
 import 'react-datepicker/dist/react-datepicker.css';
 
 import { user } from '../reducer/user';
-
 import { SignUpPage } from './SignUpPage';
 
 const PROFILE_URL = 'https://time-capsule-final.herokuapp.com/profiles';
@@ -89,22 +88,20 @@ export const BabyProfileForm = () => {
             </select>
           </label>
 
-          <label>
-            <p>Date of Birth:</p>
-            <DatePicker
-              selected={dateOfBirth}
-              onChange={(dateOfBirth) => setDateOfBirth(dateOfBirth)}
-              showWeekNumbers
-              required />
-          </label>
+          <p>Date of Birth:</p>
+          <DatePicker
+            selected={dateOfBirth}
+            onChange={(dateOfBirth) => setDateOfBirth(dateOfBirth)}
+            showWeekNumbers
+            required />
 
-          <label>
-            <p>Time of Birth:</p>
-            <TimePicker
-              onChange={(timeOfBirth) => setTimeOfBirth(timeOfBirth)}
-              value={timeOfBirth}
-              required />
-          </label>
+          <p>Time of Birth:</p>
+          <TimePicker
+            onChange={(timeOfBirth) => setTimeOfBirth(timeOfBirth)}
+            value={timeOfBirth}
+            closeClock
+            disableClock
+            required />
 
           <label>
             <p>Gestational age (in weeks):</p>
