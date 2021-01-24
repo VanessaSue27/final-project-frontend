@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Form, InputLabel, InputSection, SubTitle, Title, UserInput, Button, LandingImage, ButtonLink } from 'styled-components/SignUpAndLoginStyles';
 
 import { user } from '../reducer/user';
+import { Title, SubTitle } from '../styled-components/GlobalStyles';
+import { Form, InputLabel, InputSection,UserInput, Button, LandingImage, ButtonLink } from '../styled-components/SignUpAndLoginStyles';
 import rocket from '../assets/rocket.jpg'
 
 const LOGIN_URL = 'https://time-capsule-final.herokuapp.com/sessions';

@@ -4,6 +4,7 @@ import DatePicker from 'react-datepicker';
 import TimePicker from 'react-time-picker';
 import 'react-datepicker/dist/react-datepicker.css';
 
+import { Dropdown, FormSection, InputField, UserForm, SubmitButton, FormLabel, Title, SubTitle } from 'styled-components/GlobalStyles';
 import { user } from '../reducer/user';
 import { SignUpPage } from './SignUpPage';
 
@@ -59,83 +60,88 @@ export const BabyProfileForm = () => {
   if (accessToken) {
     return (
       <>
-        <h1>Baby Profile Form</h1>
-        <h2>{`Welcome, ${username}. Start by filling up these details:`}</h2>
-        <h3>Add some instructions here on how to fill in this form?</h3>
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="nameInput">
-            <p>Baby name:</p>
-            <input
-              id="nameInput"
-              type="text"
-              value={babyName}
-              onChange={(event) => setBabyName(event.target.value)}
-              minLength="3"
-              maxLength="20"
-              required />
-          </label>
+        <FormSection>
+          <UserForm onSubmit={handleSubmit}>
+            <Title>{`Welcome, ${username}!`}</Title>
+            <SubTitle> Build your infant profile here!</SubTitle>
+            <FormLabel htmlFor="nameInput">
+                Baby name
+              <InputField
+                id="nameInput"
+                type="text"
+                value={babyName}
+                onChange={(event) => setBabyName(event.target.value)}
+                minLength="3"
+                maxLength="20"
+                required />
+            </FormLabel>
 
-          <label>
-            <p>Sex:</p>
-            <select
-              value={sex}
-              onChange={(event) => setSex(event.target.value)}
-              required>
-              <option value="">Select</option>
-              <option value="Girl">Girl</option>
-              <option value="Boy">Boy</option>
-              <option value="Not Disclosed"> Prefer not to disclose</option>
-            </select>
-          </label>
+            <FormLabel>
+                Sex
+              <Dropdown
+                value={sex}
+                onChange={(event) => setSex(event.target.value)}
+                required>
+                <option value="">Select</option>
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
+                <option value="Not Disclosed"> Prefer not to disclose</option>
+              </Dropdown>
+            </FormLabel>
 
-          <p>Date of Birth:</p>
-          <DatePicker
-            selected={dateOfBirth}
-            onChange={(dateOfBirth) => setDateOfBirth(dateOfBirth)}
-            showWeekNumbers
-            required />
+            <FormLabel>
+              Date of Birth
+              <DatePicker
+                selected={dateOfBirth}
+                onChange={(dateOfBirth) => setDateOfBirth(dateOfBirth)}
+                showWeekNumbers
+                required />
+            </FormLabel>
 
-          <p>Time of Birth:</p>
-          <TimePicker
-            onChange={(timeOfBirth) => setTimeOfBirth(timeOfBirth)}
-            value={timeOfBirth}
-            closeClock
-            disableClock
-            required />
+            <FormLabel>
+              Time of Birth
+              <TimePicker
+                onChange={(timeOfBirth) => setTimeOfBirth(timeOfBirth)}
+                value={timeOfBirth}
+                closeClock
+                disableClock
+                required />
+            </FormLabel>
 
-          <label>
-            <p>Gestational age (in weeks):</p>
-            <input
-              type="number"
-              min="23"
-              max="50"
-              value={gestationalAge}
-              onChange={(event) => setGestationalAge(event.target.value)}
-              required />
-          </label>
+            <FormLabel>
+              Gestational age (in weeks)
+              <InputField
+                type="number"
+                min="23"
+                max="50"
+                value={gestationalAge}
+                onChange={(event) => setGestationalAge(event.target.value)}
+                required />
+            </FormLabel>
 
-          <label>
-            <p>Weight (in grams):</p>
-            <input
-              type="number"
-              min="500"
-              value={weight}
-              onChange={(event) => setWeight(event.target.value)}
-              required />
-          </label>
+            <FormLabel>
+              Weight (in grams)
+              <InputField
+                type="number"
+                min="500"
+                value={weight}
+                onChange={(event) => setWeight(event.target.value)}
+                required />
+            </FormLabel>
 
-          <label>
-            <p>Length (in cm):</p>
-            <input
-              type="number"
-              min="10"
-              max="200"
-              value={length}
-              onChange={(event) => setLength(event.target.value)}
-              required />
-          </label>
-          <button type="submit">SUBMIT</button>
-        </form>
+            <FormLabel>
+              Length (in cm)
+              <InputField
+                type="number"
+                min="10"
+                max="200"
+                value={length}
+                onChange={(event) => setLength(event.target.value)}
+                required />
+            </FormLabel>
+            <SubmitButton type="submit">SUBMIT</SubmitButton>
+          </UserForm>
+        </FormSection>
       </>
     );
   } else {

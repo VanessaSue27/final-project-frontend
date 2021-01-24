@@ -48,15 +48,6 @@ export const Form = styled.form`
   }
 `;
 
-export const Title = styled.h1`
-  font-family:'Roboto Slab', sans-serif;
-  color:rgb(234,70,100);
-  font-size: 50px;
-  text-align:center;
-  letter-spacing: 5px;
-  margin-bottom: 40px;
-`;
-
 export const Button = styled.button`
   box-sizing: border-box;
   display: inline-block;
@@ -134,14 +125,4 @@ export const InputLabel = styled.label`
   font-size:25px;
   border-radius: 20px;
   margin: 10px;
-`
-
-export const SubTitle = styled.h2`
-  font-family:'Roboto Slab', sans-serif;
-  color:rgb(234,70,100);
-  font-size: 30px;
-  letter-spacing:1px;
-  text-align:center;
-  margin-bottom:0;
-  margin-top: 60px;
 `
