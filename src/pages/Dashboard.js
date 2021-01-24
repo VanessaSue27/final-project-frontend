@@ -1,22 +1,32 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { user } from '../reducer/user';
 
+import { SignUpPage } from './SignUpPage';
+
 export const Dashboard = () => {
   const dispatch = useDispatch();
+  const username = useSelector((store) => store.user.username);
+  const accessToken = useSelector((store) => store.user.accessToken);
 
   const handleClick = () => {
     dispatch(user.actions.logout());
     window.location.href = '/';
   };
 
-  return (
-    <>
-      <h1>Welcome to the Dashboard!!!</h1>
-      <button type="button" onClick={handleClick}>LOGOUT</button>
-    </>
-  );
+  if (accessToken) {
+    return (
+      <>
+        <h1>{`Welcome, ${username} to the Dashboard!!!`}</h1>
+        <button type="button" onClick={handleClick}>LOGOUT</button>
+      </>
+    );
+  } else {
+    return (
+      <SignUpPage />
+    );
+  }
 };
 
 // NEXT STEP:
