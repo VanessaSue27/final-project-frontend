@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import background from '../assets/background.jpg';
 
-export const FormSection = styled.div`
+export const Section = styled.main`
   width: 100%;
   height:100vh;
   background-image: url(${background});
@@ -103,9 +103,9 @@ export const FormLabel = styled.label`
   text-align:center;
   box-sizing: border-box;
   font-family: 'Roboto Slab', sans-serif;
-  color:rgb(64,137,204);
-  font-weight:500;
-  font-size:25px;
+  color: rgb(64,137,204);
+  font-weight: 500;
+  font-size: 25px;
   border-radius: 20px;
   margin: 10px;
 `;

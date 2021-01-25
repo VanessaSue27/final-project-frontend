@@ -4,7 +4,7 @@ import DatePicker from 'react-datepicker';
 import TimePicker from 'react-time-picker';
 import 'react-datepicker/dist/react-datepicker.css';
 
-import { Dropdown, FormSection, InputField, UserForm, SubmitButton, FormLabel, Title, SubTitle } from 'styled-components/GlobalStyles';
+import { Dropdown, Section, InputField, UserForm, SubmitButton, FormLabel, Title, SubTitle } from 'styled-components/GlobalStyles';
 import { user } from '../reducer/user';
 import { LogInPage } from './LogInPage';
 
@@ -54,7 +54,7 @@ export const BabyProfileForm = () => {
   if (accessToken) {
     return (
       <>
-        <FormSection>
+        <Section>
           <UserForm onSubmit={handleSubmit}>
             <Title>{`Welcome, ${username}!`}</Title>
             <SubTitle> Build your infant profile here!</SubTitle>
@@ -135,7 +135,7 @@ export const BabyProfileForm = () => {
             </FormLabel>
             <SubmitButton type="submit">SUBMIT</SubmitButton>
           </UserForm>
-        </FormSection>
+        </Section>
       </>
     );
   } else {

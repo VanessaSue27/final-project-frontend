@@ -1,15 +1,11 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import styled from 'styled-components';
 
 import { DashboardHome } from './DashboardHome';
 import { LastEntries } from './LastEntries';
 import { AddNewEntry } from './AddNewEntry';
 import { WeightHistory } from './WeightHistory';
-
-const DashboardMainContainer = styled.main`
-  margin-left: 250px; /* Same as the width of the sidebar */
-`;
+import { DashboardMainContainer } from '../styled-components/DashBoardStyles';
 
 export const DashboardMainContent = () => {
   const dashboardContent = useSelector((store) => store.user.dashboardContent);
@@ -21,5 +17,5 @@ export const DashboardMainContent = () => {
       {dashboardContent === 'last-entries' && <LastEntries />}
       {dashboardContent === 'weight-history' && <WeightHistory />}
     </DashboardMainContainer>
-  )
+  );
 };

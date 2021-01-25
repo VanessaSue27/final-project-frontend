@@ -25,7 +25,8 @@ export const DashboardHome = () => {
 
   return (
     <>
-      <h1>{`Welcome, ${username} to the Dashboard!!!`}</h1>
+      <h1>{`Hello, ${username}! This is your Dashboard`}</h1>
+      <h2>💡Fun fact</h2>
       <h2>{pickRandomFacts()}</h2>
     </>
   )
