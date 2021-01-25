@@ -48,7 +48,7 @@ export const SignUpPage = () => {
   return (
     <InputSection>
       <Form onSubmit={handleSignUp}>
-        <Title>Time Capsule</Title>
+        <Title>Time Capsule Sign Up</Title>
         <InputLabel>
             Username
         </InputLabel>

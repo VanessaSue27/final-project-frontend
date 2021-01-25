@@ -1,8 +1,9 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+
+import { RandomFact } from '../styled-components/DashBoardStyles';
 
 const babyFacts = [
-  'Babies are born to Boogie! 🕺 Studies have shown that babies are born with innate sense of rhythm',
+  'Babies are born to boogie! 🕺 Studies have shown that babies are born with innate sense of rhythm',
   'Newborns have natural aquatic instincts when in water 🏊‍♀️',
   'Babies are born with 300 bones 🦴',
   'Smiles are reserved for human babies only 👶',
@@ -16,8 +17,6 @@ const babyFacts = [
 ];
 
 export const DashboardHome = () => {
-  const username = useSelector((store) => store.user.username);
-
   const pickRandomFacts = () => {
     const randomIndex = Math.floor(Math.random() * babyFacts.length);
     return babyFacts[randomIndex];
@@ -25,9 +24,8 @@ export const DashboardHome = () => {
 
   return (
     <>
-      <h1>{`Hello, ${username}! This is your Dashboard`}</h1>
-      <h2>💡Fun fact</h2>
-      <h2>{pickRandomFacts()}</h2>
+      <RandomFact> 💡 Fun Fact 💡</RandomFact>
+      {pickRandomFacts()}
     </>
   )
 };

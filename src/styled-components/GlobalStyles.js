@@ -15,7 +15,7 @@ export const Section = styled.main`
 `;
 
 export const UserForm = styled.form`
-  width: 80%;
+  width: 60%;
   height:fit-content;
   background-color: rgb(203,214,226, 0.6);
   display: flex;
@@ -30,6 +30,15 @@ export const UserForm = styled.form`
   transform: translate(0%, 5%);
 `;
 
+export const Title = styled.h1`
+  font-family:'Roboto Slab', sans-serif;
+  color:rgb(234,70,100);
+  font-size: 50px;
+  text-align:center;
+  letter-spacing: 5px;
+  margin-bottom: 20px;
+`;
+
 export const SubTitle = styled.h2`
   font-family:'Roboto Slab', sans-serif;
   color:rgb(234,70,100);
@@ -37,25 +46,15 @@ export const SubTitle = styled.h2`
   letter-spacing:1px;
   text-align:center;
   margin-bottom:0;
-  margin-top: 60px;
-`;
-
-export const Title = styled.h1`
-  font-family:'Roboto Slab', sans-serif;
-  color:rgb(234,70,100);
-  font-size: 50px;
-  text-align:center;
-  letter-spacing: 5px;
-  margin-bottom: 40px;
+  margin-top: 30px;
 `;
 
 export const InputField = styled.input`
   width: 100%;
-  height: 40px;
-  margin-bottom: 15px;
+  height: 30px;
   margin-top: 10px;
   border-radius:10px;
-  font-size: 15px;
+  font-size: 20px;
   text-align: center;
   border:none;
   -webkit-box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5); 
@@ -64,8 +63,7 @@ export const InputField = styled.input`
 
 export const Dropdown = styled.select`
   width: 100%;
-  height: 40px;
-  margin-bottom: 15px;
+  height: 30px;
   margin-top: 10px;
   border-radius:10px;
   font-size: 20px;
@@ -83,7 +81,7 @@ export const SubmitButton = styled.button`
   height: 50px;
   border-radius: 20px;
   padding: 10px;
-  margin-top: 20px;
+  margin-top: 30px;
   margin-bottom:40px;
   font-family: 'Roboto Slab', sans-serif;
   font-size: 20px;
@@ -105,7 +103,12 @@ export const FormLabel = styled.label`
   font-family: 'Roboto Slab', sans-serif;
   color: rgb(64,137,204);
   font-weight: 500;
-  font-size: 25px;
+  font-size: 20px;
   border-radius: 20px;
   margin: 10px;
+`;
+
+export const Line = styled.div`
+  background-color: rgb(63,177,181);
+  border: 1px;
 `;

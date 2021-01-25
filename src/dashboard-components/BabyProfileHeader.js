@@ -45,7 +45,7 @@ export const BabyProfileHeader = () => {
       <h4>{`Gestational Age: ${gestationalAge}`}</h4>
       <h4>{`Time of Birth: ${timeOfBirth}`}</h4>
       <h4>{`Date of Birth: ${moment(dateOfBirth).format('MMMM DD, YYYY')}`}</h4>
-      <h4>{`Your infant is ${moment(dateOfBirth).fromNow(true)} old.`}</h4>
+      <h4>{`${babyName} is ${moment(dateOfBirth).fromNow(true)} old.`}</h4>
     </HeaderContainer>
   );
 };

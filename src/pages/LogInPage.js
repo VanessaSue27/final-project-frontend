@@ -48,7 +48,7 @@ export const LogInPage = () => {
   return (
     <InputSection>
       <Form onSubmit={handleLogin}>
-        <Title>Log In</Title>
+        <Title>Time Capsule Log In</Title>
         <InputLabel>
             Username
         </InputLabel>
