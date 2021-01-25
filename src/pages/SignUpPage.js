@@ -74,7 +74,7 @@ export const SignUpPage = () => {
         <Button type="submit">SIGN UP</Button>
         {error && <div>{`${error}`}</div>}
         <SubTitle>Already a user?</SubTitle>
-        <ButtonLink to="/login">LOG IN</ButtonLink>
+        <ButtonLink to="/">LOG IN</ButtonLink>
       </Form>
       <LandingImage src={rocket} alt="rocket" />
     </InputSection>

@@ -74,7 +74,7 @@ export const LogInPage = () => {
         <Button type="submit">LOG IN</Button>
         {error && <div>{`${error}`}</div>}
         <SubTitle>Not a user?</SubTitle>
-        <ButtonLink to="/">CREATE ACCOUNT</ButtonLink>
+        <ButtonLink to="/signup">CREATE ACCOUNT</ButtonLink>
       </Form>
       <LandingImage src={rocket} alt="rocket" />
     </InputSection>

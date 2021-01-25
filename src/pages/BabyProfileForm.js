@@ -6,7 +6,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 
 import { Dropdown, FormSection, InputField, UserForm, SubmitButton, FormLabel, Title, SubTitle } from 'styled-components/GlobalStyles';
 import { user } from '../reducer/user';
-import { SignUpPage } from './SignUpPage';
+import { LogInPage } from './LogInPage';
 
 const PROFILE_URL = 'https://time-capsule-final.herokuapp.com/profiles';
 
@@ -140,7 +140,7 @@ export const BabyProfileForm = () => {
     );
   } else {
     return (
-      <SignUpPage />
+      <LogInPage />
     );
   }
 };
