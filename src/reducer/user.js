@@ -30,7 +30,7 @@ export const user = createSlice({
       state.dashboardContent = dashboardContent;
       localStorage.setItem('dashboardContent', dashboardContent);
     },
-    logout: (state, action) => {
+    logout: (state) => {
       state.username = null;
       state.accessToken = null;
       state.errorMessage = null;
