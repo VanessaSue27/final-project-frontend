@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { user } from '../reducer/user';
 import { Title, SubTitle } from '../styled-components/GlobalStyles';
-import { Form, InputLabel, InputSection,UserInput, Button, LandingImage, ButtonLink } from '../styled-components/SignUpAndLoginStyles';
+import { Form, InputLabel, InputSection, UserInput, Button, LandingImage, ButtonLink } from '../styled-components/SignUpAndLoginStyles';
 import rocket from '../assets/rocket.jpg'
 
 const LOGIN_URL = 'https://time-capsule-final.herokuapp.com/sessions';
@@ -39,6 +39,7 @@ export const LogInPage = () => {
         dispatch(user.actions.setAccessToken({ accessToken: json.accessToken }));
         window.location.href = '/dashboard';
       })
+      // eslint-disable-next-line no-shadow
       .catch((error) => {
         dispatch(user.actions.setErrorMessage({ errorMessage: error.toString() }));
       });

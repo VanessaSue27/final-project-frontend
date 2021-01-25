@@ -3,7 +3,8 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
   username: localStorage.username || null,
   accessToken: localStorage.accessToken || null,
-  errorMessage: null
+  errorMessage: null,
+  dashboardContent: localStorage.dashboardContent || 'home'
 };
 
 export const user = createSlice({
@@ -24,12 +25,18 @@ export const user = createSlice({
       const { errorMessage } = action.payload;
       state.errorMessage = errorMessage;
     },
+    setDashboardContent: (state, action) => {
+      const { dashboardContent } = action.payload;
+      state.dashboardContent = dashboardContent;
+      localStorage.setItem('dashboardContent', dashboardContent);
+    },
     logout: (state, action) => {
       state.username = null;
       state.accessToken = null;
       state.errorMessage = null;
       localStorage.removeItem('accessToken');
       localStorage.removeItem('username');
+      localStorage.removeItem('dashboardContent');
     }
   }
 });

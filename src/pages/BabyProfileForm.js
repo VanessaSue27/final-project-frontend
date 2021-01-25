@@ -42,20 +42,14 @@ export const BabyProfileForm = () => {
         }
       })
       .then((json) => {
-        console.log(json); // Shows in console a message saying the profile was saved successfully
+        // Shows in console a message saying the profile was saved successfully
+        console.log(json);
         window.location.href = '/dashboard';
       })
       .catch((error) => {
         dispatch(user.actions.setErrorMessage({ errorMessage: error.toString() }));
       });
   };
-
-  // When we implement the Baby Profile form properly, fix this connection to the Dashboard
-  // At this point the accessToken is already saved in the store, so we should have
-  // access to restricted endpoints
-  // So it could be that on this page, when the user clicks on CONTINUE button, we redirect to
-  // Dasboard and in the Dasboard component we do the fetch to the restricted GET Baby Profile
-  // endpoint, so we can show the baby details in the Header section of the Dashboard
 
   if (accessToken) {
     return (
