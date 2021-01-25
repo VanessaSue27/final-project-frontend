@@ -44,6 +44,7 @@ export const BabyProfileHeader = () => {
 
   useEffect(() => {
     getBabyDetails();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
