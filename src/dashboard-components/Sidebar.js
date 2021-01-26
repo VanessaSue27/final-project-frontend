@@ -8,7 +8,6 @@ import addEntry from '../assets/addentry.png';
 import rocketIcon from '../assets/rocket-icon.png';
 import homePage from '../assets/homepage.png'
 
-
 export const Sidebar = () => {
   const dispatch = useDispatch();
 

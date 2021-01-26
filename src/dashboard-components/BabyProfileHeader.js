@@ -41,7 +41,6 @@ export const BabyProfileHeader = () => {
     <HeaderContainer>
       <HeaderTitle> {`Profile of ${babyName}`}</HeaderTitle>
       <h4>{`Member Since: ${moment(createdAt).format('MMMM DD, YYYY')}`}</h4>
-      {/* <h4>{`Baby Name: ${babyName}`}</h4> */}
       <h4>{`Gestational Age: ${gestationalAge}`}</h4>
       <h4>{`Time of Birth: ${timeOfBirth}`}</h4>
       <h4>{`Date of Birth: ${moment(dateOfBirth).format('MMMM DD, YYYY')}`}</h4>

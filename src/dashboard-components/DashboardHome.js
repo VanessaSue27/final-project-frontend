@@ -24,7 +24,7 @@ export const DashboardHome = () => {
 
   return (
     <>
-      <RandomFact> 💡 Fun Fact 💡</RandomFact>
+      <RandomFact> <span role="img" aria-label="lightbulb-emoji">💡</span> Fun Fact <span role="img" aria-label="lightbulb-emoji">💡</span></RandomFact>
       {pickRandomFacts()}
     </>
   )
