@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { user } from '../reducer/user';
-import { Section, UserForm, FormLabel, InputField, SubmitButton } from '../styled-components/GlobalStyles';
+import { Section, UserForm, FormLabel, InputField, SubmitButton, ErrorMessage } from '../styled-components/GlobalStyles';
 
 const POSTENTRY_URL = 'https://time-capsule-final.herokuapp.com/entries';
 
@@ -93,7 +93,7 @@ export const AddNewEntry = () => {
             maxLength="300"
             placeholder="Write a reflection, thought or a milestone or anything else you want!"
             onChange={(event) => setDailyReflection(event.target.value)} />
-          {error && <div>{`${error}`}</div>}
+          {error && <ErrorMessage>{`${error}`}</ErrorMessage>}
           <SubmitButton type="submit">SUBMIT</SubmitButton>
         </UserForm>
       </Section>

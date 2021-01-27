@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { user } from '../reducer/user';
-import { Title, SubTitle } from '../styled-components/GlobalStyles';
+import { Title, SubTitle, ErrorMessage } from '../styled-components/GlobalStyles';
 import { Form, InputLabel, InputSection, UserInput, Button, LandingImage, ButtonLink } from '../styled-components/SignUpAndLoginStyles';
 import rocket from '../assets/rocket.jpg'
 
@@ -72,7 +72,7 @@ export const LogInPage = () => {
           maxLength="50"
           required />
         <Button type="submit">LOG IN</Button>
-        {error && <div>{`${error}`}</div>}
+        {error && <ErrorMessage>{`${error}`}</ErrorMessage>}
         <SubTitle>Not a user?</SubTitle>
         <ButtonLink to="/signup">CREATE ACCOUNT</ButtonLink>
       </Form>
