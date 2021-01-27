@@ -17,17 +17,21 @@ export const MainSection = styled.div`
   width: 80%;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: 320px) and (max-width: 1023px) {
+    width:100%;
+  };
 `;
 
 export const MainHeader = styled.div`
-  width: 82%;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  text-align:center;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
   font-size: 30px;
   font-family: 'Roboto Slab', sans-serif;
-  color:rgb(234,70,100);
+  color: rgb(234,70,100);
   margin-left: 250px;
   height: 100px;
   margin-top: 7%;
@@ -35,21 +39,47 @@ export const MainHeader = styled.div`
   background-color: rgb(242,240,240, 0.6);
   -webkit-box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5); 
   box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5);
+
+  @media (max-width: 668px) {
+    width: 75%;
+    margin-left: 10%;
+    margin-top: 22%;
+    font-size: 20px;
+    padding: 5px;
+  }
+
+  @media (min-width: 669px) and (max-width: 1023px) {
+    width:85%;
+    margin-left:8%;
+    margin-top: 15%;
+  }
 `;
 
 export const HeaderContainer = styled.div`
   width: 80%;  
   display: flex;
   flex-direction: column;
+  text-align:center;
   padding: 10px;
   margin-left: 250px;
   margin-top: 2%;
   border-radius: 20px;
-  line-height: 0px;
   color: rgb(242,240,240);
   background-color: rgb(80,91,211,0.7);
   -webkit-box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.8); 
   box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.8);
+
+  @media (min-width: 320px) and (max-width: 1023px) {
+    width: 100%;
+    margin-left:0;
+    padding: 0;
+  };
+`;
+
+export const HeaderText = styled.p`
+  font-size: 15px;
+  line-height:0;
+  font-family: 'Roboto Slab', sans-serif;
 `;
 
 export const DashboardMainContainer = styled.div`
@@ -69,6 +99,14 @@ export const DashboardMainContainer = styled.div`
   background-color: rgb(242,240,240, 0.6);
   -webkit-box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5); 
   box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5);
+
+  @media (min-width: 320px) and (max-width: 1023px) {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom:0;
+    margin-top:5px;
+    border-radius:0;
+  };
 `;
 
 export const RandomFact = styled.h3`
@@ -96,6 +134,10 @@ export const SidebarContainer = styled.div`
   background-color: rgb(242,240,240, 0.6);
   -webkit-box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5); 
   box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5);
+  
+  @media (max-width: 1023px) {
+    display: none;
+  }
 `;
 
 export const SideBarButton = styled.button`
@@ -119,6 +161,10 @@ export const SideBarButton = styled.button`
       border-radius: 10px;
       cursor: pointer
     }
+  
+  @media (max-width: 1023px) {
+    display: none;
+  }
 `;
 
 export const Icon = styled.img`

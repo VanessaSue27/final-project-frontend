@@ -6,6 +6,7 @@ import { Sidebar } from '../dashboard-components/Sidebar';
 import { BabyProfileHeader } from '../dashboard-components/BabyProfileHeader';
 import { DashboardMainContent } from '../dashboard-components/DashboardMainContent';
 import { PageSection, MainHeader, MainSection } from '../styled-components/DashBoardStyles';
+import { HamburgerMenu } from '../dashboard-components/HamburgerMenu';
 
 export const Dashboard = () => {
   const accessToken = useSelector((store) => store.user.accessToken);
@@ -15,6 +16,7 @@ export const Dashboard = () => {
     return (
       <>
         <PageSection>
+          <HamburgerMenu />
           <Sidebar />
           <MainSection>
             <MainHeader>{`Hello, ${username}! Welcome to the Time Capsule 🚀`}</MainHeader>

@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import moment from 'moment';
 
 import { user } from '../reducer/user';
-import { HeaderContainer, HeaderTitle } from '../styled-components/DashBoardStyles';
+import { HeaderContainer, HeaderTitle, HeaderText } from '../styled-components/DashBoardStyles';
 
 export const BabyProfileHeader = () => {
   const dispatch = useDispatch();
@@ -40,11 +40,11 @@ export const BabyProfileHeader = () => {
   return (
     <HeaderContainer>
       <HeaderTitle> {`Profile of ${babyName}`}</HeaderTitle>
-      <h4>{`Member Since: ${moment(createdAt).format('MMMM DD, YYYY')}`}</h4>
-      <h4>{`Gestational Age: ${gestationalAge}`}</h4>
-      <h4>{`Time of Birth: ${timeOfBirth}`}</h4>
-      <h4>{`Date of Birth: ${moment(dateOfBirth).format('MMMM DD, YYYY')}`}</h4>
-      <h4>{`${babyName} is ${moment(dateOfBirth).fromNow(true)} old.`}</h4>
+      <HeaderText>{`Member Since: ${moment(createdAt).format('MMMM DD, YYYY')}`}</HeaderText>
+      <HeaderText>{`Gestational Age: ${gestationalAge}`}</HeaderText>
+      <HeaderText>{`Time of Birth: ${timeOfBirth}`}</HeaderText>
+      <HeaderText>{`Date of Birth: ${moment(dateOfBirth).format('MMMM DD, YYYY')}`}</HeaderText>
+      <HeaderText>{`${babyName} is ${moment(dateOfBirth).fromNow(true)} old.`}</HeaderText>
     </HeaderContainer>
   );
 };
