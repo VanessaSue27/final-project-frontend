@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { user } from '../reducer/user';
 import rocket from '../assets/rocket.jpg'
-import { InputSection, Form, Button, LandingImage, UserInput, InputLabel, ButtonLink } from '../styled-components/SignUpAndLoginStyles'
-import { Title, SubTitle } from '../styled-components/GlobalStyles';
+import { InputSection, Form, Button, LandingImage, UserInput, InputLabel, ButtonLink} from '../styled-components/SignUpAndLoginStyles'
+import { Title, SubTitle, ErrorMessage } from '../styled-components/GlobalStyles';
 
 const SIGNUP_URL = 'https://time-capsule-final.herokuapp.com/users';
 
@@ -72,7 +72,7 @@ export const SignUpPage = () => {
           maxLength="50"
           required />
         <Button type="submit">SIGN UP</Button>
-        {error && <div>{`${error}`}</div>}
+        {error && <ErrorMessage>{`${error}`}</ErrorMessage>}
         <SubTitle>Already a user?</SubTitle>
         <ButtonLink to="/">LOG IN</ButtonLink>
       </Form>
