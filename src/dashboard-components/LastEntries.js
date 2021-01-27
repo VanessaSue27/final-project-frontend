@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import moment from 'moment';
@@ -48,16 +49,40 @@ export const LastEntries = () => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const handleDelete = (entryId) => {
+    const DELETEENTRIES_URL = `https://time-capsule-final.herokuapp.com/entries/${entryId}`;
+
+    fetch(DELETEENTRIES_URL, {
+      method: 'DELETE',
+      headers: { Authorization: accessToken }
+    })
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error('Could not delete entry.');
+        }
+        return res.json();
+      })
+      .then((json) => {
+        // console logs a message saying the entry was deleted successfully
+        console.log(json);
+        window.location.reload();
+      })
+      .catch((error) => {
+        dispatch(user.actions.setErrorMessage({ errorMessage: error.toString() }));
+      });
+  };
+
   return (
     <>
       <h1>Last 5 Entries Section!</h1>
       <EntriesSection>
         {entriesData.map((entry) => (
-          <EntryContainer>
+          <EntryContainer key={entry._id}>
             <p>{`Entry created on: ${moment(entry.createdAt).format('MMMM DD, YYYY')}`}</p>
             <p>{`Daily Activities: ${entry.dailyActivities.join(', ')}`}</p>
             <p>{`Daily Weight: ${entry.dailyWeight}`}</p>
             <p>{`Daily Reflection: ${entry.dailyReflection}`}</p>
+            <button type="button" onClick={() => handleDelete(entry._id)}>Delete Entry</button>
           </EntryContainer>
         ))}
       </EntriesSection>
