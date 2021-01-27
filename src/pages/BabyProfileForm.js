@@ -83,14 +83,12 @@ export const BabyProfileForm = () => {
               </Dropdown>
             </FormLabel>
 
-            <FormLabel>
               Date of Birth
-              <DatePicker
-                selected={dateOfBirth}
-                onChange={(dateOfBirth) => setDateOfBirth(dateOfBirth)}
-                showWeekNumbers
-                required />
-            </FormLabel>
+            <DatePicker
+              selected={dateOfBirth}
+              onChange={(dateOfBirth) => setDateOfBirth(dateOfBirth)}
+              showWeekNumbers
+              required />
 
             <FormLabel>
               Time of Birth
