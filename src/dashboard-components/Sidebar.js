@@ -7,7 +7,7 @@ import { SidebarContainer, SideBarButton, LogOutButton, Icon } from '../styled-c
 import scale from '../assets/scale.png';
 import addEntry from '../assets/addentry.png';
 import rocketIcon from '../assets/rocket-icon.png';
-import homePage from '../assets/homepage.png'
+import homePage from '../assets/homepage.png';
 
 export const Sidebar = () => {
   const dispatch = useDispatch();

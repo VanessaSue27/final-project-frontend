@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { useDispatch } from 'react-redux';
+import swal from 'sweetalert';
 
 import { user } from '../reducer/user';
 import { Icon } from '../styled-components/DashBoardStyles';
@@ -13,8 +14,19 @@ export const Menu = ({ open, setOpen }) => {
   const dispatch = useDispatch();
 
   const handleLogout = () => {
-    dispatch(user.actions.logout());
-    window.location.href = '/';
+    swal({
+      title: 'Oh No 🙁',
+      text: 'Are you sure you want to Log Out?',
+      buttons: ['Close this alert', 'Log me out!'],
+      dangerMode: true,
+      icon: 'warning'
+    })
+      .then((willLogout) => {
+        if (willLogout) {
+          dispatch(user.actions.logout());
+          window.location.href = '/';
+        }
+      });
   };
 
   return (
