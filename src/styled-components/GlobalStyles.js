@@ -117,7 +117,8 @@ export const ErrorMessage = styled.p`
   width: 90%;
   font-size: 20px;
   font-family: 'Roboto Slab', sans-serif;
-  font-weight:500;
+  font-weight: 500;
+  text-align: center;
   color: rgb(255,255,255);
   background-color: rgb(234,70,100, 0.8);
   -webkit-box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5); 

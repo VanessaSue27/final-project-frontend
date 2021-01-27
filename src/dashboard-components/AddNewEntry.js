@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { user } from '../reducer/user';
-import { Section, UserForm, FormLabel, InputField, SubmitButton, ErrorMessage } from '../styled-components/GlobalStyles';
+import { FormLabel, InputField, SubmitButton, ErrorMessage, Title } from '../styled-components/GlobalStyles';
+import { DailyEntryForm } from '../styled-components/DailyEntriesFormStyles'
 
 const POSTENTRY_URL = 'https://time-capsule-final.herokuapp.com/entries';
 
@@ -62,41 +63,41 @@ export const AddNewEntry = () => {
 
   return (
     <>
-      <Section>
-        <UserForm onSubmit={handleSubmit}>
-          <p>Activities</p>
-          <div>
-            {activities.map((item) => (
-              <label htmlFor="activities" key={item}>
-                <input
-                  id="activities"
-                  name="daily activities"
-                  type="checkbox"
-                  checked={dailyActivities.includes(item)}
-                  onChange={() => onTypeChange(item)} />
-                {item}
-              </label>
-            ))}
-          </div>
-          <FormLabel>
+      <Title>Daily Entry Form</Title>
+      <DailyEntryForm onSubmit={handleSubmit}>
+        <div className="checkboxes-container">
+          {activities.map((item) => (
+            <label className="checkbox-container" htmlFor={`activities-${item}`} key={item}>
+              <input
+                id={`activities-${item}`}
+                name="daily-activities"
+                type="checkbox"
+                checked={dailyActivities.includes(item)}
+                onChange={() => onTypeChange(item)}
+                required />
+              {item}
+              <span className="custom-checkbox" />
+            </label>
+          ))}
+        </div>
+        <FormLabel>
               Weight (in grams)
-            <InputField
-              type="number"
-              min="500"
-              value={dailyWeight}
-              onChange={(event) => setDailyWeight(event.target.value)}
-              required />
-          </FormLabel>
-          <p>Daily Reflection(not mandatory, but we reccomend it so you keep those memories!)</p>
-          <textarea
-            rows="3"
-            maxLength="300"
-            placeholder="Write a reflection, thought or a milestone or anything else you want!"
-            onChange={(event) => setDailyReflection(event.target.value)} />
-          {error && <ErrorMessage>{`${error}`}</ErrorMessage>}
-          <SubmitButton type="submit">SUBMIT</SubmitButton>
-        </UserForm>
-      </Section>
+          <InputField
+            type="number"
+            min="500"
+            value={dailyWeight}
+            onChange={(event) => setDailyWeight(event.target.value)}
+            required />
+        </FormLabel>
+        <p>Daily Reflection(not mandatory, but we reccomend it so you keep those memories!)</p>
+        <textarea
+          rows="3"
+          maxLength="300"
+          placeholder="Write a reflection, thought or a milestone or anything else you want!"
+          onChange={(event) => setDailyReflection(event.target.value)} />
+        {error && <ErrorMessage>{`${error}`}</ErrorMessage>}
+        <SubmitButton type="submit">SUBMIT</SubmitButton>
+      </DailyEntryForm>
     </>
   );
 };

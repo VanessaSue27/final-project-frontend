@@ -73,9 +73,9 @@ export const LastEntries = () => {
               buttons: true
             }).then(() => {
               window.location.reload();
-            })
+            });
           }
-        })
+        });
         if (!res.ok) {
           throw new Error('Could not delete entry.');
         }
