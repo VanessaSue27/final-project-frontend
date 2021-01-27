@@ -2,22 +2,10 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import moment from 'moment';
-import styled from 'styled-components';
 import swal from 'sweetalert';
 
 import { user } from '../reducer/user';
-
-const EntryContainer = styled.div`
-  border: 2px solid black;
-  font-size: 16px;
-  width: 500px;
-`;
-
-const EntriesSection = styled.section`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-`;
+import { EntriesSection, EntriesTitle, EntryCard, DeleteButton } from '../styled-components/LastEntriesStyles';
 
 export const LastEntries = () => {
   const dispatch = useDispatch();
@@ -92,16 +80,16 @@ export const LastEntries = () => {
 
   return (
     <>
-      <h1>Last 5 Entries Section!</h1>
       <EntriesSection>
+        <EntriesTitle>Latest Entries</EntriesTitle>
         {entriesData.map((entry) => (
-          <EntryContainer key={entry._id}>
+          <EntryCard key={entry._id}>
+            <DeleteButton type="button" onClick={() => handleDelete(entry._id)}> X </DeleteButton>
             <p>{`Entry created on: ${moment(entry.createdAt).format('MMMM DD, YYYY')}`}</p>
             <p>{`Daily Activities: ${entry.dailyActivities.join(', ')}`}</p>
-            <p>{`Daily Weight: ${entry.dailyWeight}`}</p>
+            <p>{`Daily Weight: ${entry.dailyWeight} grams`}</p>
             <p>{`Daily Reflection: ${entry.dailyReflection}`}</p>
-            <button type="button" onClick={() => handleDelete(entry._id)}>Delete Entry</button>
-          </EntryContainer>
+          </EntryCard>
         ))}
       </EntriesSection>
     </>

@@ -96,9 +96,6 @@ export const DashboardMainContainer = styled.div`
   margin-top: 3%;
   margin-bottom: 4%;
   border-radius: 16px;
-  background-color: rgb(242,240,240, 0.6);
-  -webkit-box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5); 
-  box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5);
 
   @media (min-width: 320px) and (max-width: 1023px) {
     width: 100%;
