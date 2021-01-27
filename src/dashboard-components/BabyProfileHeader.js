@@ -3,7 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import moment from 'moment';
 
 import { user } from '../reducer/user';
-import { HeaderContainer, HeaderTitle, HeaderText } from '../styled-components/DashBoardStyles';
+import robot from '../assets/robot.png';
+import { HeaderContainer, HeaderTitle, HeaderText, ProfileImage } from '../styled-components/DashBoardStyles';
 
 export const BabyProfileHeader = () => {
   const dispatch = useDispatch();
@@ -38,13 +39,16 @@ export const BabyProfileHeader = () => {
   }, []);
 
   return (
-    <HeaderContainer>
-      <HeaderTitle> {`Profile of ${babyName}`}</HeaderTitle>
-      <HeaderText>{`Member Since: ${moment(createdAt).format('MMMM DD, YYYY')}`}</HeaderText>
-      <HeaderText>{`Gestational Age: ${gestationalAge}`}</HeaderText>
-      <HeaderText>{`Time of Birth: ${timeOfBirth}`}</HeaderText>
-      <HeaderText>{`Date of Birth: ${moment(dateOfBirth).format('MMMM DD, YYYY')}`}</HeaderText>
-      <HeaderText>{`${babyName} is ${moment(dateOfBirth).fromNow(true)} old.`}</HeaderText>
-    </HeaderContainer>
+    <>
+      <HeaderContainer>
+        <ProfileImage src={robot} />
+        <HeaderTitle> {`Profile of ${babyName}`}</HeaderTitle>
+        <HeaderText>{`Member Since: ${moment(createdAt).format('MMMM DD, YYYY')}`}</HeaderText>
+        <HeaderText>{`Gestational Age: ${gestationalAge}`}</HeaderText>
+        <HeaderText>{`Time of Birth: ${timeOfBirth}`}</HeaderText>
+        <HeaderText>{`Date of Birth: ${moment(dateOfBirth).format('MMMM DD, YYYY')}`}</HeaderText>
+        <HeaderText>{`${babyName} is ${moment(dateOfBirth).fromNow(true)} old.`}</HeaderText>
+      </HeaderContainer>
+    </>
   );
 };

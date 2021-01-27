@@ -56,12 +56,12 @@ export const MainHeader = styled.div`
 `;
 
 export const HeaderContainer = styled.div`
-  width: 80%;  
+  width: 60%;  
   display: flex;
   flex-direction: column;
   text-align:center;
   padding: 10px;
-  margin-left: 250px;
+  margin-left: 325px;
   margin-top: 2%;
   border-radius: 20px;
   color: rgb(242,240,240);
@@ -78,8 +78,17 @@ export const HeaderContainer = styled.div`
 
 export const HeaderText = styled.p`
   font-size: 15px;
+  text-align:center;
   line-height:0;
   font-family: 'Roboto Slab', sans-serif;
+`;
+
+export const ProfileImage = styled.img`
+  position: absolute;
+  width: 100px;
+  height:100px;
+  border-radius: 30px;
+  padding: 30px;
 `;
 
 export const DashboardMainContainer = styled.div`
