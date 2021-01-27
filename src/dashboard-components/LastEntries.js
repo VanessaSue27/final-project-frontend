@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import moment from 'moment';
 import styled from 'styled-components';
+import swal from 'sweetalert';
 
 import { user } from '../reducer/user';
 
@@ -57,6 +58,24 @@ export const LastEntries = () => {
       headers: { Authorization: accessToken }
     })
       .then((res) => {
+        swal({
+          // eslint-disable-next-line quotes
+          title: "DANGER ZONE! Are you sure you want to delete entry?",
+          text: "Once deleted, you can't recover it",
+          buttons: true,
+          dangerMode: true,
+          icon: 'warning'
+        }).then((willDelete) => {
+          if (willDelete) {
+            swal({
+              title: 'Entry deleted successfully',
+              icon: 'success',
+              buttons: true
+            }).then(() => {
+              window.location.reload();
+            })
+          }
+        })
         if (!res.ok) {
           throw new Error('Could not delete entry.');
         }
@@ -65,7 +84,6 @@ export const LastEntries = () => {
       .then((json) => {
         // console logs a message saying the entry was deleted successfully
         console.log(json);
-        window.location.reload();
       })
       .catch((error) => {
         dispatch(user.actions.setErrorMessage({ errorMessage: error.toString() }));
