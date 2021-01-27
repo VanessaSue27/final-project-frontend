@@ -115,6 +115,8 @@ export const RandomFact = styled.h3`
 `;
 
 export const HeaderTitle = styled.h2`
+  font-size:20px;
+  margin-bottom:0;
   text-align: center;
   margin-top: 10px;
 `;

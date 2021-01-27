@@ -93,6 +93,12 @@ export const SubmitButton = styled.button`
       transform: scale(1.1);
       cursor: pointer
     }
+
+   @media (min-width: 320px) and (max-width: 1023px) {
+     width:90%;
+     margin-top: 15px;
+     margin-bottom:5px;
+  }
 `;
 
 export const FormLabel = styled.label`
@@ -106,6 +112,16 @@ export const FormLabel = styled.label`
   font-size: 20px;
   border-radius: 20px;
   margin: 10px;
+
+  @media (max-width: 668px){
+    font-size:15px;
+  };
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    margin-top:0;
+    margin-bottom:20px;
+    font-size:20px;
+  }
 `;
 
 export const Line = styled.div`

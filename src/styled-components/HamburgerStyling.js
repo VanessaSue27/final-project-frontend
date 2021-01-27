@@ -44,6 +44,7 @@ export const StyledBurger = styled.button`
 `
 export const StyledMenu = styled.nav`
   display: flex;
+  z-index:5;
   flex-direction: column;
   justify-content: center;
   background-color: rgb(253,253,253, 0.5);

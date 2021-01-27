@@ -1,55 +1,80 @@
 import styled from 'styled-components';
 
 export const DailyEntryForm = styled.form`
-  width: 80%;
+  width: 100%;
+  height: 60vh;
   display: flex;
+  justify-content:center;
   flex-direction: column;
   align-items: center;
 `;
 
 export const CheckboxesContainer = styled.div`
+  width: 51%;
+  height: 30%;
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  vertical-align: middle;
-`;
+  margin-bottom:0;
 
-export const CheckboxLabel = styled.label`
-  color: black;
-  font-weight: normal;
-  font-size: 20px;
-  margin-left: 30px;
-`;
+  @media (max-width: 668px) {
+    width: 68%;
+  };
 
-export const Icon = styled.svg`
-fill: none;
-stroke: white;
-stroke-width: 2px;
-`
-
-export const CheckboxInput = styled.div`
-  width: 20px;
-  height: 20px;
-  margin-top:5px;
-  background: ${(props) => (props.checked ? '#1ba341' : '#e6e6e6')};
-  border-radius: 3px;
-  transition: all 150ms;
-  cursor: pointer;
-
-  ${Icon} {
-    visibility: ${(props) => (props.checked ? 'visible' : 'hidden')}
+  @media (min-width: 768px) and (max-width: 1023px) {
+    width: 45%;
   };
 `;
 
-export const CustomCheckbox = styled.input.attrs({ type: 'checkbox' })`
-  border: 0;
-    clip: rect(0 0 0 0);
-    clippath: inset(50%);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
+export const DailyEntryTitle = styled.h3`
+  font-size: 40px;
+  color: rgb(240,96,122);
+  margin-top: 10px;
+  margin-bottom:0%;
+
+  @media (max-width: 668px) {
+    font-size: 20px;
+    margin-top: 15px;
+    text-align:center;
+  };
+`;
+
+export const CheckboxLabel = styled.label`
+  color: rgb(63,177,181);
+  font-size: 20px;
+
+  @media (max-width: 668px){
+    font-size:15px;
+  };
+`;
+
+export const DailyReflectionText = styled.p`
+  font-size: 20px;
+  color: rgb(67,138,204);
+
+  @media (max-width: 668px){
+    margin-left:10px;
+    margin-right:10px;
+    font-size:15px;
+    text-align:center;
+  };
+`;
+
+export const TextArea = styled.textarea`
+  width: 90%;
+  height: 150px;
+  border: none;
+  border-radius:10px;
+  resize: none;
+  text-align:center;
+  font-size: 18px;
+  font-family: inherit;
+  -webkit-box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5); 
+  box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5);
+
+  @media (max-width: 668px) {
+    height:75px;
+    margin-left:10px;
+    margin-right:10px;
+    font-size:15px;
+  };
 `;
