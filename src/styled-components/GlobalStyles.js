@@ -11,7 +11,6 @@ export const Section = styled.main`
   display: flex;
   justify-content: center;
   font-family:'Roboto Slab', sans-serif;
-  position: absolute;
   overflow-y: scroll;
 `;
 

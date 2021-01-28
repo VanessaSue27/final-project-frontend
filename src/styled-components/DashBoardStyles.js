@@ -12,6 +12,7 @@ export const PageSection = styled.main`
   justify-content: center;
   font-family:'Roboto Slab', sans-serif;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 `;
 
 export const MainSection = styled.div`
@@ -34,7 +35,6 @@ export const MainHeader = styled.div`
   font-family: 'Roboto Slab', sans-serif;
   color: rgb(234,70,100);
   margin-left: 250px;
-  height: 100px;
   margin-top: 2%;
   border-radius: 16px;
   background-color: rgb(242,240,240, 0.6);

@@ -6,9 +6,10 @@ export const DailyEntryForm = styled.form`
   justify-content:center;
   flex-direction: column;
   align-items: center;
+  background-color: rgb(255,255,255, 0.3);
   -webkit-box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5); 
   box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5);
-  border-radius:20px;
+  border-radius: 20px;
 `;
 
 export const CheckboxesContainer = styled.div`
