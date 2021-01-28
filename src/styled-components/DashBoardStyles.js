@@ -90,13 +90,14 @@ export const ProfileImage = styled.img`
   border-radius: 30px;
   padding: 30px;
 
-  @media (min-width: 320px) and (max-width: 1023px) {
+  @media (max-width: 668px) {
    width: 50px;
    height: 50px;
    margin-top: 60px;
    padding: 0;
    padding-left: 15px;
-  };
+   border-radius: 0;
+};
 `;
 
 export const DashboardMainContainer = styled.div`
