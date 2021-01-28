@@ -82,7 +82,7 @@ export const AddNewEntry = () => {
             </CheckboxLabel>
           ))}
         </CheckboxesContainer>
-        {checkboxRequired && <p>Please choose one of the options above!</p>}
+        {checkboxRequired && <ErrorMessage>Please choose one of the options above!</ErrorMessage>}
         <FormLabel>
               Weight (in grams)
           <InputField

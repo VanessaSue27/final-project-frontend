@@ -4,7 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import moment from 'moment';
 
 import { user } from '../reducer/user';
-import { Section, UserForm, FormLabel, InputField, SubmitButton, ErrorMessage } from '../styled-components/GlobalStyles';
+import { CheckboxesContainer, DailyEntryForm, DailyEntryTitle, TextArea, CheckboxLabel } from '../styled-components/DailyEntriesFormStyles';
+import { FormLabel, InputField, SubmitButton, ErrorMessage } from '../styled-components/GlobalStyles';
 
 const activities = [
   'Hold',
@@ -70,43 +71,41 @@ export const EditEntryPage = () => {
 
   return (
     <>
-      <Section>
-        <UserForm onSubmit={handleEdit}>
-          <p>{`Editing entry created on: ${moment(entry.createdAt).format('MMMM DD, YYYY')}`}</p>
-          <p>Activities</p>
-          <div>
-            {activities.map((item) => (
-              <label htmlFor="activities" key={item}>
-                <input
-                  id={`activities-${item}`}
-                  name="daily activities"
-                  type="checkbox"
-                  checked={dailyActivities.includes(item)}
-                  onChange={() => onTypeChange(item)} />
-                {item}
-              </label>
-            ))}
-          </div>
-          {checkboxRequired && <p>Please choose one of the options above!</p>}
-          <FormLabel>
+      <DailyEntryForm onSubmit={handleEdit}>
+        <DailyEntryTitle>{`Editing entry created on: ${moment(entry.createdAt).format('MMMM DD, YYYY')}`}</DailyEntryTitle>
+        <CheckboxesContainer>
+          {activities.map((item) => (
+            <CheckboxLabel className="checkbox-container" htmlFor={`activities-${item}`} key={item}>
+              <input
+                id={`activities-${item}`}
+                name="daily activities"
+                type="checkbox"
+                checked={dailyActivities.includes(item)}
+                onChange={() => onTypeChange(item)} />
+              {item}
+              <span className="custom-checkbox" />
+            </CheckboxLabel>
+          ))}
+          {checkboxRequired && <ErrorMessage>Please choose one of the options above!</ErrorMessage>}
+        </CheckboxesContainer>
+        <FormLabel>
               Weight (in grams)
-            <InputField
-              type="number"
-              min="500"
-              value={dailyWeight}
-              onChange={(event) => setDailyWeight(event.target.value)}
-              required />
-          </FormLabel>
-          <p>Daily Reflection(not mandatory, but we reccomend it so you keep those memories!)</p>
-          <textarea
-            rows="3"
-            maxLength="300"
-            value={dailyReflection}
-            onChange={(event) => setDailyReflection(event.target.value)} />
-          {error && <ErrorMessage>{`${error}`}</ErrorMessage>}
-          <SubmitButton type="submit">UPDATE ENTRY</SubmitButton>
-        </UserForm>
-      </Section>
+          <InputField
+            type="number"
+            min="500"
+            value={dailyWeight}
+            onChange={(event) => setDailyWeight(event.target.value)}
+            required />
+        </FormLabel>
+        <p>Daily Reflection(not mandatory, but we reccomend it so you keep those memories!)</p>
+        <TextArea
+          rows="3"
+          maxLength="300"
+          value={dailyReflection}
+          onChange={(event) => setDailyReflection(event.target.value)} />
+        {error && <ErrorMessage>{`${error}`}</ErrorMessage>}
+        <SubmitButton type="submit">UPDATE ENTRY</SubmitButton>
+      </DailyEntryForm>
     </>
   );
 };
