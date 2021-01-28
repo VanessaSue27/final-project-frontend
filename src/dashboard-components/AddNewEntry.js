@@ -21,6 +21,7 @@ export const AddNewEntry = () => {
   const [dailyActivities, setDailyActivities] = useState([]);
   const [dailyWeight, setDailyWeight] = useState(0);
   const [dailyReflection, setDailyReflection] = useState('');
+  const [checkboxRequired, setCheckboxRequired] = useState(false);
 
   const accessToken = useSelector((store) => store.user.accessToken);
   const error = useSelector((store) => store.user.errorMessage);
@@ -29,28 +30,32 @@ export const AddNewEntry = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    fetch(POSTENTRY_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: accessToken
-      },
-      body: JSON.stringify({ dailyActivities, dailyWeight, dailyReflection })
-    })
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error('Unable to save new entry');
-        } else {
-          return res.json();
-        }
+    if (dailyActivities.length > 0) {
+      fetch(POSTENTRY_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: accessToken
+        },
+        body: JSON.stringify({ dailyActivities, dailyWeight, dailyReflection })
       })
-      .then((json) => {
-        dispatch(user.actions.setDashboardContent({ dashboardContent: 'last-entries' }));
-      })
-      // eslint-disable-next-line no-shadow
-      .catch((error) => {
-        dispatch(user.actions.setErrorMessage({ errorMessage: error.toString() }));
-      });
+        .then((res) => {
+          if (!res.ok) {
+            throw new Error('Unable to save new entry');
+          } else {
+            return res.json();
+          }
+        })
+        .then((json) => {
+          dispatch(user.actions.setDashboardContent({ dashboardContent: 'last-entries' }));
+        })
+        // eslint-disable-next-line no-shadow
+        .catch((error) => {
+          dispatch(user.actions.setErrorMessage({ errorMessage: error.toString() }));
+        });
+    } else {
+      setCheckboxRequired(true);
+    }
   };
 
   const onTypeChange = (item) => {
@@ -77,6 +82,7 @@ export const AddNewEntry = () => {
             </CheckboxLabel>
           ))}
         </CheckboxesContainer>
+        {checkboxRequired && <p>Please choose one of the options above!</p>}
         <FormLabel>
               Weight (in grams)
           <InputField
