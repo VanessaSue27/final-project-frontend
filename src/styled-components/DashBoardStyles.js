@@ -11,6 +11,7 @@ export const PageSection = styled.main`
   flex-direction:row;
   justify-content: center;
   font-family:'Roboto Slab', sans-serif;
+  overflow-y:scroll;
 `;
 
 export const MainSection = styled.div`
@@ -58,8 +59,8 @@ export const MainHeader = styled.div`
 export const HeaderContainer = styled.div`
   width: 60%;  
   display: flex;
-  flex-direction: column;
-  text-align:center;
+  flex-direction: row;
+  text-align:left;
   padding: 10px;
   margin-left: 325px;
   margin-top: 2%;
@@ -76,15 +77,26 @@ export const HeaderContainer = styled.div`
   };
 `;
 
+export const ImageContainer = styled.div`
+  display:flex;
+  justify-content:left;  
+  align-items: center;
+`;
+
+export const HeaderTextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding-left:35px;
+`;
+
 export const HeaderText = styled.p`
   font-size: 15px;
-  text-align:center;
+  text-align: left;
   line-height:0;
   font-family: 'Roboto Slab', sans-serif;
 `;
 
 export const ProfileImage = styled.img`
-  position: absolute;
   width: 100px;
   height:100px;
   border-radius: 30px;
@@ -93,7 +105,6 @@ export const ProfileImage = styled.img`
   @media (max-width: 668px) {
    width: 50px;
    height: 50px;
-   margin-top: 60px;
    padding: 0;
    padding-left: 15px;
    border-radius: 0;
@@ -103,7 +114,6 @@ export const ProfileImage = styled.img`
 export const DashboardMainContainer = styled.div`
   margin-left: 250px;
   width: 82%;
-  height: 60%;
   display:flex;
   flex-direction: column;
   justify-content: center;
@@ -130,8 +140,8 @@ export const RandomFact = styled.h3`
 `;
 
 export const HeaderTitle = styled.h2`
-  font-size:20px;
-  margin-bottom:0;
+  font-size: 20px;
+  margin-bottom: 0;
   text-align: center;
   margin-top: 10px;
 `;

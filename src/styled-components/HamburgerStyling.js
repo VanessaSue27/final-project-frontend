@@ -2,15 +2,16 @@ import styled from 'styled-components/macro'
 
 export const StyledBurger = styled.button`
   position: absolute;
-  top: 5%;
-  left: 2rem;
+  top: 3%;
+  left: 1.0rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 2rem;
+  width: 3rem;
   height: 2rem;
-  background: transparent;
+  background: rgb(253,253,253, 0.3);
   border: none;
+  border-radius: 4px;
   cursor: pointer;
   padding: 0;
   z-index: 10;
@@ -21,7 +22,9 @@ export const StyledBurger = styled.button`
   div {
     width: 2rem;
     height: 0.25rem;
+    margin-left: 0.45rem;
     background: ${({ open }) => (open ? '#0D0C1D' : '#000')};
+    background-color: rgb(136,225,239);
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
@@ -44,7 +47,7 @@ export const StyledBurger = styled.button`
 `
 export const StyledMenu = styled.nav`
   display: flex;
-  z-index:5;
+  z-index: 5;
   flex-direction: column;
   justify-content: center;
   background-color: rgb(253,253,253, 0.5);
