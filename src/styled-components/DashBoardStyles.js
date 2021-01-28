@@ -89,6 +89,14 @@ export const ProfileImage = styled.img`
   height:100px;
   border-radius: 30px;
   padding: 30px;
+
+  @media (min-width: 320px) and (max-width: 1023px) {
+   width: 50px;
+   height: 50px;
+   margin-top: 60px;
+   padding: 0;
+   padding-left: 15px;
+  };
 `;
 
 export const DashboardMainContainer = styled.div`
