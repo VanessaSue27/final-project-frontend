@@ -4,7 +4,7 @@ import background from '../assets/background.jpg';
 
 export const Section = styled.main`
   width: 100%;
-  height:100vh;
+  height: 100vh;
   background-image: url(${background});
   background-size: cover;
   background-repeat: no-repeat;
@@ -12,11 +12,11 @@ export const Section = styled.main`
   justify-content: center;
   font-family:'Roboto Slab', sans-serif;
   position: absolute;
+  overflow-y: scroll;
 `;
 
 export const UserForm = styled.form`
   width: 60%;
-  height:fit-content;
   background-color: rgb(203,214,226, 0.6);
   display: flex;
   flex-direction: column;
@@ -81,8 +81,8 @@ export const SubmitButton = styled.button`
   height: 50px;
   border-radius: 20px;
   padding: 10px;
-  margin-top: 30px;
-  margin-bottom:40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   font-family: 'Roboto Slab', sans-serif;
   font-size: 20px;
   background: rgb(240,96,122);

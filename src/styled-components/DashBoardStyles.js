@@ -11,7 +11,7 @@ export const PageSection = styled.main`
   flex-direction:row;
   justify-content: center;
   font-family:'Roboto Slab', sans-serif;
-  overflow-y:scroll;
+  overflow-y: scroll;
 `;
 
 export const MainSection = styled.div`
@@ -35,7 +35,7 @@ export const MainHeader = styled.div`
   color: rgb(234,70,100);
   margin-left: 250px;
   height: 100px;
-  margin-top: 7%;
+  margin-top: 2%;
   border-radius: 16px;
   background-color: rgb(242,240,240, 0.6);
   -webkit-box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5); 
@@ -43,15 +43,17 @@ export const MainHeader = styled.div`
 
   @media (max-width: 668px) {
     width: 75%;
-    margin-left: 10%;
-    margin-top: 22%;
+    background-color:transparent;
+    box-shadow: none;
+    margin-left: 20%;
+    margin-top: 0;
     font-size: 20px;
-    padding: 5px;
+    padding: 0;
   }
 
   @media (min-width: 669px) and (max-width: 1023px) {
-    width:85%;
-    margin-left:8%;
+    width: 85%;
+    margin-left: 8%;
     margin-top: 15%;
   }
 `;
@@ -60,10 +62,10 @@ export const HeaderContainer = styled.div`
   width: 60%;  
   display: flex;
   flex-direction: row;
-  text-align:left;
+  text-align: left;
   padding: 10px;
   margin-left: 325px;
-  margin-top: 2%;
+  margin-top: 15px;
   border-radius: 20px;
   color: rgb(242,240,240);
   background-color: rgb(80,91,211,0.7);
@@ -86,19 +88,19 @@ export const ImageContainer = styled.div`
 export const HeaderTextContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding-left:35px;
+  padding-left: 35px;
 `;
 
 export const HeaderText = styled.p`
   font-size: 15px;
   text-align: left;
-  line-height:0;
+  line-height: 0;
   font-family: 'Roboto Slab', sans-serif;
 `;
 
 export const ProfileImage = styled.img`
   width: 100px;
-  height:100px;
+  height: 100px;
   border-radius: 30px;
   padding: 30px;
 
@@ -112,25 +114,14 @@ export const ProfileImage = styled.img`
 `;
 
 export const DashboardMainContainer = styled.div`
-  margin-left: 250px;
   width: 82%;
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align:center;
-  font-size: 30px;
-  font-family: 'Roboto Slab', sans-serif;
-  color:rgb(63,177,181);
-  margin-top: 3%;
-  margin-bottom: 4%;
-  border-radius: 16px;
+  margin-left: 250px;
+  margin-top: 20px;
+  padding-bottom: 12px;
 
   @media (min-width: 320px) and (max-width: 1023px) {
     width: 100%;
     margin-left: 0;
-    margin-bottom:0;
-    margin-top:5px;
-    border-radius:0;
   };
 `;
 

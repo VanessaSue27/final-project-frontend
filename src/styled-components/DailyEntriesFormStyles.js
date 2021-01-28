@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const DailyEntryForm = styled.form`
   width: 100%;
-  margin-top: 30px;
   display: flex;
   justify-content:center;
   flex-direction: column;
@@ -36,7 +35,8 @@ export const DailyEntryTitle = styled.h3`
 
   @media (max-width: 668px) {
     font-size: 20px;
-    margin-top: 15px;
+    margin-top: 0;
+    padding: 10px;
     text-align:center;
   };
 `;

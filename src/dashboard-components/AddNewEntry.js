@@ -66,8 +66,8 @@ export const AddNewEntry = () => {
 
   return (
     <>
-      <DailyEntryTitle>Daily Entry Form</DailyEntryTitle>
       <DailyEntryForm onSubmit={handleSubmit}>
+        <DailyEntryTitle>Daily Entry Form</DailyEntryTitle>
         <CheckboxesContainer>
           {activities.map((item) => (
             <CheckboxLabel className="checkbox-container" htmlFor={`activities-${item}`} key={item}>
