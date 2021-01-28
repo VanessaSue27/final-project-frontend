@@ -4,7 +4,8 @@ const initialState = {
   username: localStorage.username || null,
   accessToken: localStorage.accessToken || null,
   errorMessage: null,
-  dashboardContent: localStorage.dashboardContent || 'home'
+  dashboardContent: localStorage.dashboardContent || 'home',
+  entry: localStorage.entry || null
 };
 
 export const user = createSlice({
@@ -30,13 +31,20 @@ export const user = createSlice({
       state.dashboardContent = dashboardContent;
       localStorage.setItem('dashboardContent', dashboardContent);
     },
+    setEntry: (state, action) => {
+      const { entry } = action.payload;
+      state.entry = entry;
+      localStorage.setItem('entry', entry);
+    },
     logout: (state) => {
       state.username = null;
       state.accessToken = null;
       state.errorMessage = null;
+      state.entry = null;
       localStorage.removeItem('accessToken');
       localStorage.removeItem('username');
       localStorage.removeItem('dashboardContent');
+      localStorage.removeItem('entry');
     }
   }
 });

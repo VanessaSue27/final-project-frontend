@@ -5,6 +5,7 @@ import { DashboardHome } from './DashboardHome';
 import { LastEntries } from './LastEntries';
 import { AddNewEntry } from './AddNewEntry';
 import { WeightHistory } from './WeightHistory';
+import { EditEntryPage } from './EditEntryPage';
 import { DashboardMainContainer } from '../styled-components/DashBoardStyles';
 
 export const DashboardMainContent = () => {
@@ -17,6 +18,7 @@ export const DashboardMainContent = () => {
         {dashboardContent === 'add-new-entry' && <AddNewEntry />}
         {dashboardContent === 'last-entries' && <LastEntries />}
         {dashboardContent === 'weight-history' && <WeightHistory />}
+        {dashboardContent === 'edit-entry' && <EditEntryPage />}
       </DashboardMainContainer>
     </>
   );

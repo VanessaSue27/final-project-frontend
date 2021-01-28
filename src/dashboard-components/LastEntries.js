@@ -78,6 +78,11 @@ export const LastEntries = () => {
       });
   };
 
+  const handleEdit = (entry) => {
+    dispatch(user.actions.setDashboardContent({ dashboardContent: 'edit-entry' }));
+    dispatch(user.actions.setEntry({ entry }));
+  };
+
   return (
     <>
       <EntriesSection>
@@ -89,6 +94,7 @@ export const LastEntries = () => {
             <p>{`Daily Activities: ${entry.dailyActivities.join(', ')}`}</p>
             <p>{`Daily Weight: ${entry.dailyWeight} grams`}</p>
             <p>{`Daily Reflection: ${entry.dailyReflection}`}</p>
+            <button type="button" onClick={() => handleEdit(entry)}>Edit Entry</button>
           </EntryCard>
         ))}
       </EntriesSection>
