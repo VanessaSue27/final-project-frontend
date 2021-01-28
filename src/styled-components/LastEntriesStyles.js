@@ -7,6 +7,10 @@ export const EntriesSection = styled.div`
   flex-direction: column;
   align-items: center;
   overflow-y: scroll;
+
+  @media (max-width: 668px) { 
+    height: 50vh;
+  }
 `;
 
 export const EntryCard = styled.div` 
@@ -18,6 +22,12 @@ export const EntryCard = styled.div`
   text-align:left;
   -webkit-box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5); 
   box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5);
+
+  @media (max-width: 668px) { 
+    width:80%;
+  }
+
+
 `;
 
 export const EntriesTitle = styled.h3`

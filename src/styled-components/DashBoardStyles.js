@@ -46,7 +46,7 @@ export const MainHeader = styled.div`
     background-color:transparent;
     box-shadow: none;
     margin-left: 20%;
-    margin-top: 0;
+    margin-top: 30px;
     font-size: 20px;
     padding: 0;
   }
@@ -59,7 +59,8 @@ export const MainHeader = styled.div`
 `;
 
 export const HeaderContainer = styled.div`
-  width: 60%;  
+  width: 60%; 
+  max-height: 500px; 
   display: flex;
   flex-direction: row;
   text-align: left;
