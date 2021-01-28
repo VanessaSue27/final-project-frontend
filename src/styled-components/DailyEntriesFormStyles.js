@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const DailyEntryForm = styled.form`
   width: 100%;
-  height: 75vh;
   margin-top: 30px;
   display: flex;
   justify-content:center;
