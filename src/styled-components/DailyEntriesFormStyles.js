@@ -13,19 +13,20 @@ export const DailyEntryForm = styled.form`
   border-radius: 20px;
 
   @media (max-width: 668px) { 
-    height: auto;
+    height: 57vh;
   }
 `;
 
 export const CheckboxesContainer = styled.div`
   width: 51%;
-  height: 25%;
   display: flex;
   flex-wrap: wrap;
   margin-bottom:0;
 
   @media (max-width: 668px) {
     width: 68%;
+    margin-top:0;
+    height: 35%;
   };
 
   @media (min-width: 768px) and (max-width: 1023px) {
@@ -42,6 +43,7 @@ export const DailyEntryTitle = styled.h3`
   @media (max-width: 668px) {
     font-size: 20px;
     margin-top: 0;
+    margin-bottom: 0;
     padding: 10px;
     text-align:center;
   };
