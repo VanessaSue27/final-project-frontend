@@ -53,8 +53,7 @@ export const MainHeader = styled.div`
 `;
 
 export const HeaderContainer = styled.div`
-  width: 60%;
-  max-width: 78%; 
+  width: 60%; 
   max-height: 500px; 
   display: flex;
   flex-direction: row;
