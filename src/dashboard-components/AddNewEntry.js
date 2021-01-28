@@ -71,8 +71,7 @@ export const AddNewEntry = () => {
                 name="daily-activities"
                 type="checkbox"
                 checked={dailyActivities.includes(item)}
-                onChange={() => onTypeChange(item)}
-                required />
+                onChange={() => onTypeChange(item)} />
               {item}
               <span className="custom-checkbox" />
             </CheckboxLabel>
