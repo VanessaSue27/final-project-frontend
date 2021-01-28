@@ -42,7 +42,7 @@ export const BabyProfileHeader = () => {
     <>
       <HeaderContainer>
         <ProfileImage src={robot} />
-        <HeaderTitle> {`Profile of ${babyName}`}</HeaderTitle>
+        <HeaderTitle> {`${babyName}`}</HeaderTitle>
         <HeaderText>{`Member Since: ${moment(createdAt).format('MMMM DD, YYYY')}`}</HeaderText>
         <HeaderText>{`Gestational Age: ${gestationalAge}`}</HeaderText>
         <HeaderText>{`Time of Birth: ${timeOfBirth}`}</HeaderText>

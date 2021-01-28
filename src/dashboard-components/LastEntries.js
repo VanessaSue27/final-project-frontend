@@ -46,24 +46,6 @@ export const LastEntries = () => {
       headers: { Authorization: accessToken }
     })
       .then((res) => {
-        swal({
-          // eslint-disable-next-line quotes
-          title: "DANGER ZONE! Are you sure you want to delete entry?",
-          text: "Once deleted, you can't recover it",
-          buttons: true,
-          dangerMode: true,
-          icon: 'warning'
-        }).then((willDelete) => {
-          if (willDelete) {
-            swal({
-              title: 'Entry deleted successfully',
-              icon: 'success',
-              buttons: true
-            }).then(() => {
-              window.location.reload();
-            });
-          }
-        });
         if (!res.ok) {
           throw new Error('Could not delete entry.');
         }
@@ -83,13 +65,34 @@ export const LastEntries = () => {
     dispatch(user.actions.setEntry({ entry }));
   };
 
+  const handleClick = (entryId) => {
+    swal({
+      title: 'DANGER ZONE! Are you sure you want to delete entry?',
+      text: "Once deleted, you can't recover it",
+      buttons: true,
+      dangerMode: true,
+      icon: 'warning'
+    }).then((willDelete) => {
+      if (willDelete) {
+        handleDelete(entryId)
+        swal({
+          title: 'Entry deleted successfully',
+          icon: 'success',
+          buttons: true
+        }).then(() => {
+          window.location.reload();
+        });
+      }
+    });
+  };
+
   return (
     <>
       <EntriesSection>
         <EntriesTitle>Latest Entries</EntriesTitle>
         {entriesData.map((entry) => (
           <EntryCard key={entry._id}>
-            <DeleteButton type="button" onClick={() => handleDelete(entry._id)}> X </DeleteButton>
+            <DeleteButton type="button" onClick={() => handleClick(entry._id)}> X </DeleteButton>
             <p>{`Entry created on: ${moment(entry.createdAt).format('MMMM DD, YYYY')}`}</p>
             <p>{`Daily Activities: ${entry.dailyActivities.join(', ')}`}</p>
             <p>{`Daily Weight: ${entry.dailyWeight} grams`}</p>
