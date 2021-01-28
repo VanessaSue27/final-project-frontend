@@ -10,22 +10,27 @@ export const Section = styled.main`
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
+  align-items: center;
   font-family:'Roboto Slab', sans-serif;
 `;
 
 export const UserForm = styled.form`
   width: 60%;
-  background-color: rgb(203,214,226, 0.6);
   display: flex;
+  background-color: rgb(203,214,226, 0.6);
   flex-direction: column;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
   border-radius: 20px;
-  margin: 10px;
   -webkit-box-shadow: 2px 2px 17px 9px rgba(114, 114, 114, 0.1); 
   box-shadow: 2px 2px 17px 9px rgba(114,114,114,0.1);
-  transform: translate(0%, 5%);
+
+  @media (max-width: 668px) { 
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+  }
 `;
 
 export const Title = styled.h1`
@@ -33,8 +38,14 @@ export const Title = styled.h1`
   color:rgb(234,70,100);
   font-size: 50px;
   text-align:center;
-  letter-spacing: 5px;
-  margin-bottom: 20px;
+  padding: 5px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+
+
+  @media (max-width: 668px) { 
+    font-size: 30px;
+  }
 `;
 
 export const SubTitle = styled.h2`
@@ -45,6 +56,11 @@ export const SubTitle = styled.h2`
   text-align:center;
   margin-bottom:0;
   margin-top: 30px;
+
+  @media (max-width: 668px) { 
+    font-size: 20px;
+    margin-top: 10px;
+  }
 `;
 
 export const InputField = styled.input`
@@ -69,6 +85,10 @@ export const Dropdown = styled.select`
   border:none;
   -webkit-box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5); 
   box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5);
+
+  @media (max-width: 668px) { 
+    font-size: 14px;
+  }
 `;
 
 export const SubmitButton = styled.button`
@@ -88,7 +108,6 @@ export const SubmitButton = styled.button`
   border: none;
     &:hover {
       background: rgb(63,177,181);
-      transform: scale(1.1);
       cursor: pointer
     }
 
