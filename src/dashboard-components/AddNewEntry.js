@@ -45,8 +45,6 @@ export const AddNewEntry = () => {
         }
       })
       .then((json) => {
-        // Shows in console a message saying the profile was saved successfully
-        console.log(json);
         dispatch(user.actions.setDashboardContent({ dashboardContent: 'last-entries' }));
       })
       // eslint-disable-next-line no-shadow
@@ -73,7 +71,8 @@ export const AddNewEntry = () => {
                 name="daily-activities"
                 type="checkbox"
                 checked={dailyActivities.includes(item)}
-                onChange={() => onTypeChange(item)} />
+                onChange={() => onTypeChange(item)}
+                required />
               {item}
               <span className="custom-checkbox" />
             </CheckboxLabel>

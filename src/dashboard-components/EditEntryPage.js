@@ -54,8 +54,6 @@ export const EditEntryPage = () => {
         return res.json();
       })
       .then((json) => {
-        // console logs a message saying the entry was updated successfully
-        console.log(json);
         dispatch(user.actions.setDashboardContent({ dashboardContent: 'last-entries' }));
         localStorage.removeItem('entry');
         dispatch(user.actions.setEntry({ entry: null }));
@@ -75,11 +73,12 @@ export const EditEntryPage = () => {
             {activities.map((item) => (
               <label htmlFor="activities" key={item}>
                 <input
-                  id="activities"
+                  id={`activities-${item}`}
                   name="daily activities"
                   type="checkbox"
                   checked={dailyActivities.includes(item)}
-                  onChange={() => onTypeChange(item)} />
+                  onChange={() => onTypeChange(item)}
+                  required />
                 {item}
               </label>
             ))}
