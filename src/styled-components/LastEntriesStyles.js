@@ -26,8 +26,6 @@ export const EntryCard = styled.div`
   @media (max-width: 668px) { 
     width:80%;
   }
-
-
 `;
 
 export const EntriesTitle = styled.h3`
@@ -37,23 +35,59 @@ export const EntriesTitle = styled.h3`
   margin-bottom:0;
 `;
 
+export const EntriesText = styled.p`
+  color:rgb(81,109,153);
+  font-size: 18px;
+`;
+
+export const ButtonsContainer = styled.div`
+  display:flex;
+  flex-direction: row; 
+  justify-content: flex-end;
+
+  @media (max-width: 668px) { 
+    justify-content: center;
+  }
+`;
 export const DeleteButton = styled.button`
+  box-sizing: border-box;
   display: inline-block;
   text-align: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 20px;
-  padding: 8px;
-  margin-left: 95%;
-  font-size: 20px;
-  background: rgb(209,209,209);
+  width: 100px;
+  height: 50px;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 35px;
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 18px;
+  background: rgb(240,96,122);
   color: #fff;
-  transform: translate(50% 50%);
   border: none;
+  border-radius: 10px;
     &:hover {
-      background: rgb(240,96,122);
-      transform: scale(1.1);
+      background: rgb(238,55,55);
       cursor: pointer
     }
+`;
 
+export const EditButton = styled.button`
+  box-sizing: border-box;
+  display: inline-block;
+  text-align: center;
+  width: 100px;
+  height: 50px;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 18px;
+  background: rgb(63,177,181);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+    &:hover {
+      background: rgb(255,178,98);
+      cursor: pointer
+    }
 `;

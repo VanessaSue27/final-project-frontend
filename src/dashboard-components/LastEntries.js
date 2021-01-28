@@ -5,7 +5,7 @@ import moment from 'moment';
 import swal from 'sweetalert';
 
 import { user } from '../reducer/user';
-import { EntriesSection, EntriesTitle, EntryCard, DeleteButton } from '../styled-components/LastEntriesStyles';
+import { EntriesSection, EntriesTitle, EntryCard, DeleteButton, EditButton, ButtonsContainer, EntriesText } from '../styled-components/LastEntriesStyles';
 
 export const LastEntries = () => {
   const dispatch = useDispatch();
@@ -92,12 +92,14 @@ export const LastEntries = () => {
         <EntriesTitle>Latest Entries</EntriesTitle>
         {entriesData.map((entry) => (
           <EntryCard key={entry._id}>
-            <DeleteButton type="button" onClick={() => handleClick(entry._id)}> X </DeleteButton>
-            <p>{`Entry created on: ${moment(entry.createdAt).format('MMMM DD, YYYY')}`}</p>
-            <p>{`Daily Activities: ${entry.dailyActivities.join(', ')}`}</p>
-            <p>{`Daily Weight: ${entry.dailyWeight} grams`}</p>
-            <p>{`Daily Reflection: ${entry.dailyReflection}`}</p>
-            <button type="button" onClick={() => handleEdit(entry)}>Edit Entry</button>
+            <EntriesText>{`Entry created on:  ${moment(entry.createdAt).format('MMMM DD, YYYY')}`}</EntriesText>
+            <EntriesText>{`Daily Activities:  ${entry.dailyActivities.join(', ')}`}</EntriesText>
+            <EntriesText>{`Daily Weight:  ${entry.dailyWeight} grams`}</EntriesText>
+            <EntriesText>{`Daily Reflection:  ${entry.dailyReflection}`}</EntriesText>
+            <ButtonsContainer>
+              <EditButton type="button" onClick={() => handleEdit(entry)}>Edit</EditButton>
+              <DeleteButton type="button" onClick={() => handleClick(entry._id)}>Delete</DeleteButton>
+            </ButtonsContainer>
           </EntryCard>
         ))}
       </EntriesSection>
