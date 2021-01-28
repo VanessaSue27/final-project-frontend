@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { RandomFact } from '../styled-components/DashBoardStyles';
+import { Title } from '../styled-components/GlobalStyles';
 
 const babyFacts = [
   'Babies are born to boogie! 🕺 Studies have shown that babies are born with innate sense of rhythm',
@@ -24,8 +25,8 @@ export const DashboardHome = () => {
 
   return (
     <>
-      <RandomFact> <span role="img" aria-label="lightbulb-emoji">💡</span> Fun Fact <span role="img" aria-label="lightbulb-emoji">💡</span></RandomFact>
-      {pickRandomFacts()}
+      <Title><span role="img" aria-label="lightbulb-emoji">💡</span> Fun Fact <span role="img" aria-label="lightbulb-emoji">💡</span></Title>
+      <RandomFact>{pickRandomFacts()}</RandomFact>
     </>
   )
 };

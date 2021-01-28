@@ -20,8 +20,9 @@ export const EntryCard = styled.div`
   margin: 10px;
   padding: 20px;
   text-align:left;
-  -webkit-box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5); 
-  box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5);
+  background-color:rgb(255,255,255, 0.4);
+  -webkit-box-shadow: 2px 2px 22px 2px rgba(180,194,216,0.5); 
+  box-shadow: 2px 2px 22px 2px rgba(180,194,216,0.5);
 
   @media (max-width: 668px) { 
     width:80%;

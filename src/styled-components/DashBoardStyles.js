@@ -16,7 +16,7 @@ export const PageSection = styled.main`
 `;
 
 export const MainSection = styled.div`
-  width: 80%;
+  width: 83%;
   display: flex;
   flex-direction: column;
 
@@ -35,16 +35,10 @@ export const MainHeader = styled.div`
   font-family: 'Roboto Slab', sans-serif;
   color: rgb(234,70,100);
   margin-left: 250px;
-  margin-top: 2%;
-  border-radius: 16px;
-  background-color: rgb(242,240,240, 0.6);
-  -webkit-box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5); 
-  box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5);
+  margin-top: 30px;
 
   @media (max-width: 668px) {
     width: 75%;
-    background-color:transparent;
-    box-shadow: none;
     margin-left: 20%;
     margin-top: 30px;
     font-size: 20px;
@@ -59,7 +53,8 @@ export const MainHeader = styled.div`
 `;
 
 export const HeaderContainer = styled.div`
-  width: 60%; 
+  width: 60%;
+  max-width: 78%; 
   max-height: 500px; 
   display: flex;
   flex-direction: row;
@@ -69,7 +64,7 @@ export const HeaderContainer = styled.div`
   margin-top: 15px;
   border-radius: 20px;
   color: rgb(242,240,240);
-  background-color: rgb(80,91,211,0.7);
+  background-color: rgb(80,91,211);
   -webkit-box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.8); 
   box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.8);
 
@@ -128,7 +123,8 @@ export const DashboardMainContainer = styled.div`
 
 export const RandomFact = styled.h3`
   font-size: 30px;
-  color: rgb(240,96,122);
+  text-align: center;
+  color: rgb(63,177,181);
 `;
 
 export const HeaderTitle = styled.h2`
