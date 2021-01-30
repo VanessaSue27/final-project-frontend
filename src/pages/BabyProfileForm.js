@@ -8,8 +8,7 @@ import { Dropdown, Section, InputField, UserForm, SubmitButton, FormLabel, Title
 import { user } from '../reducer/user';
 import { LogInPage } from './LogInPage';
 
-// const PROFILE_URL = 'https://time-capsule-final.herokuapp.com/profiles';
-const PROFILE_URL = 'http://localhost:8080/profiles';
+const PROFILE_URL = 'https://time-capsule-final.herokuapp.com/profiles';
 
 export const BabyProfileForm = () => {
   const [babyName, setBabyName] = useState('');

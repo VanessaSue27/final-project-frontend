@@ -6,8 +6,7 @@ import { Title, SubTitle, ErrorMessage } from '../styled-components/GlobalStyles
 import { Form, InputLabel, InputSection, UserInput, Button, LandingImage, ButtonLink } from '../styled-components/SignUpAndLoginStyles';
 import rocket from '../assets/rocket.jpg'
 
-// const LOGIN_URL = 'https://time-capsule-final.herokuapp.com/sessions';
-const LOGIN_URL = 'http://localhost:8080/sessions';
+const LOGIN_URL = 'https://time-capsule-final.herokuapp.com/sessions';
 
 export const LogInPage = () => {
   const [name, setName] = useState('');
