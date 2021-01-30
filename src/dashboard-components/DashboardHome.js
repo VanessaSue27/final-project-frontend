@@ -8,7 +8,6 @@ import rocket2 from '../assets/rocket2.png';
 import mother from '../assets/mother.png';
 import motherBaby from '../assets/mother-baby.png';
 
-
 const babyFacts = [
   'Babies are born to boogie! 🕺 Studies have shown that babies are born with innate sense of rhythm',
   'Newborns have natural aquatic instincts when in water 🏊‍♀️',

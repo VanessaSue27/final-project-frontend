@@ -12,13 +12,12 @@ export const BabyProfileHeader = () => {
   const accessToken = useSelector((store) => store.user.accessToken);
   const [babyProfileData, setBabyProfileData] = useState({});
   // eslint-disable-next-line no-unused-vars
-  const [profileImage, setProfileImage] = useState({ preview: '', raw: '' });
+  const [profileImage, setProfileImage] = useState();
   const { createdAt, babyName, gestationalAge, timeOfBirth, dateOfBirth, profileImageUrl } = babyProfileData;
   const imageInput = useRef()
 
-  // const GETPROFILE_URL = 'https://time-capsule-final.herokuapp.com/profiles';
-  const GETPROFILE_URL = 'http://localhost:8080/profiles';
-  const IMAGE_URL = 'http://localhost:8080/profile/image';
+  const GETPROFILE_URL = 'https://time-capsule-final.herokuapp.com/profiles';
+  const IMAGE_URL = 'https://time-capsule-final.herokuapp.com/profile/image';
 
   const getBabyDetails = () => {
     fetch(GETPROFILE_URL, {
@@ -63,15 +62,6 @@ export const BabyProfileHeader = () => {
         dispatch(user.actions.setErrorMessage({ errorMessage: error.toString() }));
       });
   };
-
-  // const handleChange = (event) => {
-  //   if (event.target.files.length) {
-  //     setProfileImage({
-  //       preview: URL.createObjectURL(event.target.files[0]),
-  //       raw: event.target.files[0]
-  //     });
-  //   }
-  // };
 
   return (
     <HeaderContainer>
