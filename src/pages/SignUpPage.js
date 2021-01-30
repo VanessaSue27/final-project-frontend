@@ -6,7 +6,8 @@ import rocket from '../assets/rocket.jpg'
 import { InputSection, Form, Button, LandingImage, UserInput, InputLabel, ButtonLink } from '../styled-components/SignUpAndLoginStyles';
 import { Title, SubTitle, ErrorMessage } from '../styled-components/GlobalStyles';
 
-const SIGNUP_URL = 'https://time-capsule-final.herokuapp.com/users';
+// const SIGNUP_URL = 'https://time-capsule-final.herokuapp.com/users';
+const SIGNUP_URL = 'http://localhost:8080/users';
 
 export const SignUpPage = () => {
   const [name, setName] = useState('');

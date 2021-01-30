@@ -67,7 +67,7 @@ export const HeaderContainer = styled.div`
   -webkit-box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.8); 
   box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.8);
 
-  @media (min-width: 320px) and (max-width: 1023px) {
+  @media (min-width: 320px) and (max-width: 992px) {
     width: 100%;
     margin-left:0;
     padding: 0;
@@ -78,12 +78,13 @@ export const ImageContainer = styled.div`
   display:flex;
   justify-content:left;  
   align-items: center;
+  cursor: pointer;
 `;
 
 export const HeaderTextContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding-left: 35px;
+  margin-left: 50px;
 `;
 
 export const HeaderText = styled.p`
@@ -98,14 +99,22 @@ export const ProfileImage = styled.img`
   height: 100px;
   border-radius: 30px;
   padding: 30px;
+  cursor: pointer;
 
   @media (max-width: 668px) {
-   width: 50px;
-   height: 50px;
+   width: 75px;
+   height: 75px;
    padding: 0;
    padding-left: 15px;
    border-radius: 0;
-};
+}
+`;
+
+export const Instructions = styled.p`
+font-size: 15px;
+text-align: center;
+margin-top: 0;
+color: rgb(234,70,100);
 `;
 
 export const DashboardMainContainer = styled.div`

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { RandomFact } from '../styled-components/DashBoardStyles';
+import { Instructions, RandomFact } from '../styled-components/DashBoardStyles';
 import { Title } from '../styled-components/GlobalStyles';
 
 const babyFacts = [
@@ -25,6 +25,7 @@ export const DashboardHome = () => {
 
   return (
     <>
+      <Instructions>Click the picture to change it and then click &quot;Upload&quot;</Instructions>
       <Title><span role="img" aria-label="lightbulb-emoji">💡</span> Fun Fact <span role="img" aria-label="lightbulb-emoji">💡</span></Title>
       <RandomFact>{pickRandomFacts()}</RandomFact>
     </>

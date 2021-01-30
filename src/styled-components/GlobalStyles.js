@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-
 import background from '../assets/background.jpg';
 
 export const Section = styled.main`
@@ -159,3 +158,36 @@ export const ErrorMessage = styled.p`
   border-radius: 16px;
   padding:10px;
 `;
+
+export const UploadButton = styled.button`
+  box-sizing: border-box;
+  display: inline-block;
+  text-align: center;
+  width: 100px;
+  height: 25px;
+  border-radius: 20px;
+  margin-left: -135px;
+  margin-top: 155px;
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 12px;
+  background: rgb(240,96,122);
+  color: #fff;
+  border: none;
+    &:hover {
+      background: rgb(63,177,181);
+      cursor: pointer
+    }
+
+   @media (max-width: 668px){
+    width: 75px;
+    margin-left: -75px;
+    margin-top: 145px;
+   }
+
+  @media (min-width: 768px) and (max-width: 1023px){
+    width: 100px;
+    margin-left: -55px;
+    margin-top: 145px;
+  }
+`;
+
