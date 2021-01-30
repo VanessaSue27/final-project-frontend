@@ -135,6 +135,12 @@ export const RandomFact = styled.h3`
   color: rgb(63,177,181);
 `;
 
+export const RandomImage = styled.img`
+  max-width: 500px;
+  max-height: 500px;
+  margin-left: 150px;
+`;
+
 export const HeaderTitle = styled.h2`
   font-size: 20px;
   margin-bottom: 0;

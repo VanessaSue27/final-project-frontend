@@ -1,7 +1,13 @@
 import React from 'react';
 
-import { Instructions, RandomFact } from '../styled-components/DashBoardStyles';
+import { Instructions, RandomFact, RandomImage } from '../styled-components/DashBoardStyles';
 import { Title } from '../styled-components/GlobalStyles';
+import appreciation from '../assets/appreciation.svg';
+import balloons from '../assets/balloons.png';
+import rocket2 from '../assets/rocket2.png';
+import mother from '../assets/mother.png';
+import motherBaby from '../assets/mother-baby.png';
+
 
 const babyFacts = [
   'Babies are born to boogie! 🕺 Studies have shown that babies are born with innate sense of rhythm',
@@ -17,17 +23,24 @@ const babyFacts = [
   'Babies deprive their parents of approximately 44 days of sleep, on average, in the first year 😬'
 ];
 
+const randomImages = [
+  appreciation,
+  balloons,
+  rocket2,
+  mother,
+  motherBaby
+]
+
 export const DashboardHome = () => {
-  const pickRandomFacts = () => {
-    const randomIndex = Math.floor(Math.random() * babyFacts.length);
-    return babyFacts[randomIndex];
-  };
+  const randomImage = randomImages[Math.floor(Math.random() * randomImages.length)];
+  const randomIndex = babyFacts[Math.floor(Math.random() * babyFacts.length)];
 
   return (
     <>
       <Instructions>Click the picture to change it and then click &quot;Upload&quot;</Instructions>
+      <RandomImage src={`${randomImage}`} alt="greeting" />
       <Title><span role="img" aria-label="lightbulb-emoji">💡</span> Fun Fact <span role="img" aria-label="lightbulb-emoji">💡</span></Title>
-      <RandomFact>{pickRandomFacts()}</RandomFact>
+      <RandomFact>{`${randomIndex}`}</RandomFact>
     </>
   )
 };
