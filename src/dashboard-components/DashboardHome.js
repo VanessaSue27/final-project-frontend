@@ -38,9 +38,9 @@ export const DashboardHome = () => {
   return (
     <>
       <Instructions>Click the picture to change it and then click &quot;Upload&quot;</Instructions>
-      <RandomImage src={`${randomImage}`} alt="greeting" />
       <Title><span role="img" aria-label="lightbulb-emoji">💡</span> Fun Fact <span role="img" aria-label="lightbulb-emoji">💡</span></Title>
       <RandomFact>{`${randomIndex}`}</RandomFact>
+      <RandomImage src={`${randomImage}`} alt="greeting" />
     </>
   )
 };
