@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import { user } from '../reducer/user';
 import rocket from '../assets/rocket.jpg'
@@ -46,37 +47,40 @@ export const SignUpPage = () => {
   };
 
   return (
-    <InputSection>
-      <Form onSubmit={handleSignUp}>
-        <Title>Time Capsule Sign Up</Title>
-        <InputLabel>
-            Username
-        </InputLabel>
-        <UserInput
-          id="usernameInput"
-          type="text"
-          value={name}
-          onChange={(event) => setName(event.target.value)}
-          minLength="3"
-          maxLength="20"
-          required />
-        <InputLabel>
-            Password
-        </InputLabel>
-        <UserInput
-          id="passwordInput"
-          type="password"
-          value={password}
-          onChange={(event) => setPassword(event.target.value)}
-          minLength="5"
-          maxLength="50"
-          required />
-        <Button type="submit">SIGN UP</Button>
-        {error && <ErrorMessage>{`${error}`}</ErrorMessage>}
-        <SubTitle>Already a user?</SubTitle>
-        <ButtonLink to="/">LOG IN</ButtonLink>
-      </Form>
-      <LandingImage src={rocket} alt="rocket" />
-    </InputSection>
+    <>
+      <InputSection>
+        <Form onSubmit={handleSignUp}>
+          <Title>Time Capsule Sign Up</Title>
+          <InputLabel>
+              Username
+          </InputLabel>
+          <UserInput
+            id="usernameInput"
+            type="text"
+            value={name}
+            onChange={(event) => setName(event.target.value)}
+            minLength="3"
+            maxLength="20"
+            required />
+          <InputLabel>
+              Password
+          </InputLabel>
+          <UserInput
+            id="passwordInput"
+            type="password"
+            value={password}
+            onChange={(event) => setPassword(event.target.value)}
+            minLength="5"
+            maxLength="50"
+            required />
+          <Button type="submit">SIGN UP</Button>
+          {error && <ErrorMessage>{`${error}`}</ErrorMessage>}
+          <SubTitle>Already a user?</SubTitle>
+          <ButtonLink to="/">LOG IN</ButtonLink>
+          <Link to="/about">Learn more about Time Capsule</Link>
+        </Form>
+        <LandingImage src={rocket} alt="rocket" />
+      </InputSection>
+    </>
   );
 };

@@ -7,6 +7,7 @@ import { user } from './reducer/user';
 
 import { SignUpPage } from './pages/SignUpPage';
 import { LogInPage } from './pages/LogInPage';
+import { AboutPage } from './pages/AboutPage';
 import { BabyProfileForm } from './pages/BabyProfileForm';
 import { Dashboard } from './pages/Dashboard';
 
@@ -24,6 +25,10 @@ export const App = () => {
 
           <Route path="/signup">
             <SignUpPage />
+          </Route>
+
+          <Route path="/about">
+            <AboutPage />
           </Route>
 
           <Route path="/create-profile">
