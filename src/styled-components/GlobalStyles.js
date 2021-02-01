@@ -179,10 +179,10 @@ export const ErrorMessage = styled.p`
 `;
 
 export const ImageErrorMessage = styled.div`
-  width: 60%;
+  width: 70%;
   font-size: 15px;
   margin-top: 10px;
-  margin-left: 20%;
+  margin-left: 30%;
   font-family: 'Roboto Slab', sans-serif;
   text-align: center;
   color: rgb(255,255,255);

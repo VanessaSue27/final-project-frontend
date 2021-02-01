@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const EntriesSection = styled.div`
   width: 100%;
-  height: 70vh;
+  height: 65vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,10 +11,10 @@ export const EntriesSection = styled.div`
   @media (max-width: 668px) { 
     height: 45vh;
   }
-  @media (min-width: 768px) and (max-width: 1023px) { 
-    height: 65vh;
-  }
 
+  @media (min-width: 768px) and (max-width: 1023px) { 
+    height: 50vh;
+  }
 `;
 
 export const EntryCard = styled.div` 
