@@ -9,8 +9,12 @@ export const EntriesSection = styled.div`
   overflow-y: scroll;
 
   @media (max-width: 668px) { 
-    height: 50vh;
+    height: 45vh;
   }
+  @media (min-width: 768px) and (max-width: 1023px) { 
+    height: 65vh;
+  }
+
 `;
 
 export const EntryCard = styled.div` 
@@ -25,7 +29,7 @@ export const EntryCard = styled.div`
   box-shadow: 2px 2px 22px 2px rgba(180,194,216,0.5);
 
   @media (max-width: 668px) { 
-    width:80%;
+    width: 80%;
   }
 `;
 

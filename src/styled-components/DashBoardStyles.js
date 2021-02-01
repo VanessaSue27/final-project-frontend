@@ -69,6 +69,7 @@ export const HeaderContainer = styled.div`
   @media (max-width: 668px) {
     width: 100%;
     margin-left:0;
+    margin-bottom:1px;
     padding: 0;
   };
 
@@ -93,6 +94,7 @@ export const HeaderTextContainer = styled.div`
 
   @media (max-width: 668px) {
   margin-left: 20px;
+  padding-bottom: 5px;
 }
 
 `;

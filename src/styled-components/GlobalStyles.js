@@ -178,6 +178,28 @@ export const ErrorMessage = styled.p`
   }
 `;
 
+export const ImageErrorMessage = styled.div`
+  width: 60%;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-left: 20%;
+  font-family: 'Roboto Slab', sans-serif;
+  text-align: center;
+  color: rgb(255,255,255);
+  background-color: rgb(234,70,100, 0.8);
+  -webkit-box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5); 
+  box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5);
+  border-radius: 16px;
+  padding: 5px;
+
+  @media (max-width: 668px) {
+    width: 90%;
+    margin-bottom: 0;
+    margin-top: 5px;
+    margin-left: 15px;
+  }
+`;
+
 export const UploadButton = styled.button`
   box-sizing: border-box;
   display: inline-block;
@@ -205,7 +227,7 @@ export const UploadButton = styled.button`
 
   @media (min-width: 768px) and (max-width: 1023px){
     width: 100px;
-    margin-left: -140px;
+    margin-left: -130px;
     margin-top: 150px;
   }
 `;

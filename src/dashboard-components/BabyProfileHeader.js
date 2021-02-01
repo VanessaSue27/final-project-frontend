@@ -5,7 +5,7 @@ import moment from 'moment';
 import { user } from '../reducer/user';
 import robot from '../assets/robot.png';
 import { HeaderContainer, HeaderTitle, HeaderText, ProfileImage, ImageContainer, HeaderTextContainer } from '../styled-components/DashBoardStyles';
-import { UploadButton, ErrorMessage } from '../styled-components/GlobalStyles';
+import { UploadButton, ImageErrorMessage } from '../styled-components/GlobalStyles';
 
 export const BabyProfileHeader = () => {
   const dispatch = useDispatch();
@@ -92,7 +92,7 @@ export const BabyProfileHeader = () => {
           <HeaderText>{`${babyName} is ${moment(dateOfBirth).fromNow(true)} old.`}</HeaderText>
         </HeaderTextContainer>
       </HeaderContainer>
-      {imageError && <ErrorMessage>{imageError}</ErrorMessage>}
+      {imageError && <ImageErrorMessage>{imageError}</ImageErrorMessage>}
     </>
   );
 };
