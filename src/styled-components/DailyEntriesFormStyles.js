@@ -13,7 +13,7 @@ export const DailyEntryForm = styled.form`
   border-radius: 20px;
 
   @media (min-width: 320px) and (max-width: 1023px) { 
-    height: 55vh;
+    height: 53vh;
   }
 `;
 
