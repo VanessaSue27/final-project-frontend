@@ -165,11 +165,10 @@ export const ErrorMessage = styled.p`
 
   @media (max-width: 668px) {
     font-size: 15px;
-    margin-top: 30px;
+    margin-top: 15px;
     margin-bottom: 0;
     padding: 5px;
   }
-
 
   @media (min-width: 768px) and (max-width: 1023px){
     font-size: 15px;
