@@ -35,7 +35,7 @@ export const UserForm = styled.form`
 export const Title = styled.h1`
   font-family:'Roboto Slab', sans-serif;
   color:rgb(234,70,100);
-  font-size: 50px;
+  font-size: 45px;
   text-align:center;
   padding: 5px;
   margin-top: 20px;
@@ -43,6 +43,11 @@ export const Title = styled.h1`
 
 
   @media (max-width: 668px) { 
+    font-size: 25px;
+    margin:0;
+  }
+
+  @media (min-width: 768px) and (max-width:1023px) { 
     font-size: 30px;
   }
 `;
@@ -156,7 +161,22 @@ export const ErrorMessage = styled.p`
   -webkit-box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5); 
   box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5);
   border-radius: 16px;
-  padding:10px;
+  padding: 8px;
+
+  @media (max-width: 668px) {
+    font-size: 15px;
+    margin-top: 30px;
+    margin-bottom: 0;
+    padding: 5px;
+  }
+
+
+  @media (min-width: 768px) and (max-width: 1023px){
+    font-size: 15px;
+    margin-top: 30px;
+    margin-bottom: 0;
+    padding: 5px;
+  }
 `;
 
 export const UploadButton = styled.button`
@@ -186,8 +206,8 @@ export const UploadButton = styled.button`
 
   @media (min-width: 768px) and (max-width: 1023px){
     width: 100px;
-    margin-left: -55px;
-    margin-top: 145px;
+    margin-left: -140px;
+    margin-top: 150px;
   }
 `;
 

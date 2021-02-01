@@ -39,16 +39,15 @@ export const MainHeader = styled.div`
 
   @media (max-width: 668px) {
     width: 75%;
-    margin-left: 20%;
-    margin-top: 30px;
+    margin-left: 70px;
     font-size: 20px;
     padding: 0;
   }
 
   @media (min-width: 669px) and (max-width: 1023px) {
     width: 85%;
-    margin-left: 8%;
-    margin-top: 15%;
+    margin-left: 70px;
+    margin-bottom: 30px;
   }
 `;
 
@@ -59,7 +58,7 @@ export const HeaderContainer = styled.div`
   flex-direction: row;
   text-align: left;
   padding: 10px;
-  margin-left: 325px;
+  margin-left: 355px;
   margin-top: 15px;
   border-radius: 20px;
   color: rgb(242,240,240);
@@ -67,11 +66,17 @@ export const HeaderContainer = styled.div`
   -webkit-box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.8); 
   box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.8);
 
-  @media (min-width: 320px) and (max-width: 992px) {
+  @media (max-width: 668px) {
     width: 100%;
     margin-left:0;
     padding: 0;
   };
+
+  @media (min-width: 669px) and (max-width: 1023px) {
+    width: 85%;
+    margin-left: 8%;
+    margin-top: 0;
+  }
 `;
 
 export const ImageContainer = styled.div`
@@ -85,6 +90,11 @@ export const HeaderTextContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 50px;
+
+  @media (max-width: 668px) {
+  margin-left: 20px;
+}
+
 `;
 
 export const HeaderText = styled.p`
@@ -129,23 +139,44 @@ export const DashboardMainContainer = styled.div`
   };
 `;
 
+export const MainContentContainer = styled.div`
+display: flex; 
+flex-direction: column;
+justify-content: center;
+align-items: center;
+`;
+
 export const RandomFact = styled.h3`
   font-size: 30px;
   text-align: center;
   color: rgb(63,177,181);
+  margin: 0;
+
+  @media (max-width: 668px) { 
+    font-size: 18px;
+  }
+
+  @media (min-width: 669px) and (max-width:1023px) { 
+    font-size: 18px;
+  }
 `;
 
 export const RandomImage = styled.img`
-  max-width: 500px;
-  max-height: 500px;
-  margin-left: 150px;
+  max-width: 300px;
+  max-height: 400px;
+  margin: 10px;
+
+  @media (max-width: 668px) { 
+    max-width: 200px;
+    max-height: 175px;
+  }
 `;
 
 export const HeaderTitle = styled.h2`
   font-size: 20px;
   margin-bottom: 0;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 5px;
 `;
 
 export const SidebarContainer = styled.div`

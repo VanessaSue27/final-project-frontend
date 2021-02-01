@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import moment from 'moment';
 
 import { user } from '../reducer/user';
-import { CheckboxesContainer, DailyEntryForm, DailyEntryTitle, TextArea, CheckboxLabel } from '../styled-components/DailyEntriesFormStyles';
+import { CheckboxesContainer, DailyEntryForm, DailyEntryTitle, TextArea, CheckboxLabel, DailyReflectionText } from '../styled-components/DailyEntriesFormStyles';
 import { FormLabel, InputField, SubmitButton, ErrorMessage } from '../styled-components/GlobalStyles';
 
 const activities = [
@@ -72,7 +72,7 @@ export const EditEntryPage = () => {
   return (
     <>
       <DailyEntryForm onSubmit={handleEdit}>
-        <DailyEntryTitle>{`Editing entry created on: ${moment(entry.createdAt).format('MMMM DD, YYYY')}`}</DailyEntryTitle>
+        <DailyEntryTitle>{`Editing entry from: ${moment(entry.createdAt).format('MMMM DD, YYYY')}`}</DailyEntryTitle>
         <CheckboxesContainer>
           {activities.map((item) => (
             <CheckboxLabel className="checkbox-container" htmlFor={`activities-${item}`} key={item}>
@@ -86,8 +86,8 @@ export const EditEntryPage = () => {
               <span className="custom-checkbox" />
             </CheckboxLabel>
           ))}
-          {checkboxRequired && <ErrorMessage>Please choose one of the options above!</ErrorMessage>}
         </CheckboxesContainer>
+        {checkboxRequired && <ErrorMessage>Please choose one of the options above!</ErrorMessage>}
         <FormLabel>
               Weight (in grams)
           <InputField
@@ -97,7 +97,7 @@ export const EditEntryPage = () => {
             onChange={(event) => setDailyWeight(event.target.value)}
             required />
         </FormLabel>
-        <p>Daily Reflection(not mandatory, but we reccomend it so you keep those memories!)</p>
+        <DailyReflectionText>Daily Reflection</DailyReflectionText>
         <TextArea
           rows="3"
           maxLength="300"

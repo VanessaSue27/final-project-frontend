@@ -19,7 +19,7 @@ const activities = [
 
 export const AddNewEntry = () => {
   const [dailyActivities, setDailyActivities] = useState([]);
-  const [dailyWeight, setDailyWeight] = useState(0);
+  const [dailyWeight, setDailyWeight] = useState(500);
   const [dailyReflection, setDailyReflection] = useState('');
   const [checkboxRequired, setCheckboxRequired] = useState(false);
 

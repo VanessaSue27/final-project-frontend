@@ -15,7 +15,7 @@ export const BabyProfileForm = () => {
   const [dateOfBirth, setDateOfBirth] = useState('');
   const [timeOfBirth, setTimeOfBirth] = useState('');
   const [gestationalAge, setGestationalAge] = useState(0);
-  const [weight, setWeight] = useState(0);
+  const [weight, setWeight] = useState(500);
   const [length, setLength] = useState(0);
   const [sex, setSex] = useState('');
 

@@ -12,25 +12,29 @@ export const DailyEntryForm = styled.form`
   box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5);
   border-radius: 20px;
 
-  @media (max-width: 668px) { 
-    height: 57vh;
+  @media (min-width: 320px) and (max-width: 1023px) { 
+    height: 50vh;
   }
 `;
 
 export const CheckboxesContainer = styled.div`
   width: 51%;
+  height: 20%;
   display: flex;
   flex-wrap: wrap;
   margin-bottom:0;
 
   @media (max-width: 668px) {
-    width: 68%;
+    width: 100%;
     margin-top:0;
     height: 35%;
+    margin-left: 30px;
   };
 
-  @media (min-width: 768px) and (max-width: 1023px) {
-    width: 45%;
+  @media (min-width: 669px) and (max-width: 1023px) {
+    width: 55%;
+    height: 45%;
+    margin-left: 35px;
   };
 `;
 
@@ -41,11 +45,15 @@ export const DailyEntryTitle = styled.h3`
   margin-bottom: 50px;
 
   @media (max-width: 668px) {
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 0;
     margin-bottom: 0;
     padding: 10px;
     text-align:center;
+  };
+
+  @media (min-width: 669px) and (max-width: 1023px) {
+    margin-bottom: 30px;
   };
 `;
 
@@ -83,7 +91,7 @@ export const TextArea = styled.textarea`
   box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5);
 
   @media (max-width: 668px) {
-    height:75px;
+    height: 75px;
     margin-left:10px;
     margin-right:10px;
     font-size:15px;
