@@ -236,3 +236,20 @@ export const UploadButton = styled.button`
   }
 `;
 
+export const MainContainer = styled.div`
+width: 80%; 
+height: 100vh;
+display: flex; 
+flex-direction: column; 
+justify-content: center;
+`;
+
+export const Text = styled.p`
+font-size: 18px;
+color: rgb(65,87,122);
+`;
+
+export const AboutPageLink = styled.a`
+text-decoration: none;
+
+`;
