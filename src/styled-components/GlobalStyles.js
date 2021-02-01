@@ -198,6 +198,10 @@ export const ImageErrorMessage = styled.div`
     margin-top: 5px;
     margin-left: 15px;
   }
+
+  @media (min-width: 768px) and (max-width: 1023px) { 
+   margin-left: 15%;
+  }
 `;
 
 export const UploadButton = styled.button`
