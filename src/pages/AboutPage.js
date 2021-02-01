@@ -46,8 +46,22 @@ export const AboutPage = () => {
       </p>
       <a href="https://github.com/VanessaSue27/final-project-frontend" target="_blank" rel="noopener noreferrer">Time Capsule: Frontend</a>
       <a href="https://github.com/VanessaSue27/final-project-backend" target="_blank" rel="noopener noreferrer">Time Capsule: Backend</a>
-      <p>Images and icons assets are provideo by <a href="https://www.flaticon.com/" target="_blank" rel="noopener noreferrer">Flaticon</a> under the Free Download and Attribution required license.</p>
-      <h2>Include our pictures and link to our portfolios</h2>
+      <p>
+        Images and icons assets are provided by <a href="https://www.flaticon.com/" target="_blank" rel="noopener noreferrer">Flaticon</a>,
+        <a href="https://icons8.com/" target="_blank" rel="noopener noreferrer"> ICONS8</a> and <a href="https://undraw.co/" target="_blank" rel="noopener noreferrer">unDraw </a>
+        under the Open Source or Free Download and Attribution required license.
+      </p>
+      <h2>Project Developed by:</h2>
+      <div>
+        <h4>Sofia Vaz Sousa</h4>
+        <a href="https://sofiavazs.netlify.app/" target="_blank" rel="noopener noreferrer">Portfolio</a>
+      </div>
+
+      <div>
+        <h4>Vanessa Sue Smith</h4>
+        <a href="https://vanessa-portfolio.netlify.app/" target="_blank" rel="noopener noreferrer">Portfolio</a>
+      </div>
+
       <Link to="/signup">Back to Sign Up Page</Link>
     </>
   );
