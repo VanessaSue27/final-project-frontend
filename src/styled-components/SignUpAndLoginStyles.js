@@ -71,13 +71,16 @@ export const Button = styled.button`
 
 export const ButtonLink = styled(Link)`
   box-sizing: border-box;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-self: center;
   text-align: center;
   width: 230px;
   height: 50px;
   border-radius: 20px;
   padding: 10px;
   margin-top: 20px;
+  margin-bottom: 10px;
   font-family: 'Roboto Slab', sans-serif;
   font-size: 20px;
   background: rgb(63,177,181);
@@ -90,6 +93,30 @@ export const ButtonLink = styled(Link)`
       transform: scale(1.1);
       cursor: pointer;
   }
+`;
+
+export const AboutPageButton = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+  border-radius: 20px;
+  padding: 10px;
+  margin-top: 70px;
+  margin-bottom: 10px;
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 20px;
+  background: rgb(143,216,226);
+  color: #fff;
+  border: none;
+  text-decoration: none;
+  
+    &:hover {
+      background: rgb(240,96,122);
+      cursor: pointer;
+  }
+
+
 `;
 
 export const LandingImage = styled.img`

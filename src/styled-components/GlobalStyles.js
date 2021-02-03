@@ -145,11 +145,6 @@ export const FormLabel = styled.label`
   }
 `;
 
-export const Line = styled.div`
-  background-color: rgb(63,177,181);
-  border: 1px;
-`;
-
 export const ErrorMessage = styled.p`
   width: 90%;
   font-size: 20px;
@@ -236,19 +231,55 @@ export const UploadButton = styled.button`
 `;
 
 export const MainContainer = styled.div`
-width: 80%; 
-height: 100vh;
+width: 80%;
 display: flex; 
-flex-direction: column; 
+margin-left: 10%;
+flex-direction: column;
 justify-content: center;
 `;
 
+export const TextBox = styled.div`
+  display: flex; 
+  flex-direction: column;
+  padding: 5px;
+`;
+
 export const Text = styled.p`
-font-size: 18px;
-color: rgb(65,87,122);
+  font-size: 15px;
+  color: rgb(65,87,122);
 `;
 
 export const AboutPageLink = styled.a`
 text-decoration: none;
+`;
 
+export const Divider = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 30px;
+  background-color: rgb(255,255,255, 0.3);
+  -webkit-box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5); 
+  box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5);
+  border-radius: 20px;
+`;
+
+export const RocketCardImage = styled.img`
+  width: 40%;
+  padding: 10px;
+`;
+
+export const CardImage = styled.img`
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+`;
+
+export const PersonalImage = styled.img`
+  width: 200px;
+  height: 200px;
+   padding: 10px;
+  border-radius: 120px;
 `;

@@ -3,12 +3,12 @@ import { useDispatch } from 'react-redux';
 import swal from 'sweetalert';
 
 import { user } from '../reducer/user';
-import { Icon } from '../styled-components/DashBoardStyles';
 import scale from '../assets/scale.png';
 import addEntry from '../assets/addentry.png';
 import rocketIcon from '../assets/rocket-icon.png';
 import homePage from '../assets/homepage.png'
 import { StyledBurger, StyledMenu, BurgerButton } from '../styled-components/HamburgerStyling';
+import { Icon } from '../styled-components/DashBoardStyles';
 
 export const Menu = ({ open, setOpen }) => {
   const dispatch = useDispatch();

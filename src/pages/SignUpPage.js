@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
 
 import { user } from '../reducer/user';
 import rocket from '../assets/rocket.jpg'
-import { InputSection, Form, Button, LandingImage, UserInput, InputLabel, ButtonLink } from '../styled-components/SignUpAndLoginStyles';
+import { InputSection, Form, Button, LandingImage, UserInput, InputLabel, ButtonLink, AboutPageButton } from '../styled-components/SignUpAndLoginStyles';
 import { Title, SubTitle, ErrorMessage } from '../styled-components/GlobalStyles';
 
 const SIGNUP_URL = 'https://time-capsule-final.herokuapp.com/users';
@@ -77,7 +76,7 @@ export const SignUpPage = () => {
           {error && <ErrorMessage>{`${error}`}</ErrorMessage>}
           <SubTitle>Already a user?</SubTitle>
           <ButtonLink to="/">LOG IN</ButtonLink>
-          <Link to="/about">Learn more about Time Capsule</Link>
+          <AboutPageButton to="/about">Learn more about Time Capsule</AboutPageButton>
         </Form>
         <LandingImage src={rocket} alt="rocket" />
       </InputSection>
