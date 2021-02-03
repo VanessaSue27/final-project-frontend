@@ -174,10 +174,10 @@ export const ErrorMessage = styled.p`
 `;
 
 export const ImageErrorMessage = styled.div`
-  width: 70%;
+  width: 35%;
   font-size: 15px;
   margin-top: 10px;
-  margin-left: 30%;
+  margin-left: 550px;
   font-family: 'Roboto Slab', sans-serif;
   text-align: center;
   color: rgb(255,255,255);
@@ -194,8 +194,8 @@ export const ImageErrorMessage = styled.div`
     margin-left: 15px;
   }
 
-  @media (min-width: 768px) and (max-width: 1023px) { 
-   margin-left: 15%;
+  @media (min-width: 669px) and (max-width: 1023px) { 
+   margin-left: 30%;
   }
 `;
 

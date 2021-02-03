@@ -106,7 +106,7 @@ export const AboutPageButton = styled(Link)`
   margin-bottom: 10px;
   font-family: 'Roboto Slab', sans-serif;
   font-size: 20px;
-  background: rgb(143,216,226);
+  background: rgb(89,182,240);
   color: #fff;
   border: none;
   text-decoration: none;
@@ -115,8 +115,6 @@ export const AboutPageButton = styled(Link)`
       background: rgb(240,96,122);
       cursor: pointer;
   }
-
-
 `;
 
 export const LandingImage = styled.img`
