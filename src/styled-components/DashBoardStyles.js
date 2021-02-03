@@ -107,18 +107,18 @@ export const HeaderText = styled.p`
 `;
 
 export const ProfileImage = styled.img`
-  width: 100px;
-  height: 100px;
-  border-radius: 30px;
-  padding: 30px;
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  margin: 25px;
   cursor: pointer;
 
   @media (max-width: 668px) {
-   width: 75px;
-   height: 75px;
-   padding: 0;
-   padding-left: 15px;
-   border-radius: 0;
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    margin-left: 10px;
+    border-radius: 50px;
 }
 `;
 

@@ -208,10 +208,10 @@ export const UploadButton = styled.button`
   box-sizing: border-box;
   display: inline-block;
   text-align: center;
-  width: 100px;
+  width: 120px;
   height: 25px;
   border-radius: 20px;
-  margin-left: -135px;
+  margin-left: -145px;
   margin-top: 155px;
   font-family: 'Roboto Slab', sans-serif;
   font-size: 12px;
@@ -224,15 +224,14 @@ export const UploadButton = styled.button`
     }
 
    @media (max-width: 668px){
-    width: 75px;
-    margin-left: -75px;
-    margin-top: 145px;
+    width: 100px;
+    margin-left: -125px;
+    margin-top: 150px;
    }
 
   @media (min-width: 768px) and (max-width: 1023px){
-    width: 100px;
-    margin-left: -130px;
-    margin-top: 150px;
+    margin-left: -138px;
+    margin-top: 155px;
   }
 `;
 
