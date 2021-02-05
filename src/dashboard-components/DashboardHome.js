@@ -38,7 +38,7 @@ export const DashboardHome = () => {
 
   return (
     <>
-      <Instructions>Click the picture to change it and then click &quot;Upload&quot;</Instructions>
+      <Instructions> TIP! To change the picture click on it and then hit &quot;Upload&quot;!</Instructions>
       <MainContentContainer>
         <Title><span role="img" aria-label="lightbulb-emoji">💡</span> Fun Fact <span role="img" aria-label="lightbulb-emoji">💡</span></Title>
         <RandomFact>{`${randomIndex}`}</RandomFact>

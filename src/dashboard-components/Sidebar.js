@@ -32,9 +32,9 @@ export const Sidebar = () => {
     <>
       <SidebarContainer>
         <SideBarButton type="button" onClick={() => dispatch(user.actions.setDashboardContent({ dashboardContent: 'home' }))}><Icon src={homePage} alt="homepage icon" /> HOME </SideBarButton>
-        <SideBarButton type="button" onClick={() => dispatch(user.actions.setDashboardContent({ dashboardContent: 'add-new-entry' }))}><Icon src={addEntry} alt="add entry icon" /> New Daily Entry</SideBarButton>
-        <SideBarButton type="button" onClick={() => dispatch(user.actions.setDashboardContent({ dashboardContent: 'last-entries' }))}><Icon src={rocketIcon} alt="rocket icon" /> Latest 5 Entries</SideBarButton>
-        <SideBarButton type="button" onClick={() => dispatch(user.actions.setDashboardContent({ dashboardContent: 'weight-history' }))}><Icon src={scale} alt="scale icon" /> Weight History</SideBarButton>
+        <SideBarButton type="button" onClick={() => dispatch(user.actions.setDashboardContent({ dashboardContent: 'add-new-entry' }))}><Icon src={addEntry} alt="add entry icon" /> Add Daily Entry</SideBarButton>
+        <SideBarButton type="button" onClick={() => dispatch(user.actions.setDashboardContent({ dashboardContent: 'last-entries' }))}><Icon src={rocketIcon} alt="rocket icon" /> Latest Entries</SideBarButton>
+        <SideBarButton type="button" onClick={() => dispatch(user.actions.setDashboardContent({ dashboardContent: 'weight-history' }))}><Icon src={scale} alt="scale icon" /> Weight Graph</SideBarButton>
         <LogOutButton type="button" onClick={handleLogout}>LOG OUT</LogOutButton>
       </SidebarContainer>
     </>

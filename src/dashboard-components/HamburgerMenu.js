@@ -32,9 +32,9 @@ export const Menu = ({ open, setOpen }) => {
   return (
     <StyledMenu open={open} onClick={() => setOpen(!open)}>
       <BurgerButton type="button" onClick={() => dispatch(user.actions.setDashboardContent({ dashboardContent: 'home' }))}><Icon src={homePage} alt="homepage icon" /> HOME </BurgerButton>
-      <BurgerButton type="button" onClick={() => dispatch(user.actions.setDashboardContent({ dashboardContent: 'add-new-entry' }))}><Icon src={addEntry} alt="add entry icon" /> New Daily Entry</BurgerButton>
-      <BurgerButton type="button" onClick={() => dispatch(user.actions.setDashboardContent({ dashboardContent: 'last-entries' }))}><Icon src={rocketIcon} alt="rocket icon" /> Latest 5 Entries</BurgerButton>
-      <BurgerButton type="button" onClick={() => dispatch(user.actions.setDashboardContent({ dashboardContent: 'weight-history' }))}><Icon src={scale} alt="scale icon" /> Weight History</BurgerButton>
+      <BurgerButton type="button" onClick={() => dispatch(user.actions.setDashboardContent({ dashboardContent: 'add-new-entry' }))}><Icon src={addEntry} alt="add entry icon" /> Add Daily Entry</BurgerButton>
+      <BurgerButton type="button" onClick={() => dispatch(user.actions.setDashboardContent({ dashboardContent: 'last-entries' }))}><Icon src={rocketIcon} alt="rocket icon" /> Latest Entries</BurgerButton>
+      <BurgerButton type="button" onClick={() => dispatch(user.actions.setDashboardContent({ dashboardContent: 'weight-history' }))}><Icon src={scale} alt="scale icon" /> Weight Graph</BurgerButton>
       <BurgerButton type="button" onClick={handleLogout}>LOG OUT</BurgerButton>
     </StyledMenu>
   );

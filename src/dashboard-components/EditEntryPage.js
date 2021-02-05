@@ -24,8 +24,6 @@ export const EditEntryPage = () => {
 
   const dispatch = useDispatch();
 
-  // Not sure how to set the initial state for dailyActivities so that it shows the
-  // previously chosen ones, maybe because it's an array? :( ...)
   const [dailyActivities, setDailyActivities] = useState(entry.dailyActivities ?? []);
   const [dailyWeight, setDailyWeight] = useState(entry.dailyWeight);
   const [dailyReflection, setDailyReflection] = useState(entry.dailyReflection);

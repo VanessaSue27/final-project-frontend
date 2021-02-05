@@ -41,7 +41,7 @@ export const WeightHistory = () => {
           labels: dateArray,
           datasets: [
             {
-              label: 'Weight Chart',
+              label: 'Weight',
               data: weightArray,
               borderColor: ['rgb(94,121,228)'],
               backgroundColor: ['rgb(139,152,243, 0.5)'],
@@ -62,7 +62,7 @@ export const WeightHistory = () => {
           data={chartData}
           options={{
             responsive: true,
-            title: { text: 'Weight', display: true },
+            title: { text: 'Weight', display: false },
             scales: {
               yAxes: [
                 {

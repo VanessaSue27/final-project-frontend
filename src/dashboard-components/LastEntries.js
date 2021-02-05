@@ -67,7 +67,7 @@ export const LastEntries = () => {
 
   const handleClick = (entryId) => {
     swal({
-      title: 'DANGER ZONE! Are you sure you want to delete entry?',
+      title: 'DANGER ZONE! Are you sure you want to delete this entry?',
       text: "Once deleted, you can't recover it",
       buttons: true,
       dangerMode: true,
@@ -89,7 +89,7 @@ export const LastEntries = () => {
   return (
     <>
       <EntriesSection>
-        <EntriesTitle>Latest Entries</EntriesTitle>
+        <EntriesTitle>Latest 5 Entries</EntriesTitle>
         {entriesData.map((entry) => (
           <EntryCard key={entry._id}>
             <EntriesText>{`Entry created on:  ${moment(entry.createdAt).format('MMMM DD, YYYY')}`}</EntriesText>

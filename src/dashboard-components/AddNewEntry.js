@@ -67,7 +67,8 @@ export const AddNewEntry = () => {
   return (
     <>
       <DailyEntryForm onSubmit={handleSubmit}>
-        <DailyEntryTitle>Daily Entry Form</DailyEntryTitle>
+        <DailyEntryTitle>Create Daily Entry</DailyEntryTitle>
+        <FormLabel>Which activities have you done today?</FormLabel>
         <CheckboxesContainer>
           {activities.map((item) => (
             <CheckboxLabel className="checkbox-container" htmlFor={`activities-${item}`} key={item}>
@@ -99,7 +100,7 @@ export const AddNewEntry = () => {
           placeholder="Write a reflection, thought, milestone or anything else you want to treasure!"
           onChange={(event) => setDailyReflection(event.target.value)} />
         {error && <ErrorMessage>{`${error}`}</ErrorMessage>}
-        <SubmitButton type="submit">SUBMIT</SubmitButton>
+        <SubmitButton type="submit">ADD ENTRY</SubmitButton>
       </DailyEntryForm>
     </>
   );

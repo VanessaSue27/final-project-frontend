@@ -55,7 +55,7 @@ export const BabyProfileHeader = () => {
     })
       .then((res) => {
         if (!res.ok) {
-          throw new Error('Oops! Could not save profile picture.');
+          throw new Error('Oops! Choose a picture first! (formats: png/jpg/jpeg)');
         }
         return res.json();
       })
@@ -86,7 +86,7 @@ export const BabyProfileHeader = () => {
         <HeaderTextContainer>
           <HeaderTitle> {`${babyName}`}</HeaderTitle>
           <HeaderText>{`Member Since: ${moment(createdAt).format('MMMM DD, YYYY')}`}</HeaderText>
-          <HeaderText>{`Gestational Age: ${gestationalAge}`}</HeaderText>
+          <HeaderText>{`Gestational Age: ${gestationalAge} weeks`}</HeaderText>
           <HeaderText>{`Time of Birth: ${timeOfBirth}`}</HeaderText>
           <HeaderText>{`Date of Birth: ${moment(dateOfBirth).format('MMMM DD, YYYY')}`}</HeaderText>
           <HeaderText>{`${babyName} is ${moment(dateOfBirth).fromNow(true)} old.`}</HeaderText>
