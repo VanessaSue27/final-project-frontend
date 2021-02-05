@@ -66,7 +66,7 @@ export const AboutPage = () => {
             For a detailed explanation on what technologies were used to build this
             project, please refer to the corresponding GitHub repositories:
             <Text>
-              <AboutPageLink href="https://github.com/VanessaSue27/final-project-frontend" target="_blank" rel="noopener noreferrer">Time Capsule: Frontend</AboutPageLink> 
+              <AboutPageLink href="https://github.com/VanessaSue27/final-project-frontend" target="_blank" rel="noopener noreferrer">Time Capsule: Frontend</AboutPageLink>
             </Text>
             <Text>
               <AboutPageLink href="https://github.com/VanessaSue27/final-project-backend" target="_blank" rel="noopener noreferrer">Time Capsule: Backend</AboutPageLink>
@@ -83,7 +83,8 @@ export const AboutPage = () => {
         <TextBox>
           <SubTitle>Sofia Vaz Sousa</SubTitle>
           <AboutPageLink href="https://sofiavazs.netlify.app/" target="_blank" rel="noopener noreferrer">Portfolio</AboutPageLink>
-          <Text>Hello! I&apos;m Sofia and I was raised surrounded by MS-DOS and command lines,
+          <Text>
+            Hello! I&apos;m Sofia and I was raised surrounded by MS-DOS and command lines,
             I worked as a Nurse for 13 years before becoming a developer and I&apos;m an avid VR games player! <span role="img" aria-label="emoji">👾</span>
           </Text>
         </TextBox>
@@ -92,6 +93,10 @@ export const AboutPage = () => {
         <TextBox>
           <SubTitle>Vanessa Sue Smith</SubTitle>
           <AboutPageLink href="https://vanessa-portfolio.netlify.app/" target="_blank" rel="noopener noreferrer">Portfolio</AboutPageLink>
+          <Text>
+            Hola! Vanessa here <span role="img" aria-label="emoji">🙋‍♀️</span>. Born in Panamá, living in Sweden. Former Vegan Chef,
+            now I&apos;m coding my way to become a Fullstack Developer <span role="img" aria-label="emoji">👩‍🍳👩‍💻</span>
+          </Text>
         </TextBox>
         <PersonalImage src={vanessa} alt="vanessa" />
       </Divider>
