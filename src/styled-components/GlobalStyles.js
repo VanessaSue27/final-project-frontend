@@ -254,7 +254,8 @@ export const TextBox = styled.div`
 export const Text = styled.p`
   font-size: 15px;
   color: rgb(65,87,122);
-  padding: 10px;
+  padding: 8px;
+  margin: 0;
 `;
 
 export const AboutPageLink = styled.a`
