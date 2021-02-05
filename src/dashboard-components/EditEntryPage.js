@@ -5,7 +5,7 @@ import moment from 'moment';
 
 import { user } from '../reducer/user';
 import { CheckboxesContainer, DailyEntryForm, DailyEntryTitle, TextArea, CheckboxLabel, DailyReflectionText } from '../styled-components/DailyEntriesFormStyles';
-import { FormLabel, InputField, SubmitButton, ErrorMessage } from '../styled-components/GlobalStyles';
+import { FormLabel, InputField, SubmitButton, ErrorMessage } from '../styled-components/MainStyles';
 
 const activities = [
   'Hold',

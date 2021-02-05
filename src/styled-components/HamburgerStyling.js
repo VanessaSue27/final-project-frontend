@@ -14,7 +14,7 @@ export const StyledBurger = styled.button`
   border-radius: 4px;
   cursor: pointer;
   padding: 0;
-  z-index: 10;
+  z-index: 1;
   &:focus {
     outline: none;
   };
@@ -42,7 +42,7 @@ export const StyledBurger = styled.button`
   }
 
   @media (min-width: 1024px) {
-      display:none;
+      display: none;
   };
 `
 export const StyledMenu = styled.nav`
@@ -62,7 +62,7 @@ export const StyledMenu = styled.nav`
   transition: transform 0.8s ease-in-out;
 
   @media (min-width: 1024px) {
-      display:none;
+      display: none;
     };
   
   a {

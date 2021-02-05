@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { user } from '../reducer/user';
-import { Title, SubTitle, ErrorMessage } from '../styled-components/GlobalStyles';
+import { Title, SubTitle, ErrorMessage } from '../styled-components/MainStyles';
 import { Form, InputLabel, InputSection, UserInput, Button, LandingImage, ButtonLink, AboutPageButton } from '../styled-components/SignUpAndLoginStyles';
 import rocket from '../assets/rocket.jpg'
 

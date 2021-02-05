@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { Link } from 'react-router-dom';
 
 import rocket from '../assets/rocket.jpg'
@@ -20,13 +20,13 @@ export const InputSection = styled.div`
   @media (max-width: 668px) {
     background-image: url(${rocket});
     background-size: cover;
-    background-position-x:25%;
-    background-repeat:no-repeat;
+    background-position-x: 25%;
+    background-repeat: no-repeat;
   }
   @media (max-width: 768px) {
     background-image: url(${rocket});
     background-size: cover;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
   }
 `;
 
@@ -60,7 +60,7 @@ export const Button = styled.button`
   font-family: 'Roboto Slab', sans-serif;
   font-size: 20px;
   background: rgb(63,177,181);
-  color: #fff;
+  color: rgb(253,253,253);
   border: none;
     &:hover {
       background: rgb(240,96,122);
@@ -84,7 +84,7 @@ export const ButtonLink = styled(Link)`
   font-family: 'Roboto Slab', sans-serif;
   font-size: 20px;
   background: rgb(63,177,181);
-  color: #fff;
+  color: rgb(253,253,253);
   border: none;
   text-decoration:none;
   
@@ -107,7 +107,7 @@ export const AboutPageButton = styled(Link)`
   font-family: 'Roboto Slab', sans-serif;
   font-size: 20px;
   background: rgb(89,182,240);
-  color: #fff;
+  color: rgb(253,253,253);
   border: none;
   text-decoration: none;
   
@@ -131,7 +131,7 @@ export const UserInput = styled.input`
   width: 80%;
   height: 40px;
   margin-bottom: 15px;
-  border-radius:20px;
+  border-radius: 20px;
   font-size: 20px;
   text-align: center;
   border:none;
@@ -140,14 +140,14 @@ export const UserInput = styled.input`
 `
 
 export const InputLabel = styled.label`
-  display:flex;
+  display: flex;
   flex-direction: column;
-  text-align:center;
+  text-align: center;
   box-sizing: border-box;
   font-family: 'Roboto Slab', sans-serif;
-  color:rgb(64,137,204);
-  font-weight:500;
-  font-size:25px;
+  color: rgb(64,137,204);
+  font-weight: 500;
+  font-size: 25px;
   border-radius: 20px;
   margin: 10px;
 `

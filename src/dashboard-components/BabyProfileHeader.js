@@ -5,7 +5,7 @@ import moment from 'moment';
 import { user } from '../reducer/user';
 import robot from '../assets/robot.png';
 import { HeaderContainer, HeaderTitle, HeaderText, ProfileImage, ImageContainer, HeaderTextContainer } from '../styled-components/DashBoardStyles';
-import { UploadButton, ImageErrorMessage } from '../styled-components/GlobalStyles';
+import { UploadButton, ImageErrorMessage } from '../styled-components/MainStyles';
 
 export const BabyProfileHeader = () => {
   const dispatch = useDispatch();

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { user } from '../reducer/user';
-import { FormLabel, InputField, SubmitButton, ErrorMessage } from '../styled-components/GlobalStyles';
+import { FormLabel, InputField, SubmitButton, ErrorMessage } from '../styled-components/MainStyles';
 import { CheckboxesContainer, CheckboxLabel, DailyEntryForm, DailyEntryTitle, DailyReflectionText, TextArea } from '../styled-components/DailyEntriesFormStyles'
 
 const POSTENTRY_URL = 'https://time-capsule-final.herokuapp.com/entries';

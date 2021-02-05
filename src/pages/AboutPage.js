@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Title, MainContainer, SubTitle, TextBox, Text, AboutPageLink, Divider, RocketCardImage, CardImage, PersonalImage } from '../styled-components/GlobalStyles';
+import { Title, MainContainer, SubTitle, TextBox, Text, AboutPageLink, Divider, RocketCardImage, CardImage, PersonalImage } from '../styled-components/MainStyles';
 import { ButtonLink } from '../styled-components/SignUpAndLoginStyles';
 import rocket from '../assets/rocket.jpg';
 import info from '../assets/information.png';

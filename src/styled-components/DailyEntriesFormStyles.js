@@ -1,10 +1,10 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 export const DailyEntryForm = styled.form`
   width: 100%;
   height: 72vh;
   display: flex;
-  justify-content:center;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   background-color: rgb(255,255,255, 0.3);
@@ -22,11 +22,11 @@ export const CheckboxesContainer = styled.div`
   height: 20%;
   display: flex;
   flex-wrap: wrap;
-  margin-bottom:0;
+  margin-bottom: 0;
 
   @media (max-width: 668px) {
     width: 100%;
-    margin-top:0;
+    margin-top: 0;
     height: 35%;
     margin-left: 30px;
   };
@@ -49,7 +49,7 @@ export const DailyEntryTitle = styled.h3`
     margin-top: 0;
     margin-bottom: 0;
     padding: 10px;
-    text-align:center;
+    text-align: center;
   };
 
   @media (min-width: 669px) and (max-width: 1023px) {
@@ -62,7 +62,7 @@ export const CheckboxLabel = styled.label`
   font-size: 20px;
 
   @media (max-width: 668px){
-    font-size:15px;
+    font-size: 15px;
   };
 `;
 
@@ -71,10 +71,10 @@ export const DailyReflectionText = styled.p`
   color: rgb(67,138,204);
 
   @media (max-width: 668px){
-    margin-left:10px;
-    margin-right:10px;
-    font-size:15px;
-    text-align:center;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 15px;
+    text-align: center;
   };
 `;
 
@@ -84,7 +84,7 @@ export const TextArea = styled.textarea`
   border: none;
   border-radius:10px;
   resize: none;
-  text-align:center;
+  text-align: center;
   font-size: 18px;
   font-family: inherit;
   -webkit-box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5); 
@@ -92,8 +92,8 @@ export const TextArea = styled.textarea`
 
   @media (max-width: 668px) {
     height: 75px;
-    margin-left:10px;
-    margin-right:10px;
-    font-size:15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 15px;
   };
 `;

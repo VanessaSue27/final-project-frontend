@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { Line } from 'react-chartjs-2';
 
-import { Text, WeightGraphContainer } from '../styled-components/GlobalStyles';
+import { Text, WeightGraphContainer } from '../styled-components/MainStyles';
 import { DailyEntryTitle } from '../styled-components/DailyEntriesFormStyles';
 
 export const WeightHistory = () => {
@@ -64,8 +64,7 @@ export const WeightHistory = () => {
         <WeightGraphContainer>
           <DailyEntryTitle>Weight Graph</DailyEntryTitle>
           <Text>
-            We are aware that weight variation in an infant can be stressful, but keep in mind
-            that these can depend on so many factors! Also, did you know that full term babies normally lose
+            We are aware that weight variation in an infant can be stressful, but keep in mind           that these can depend on so many factors! Also, did you know that full term babies normally lose
             some weight in the first days? This is due to extra fluids loss.
           </Text>
           <Line

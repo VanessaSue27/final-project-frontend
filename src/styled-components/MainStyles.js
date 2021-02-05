@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import background from '../assets/background.jpg';
 
 export const Section = styled.main`
@@ -33,10 +33,10 @@ export const UserForm = styled.form`
 `;
 
 export const Title = styled.h1`
-  font-family:'Roboto Slab', sans-serif;
-  color:rgb(234,70,100);
+  font-family: 'Roboto Slab', sans-serif;
+  color: rgb(234,70,100);
   font-size: 45px;
-  text-align:center;
+  text-align: center;
   padding: 5px;
   margin-top: 20px;
   margin-bottom: 10px;
@@ -53,12 +53,12 @@ export const Title = styled.h1`
 `;
 
 export const SubTitle = styled.h2`
-  font-family:'Roboto Slab', sans-serif;
-  color:rgb(234,70,100);
+  font-family: 'Roboto Slab', sans-serif;
+  color: rgb(234,70,100);
   font-size: 30px;
-  letter-spacing:1px;
-  text-align:center;
-  margin-bottom:0;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 0;
   margin-top: 30px;
 
   @media (max-width: 668px) { 
@@ -71,10 +71,10 @@ export const InputField = styled.input`
   width: 100%;
   height: 30px;
   margin-top: 10px;
-  border-radius:10px;
+  border-radius: 10px;
   font-size: 20px;
   text-align: center;
-  border:none;
+  border: none;
   -webkit-box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5); 
   box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5);
 `;
@@ -86,7 +86,7 @@ export const Dropdown = styled.select`
   border-radius:10px;
   font-size: 20px;
   text-align: center;
-  border:none;
+  border: none;
   -webkit-box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5); 
   box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5);
 
@@ -108,7 +108,7 @@ export const SubmitButton = styled.button`
   font-family: 'Roboto Slab', sans-serif;
   font-size: 20px;
   background: rgb(240,96,122);
-  color: #fff;
+  color: rgb(253,253,253);
   border: none;
     &:hover {
       background: rgb(63,177,181);
@@ -124,9 +124,9 @@ export const SubmitButton = styled.button`
 `;
 
 export const FormLabel = styled.label`
-  display:flex;
+  display: flex;
   flex-direction: column;
-  text-align:center;
+  text-align: center;
   box-sizing: border-box;
   font-family: 'Roboto Slab', sans-serif;
   color: rgb(64,137,204);
@@ -136,13 +136,13 @@ export const FormLabel = styled.label`
   margin: 10px;
 
   @media (max-width: 668px){
-    font-size:15px;
+    font-size: 15px;
   };
 
   @media (min-width: 768px) and (max-width: 1023px) {
-    margin-top:0;
-    margin-bottom:20px;
-    font-size:20px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 20px;
   }
 `;
 
@@ -212,7 +212,7 @@ export const UploadButton = styled.button`
   font-family: 'Roboto Slab', sans-serif;
   font-size: 12px;
   background: rgb(240,96,122);
-  color: #fff;
+  color: rgb(253,253,253);
   border: none;
     &:hover {
       background: rgb(63,177,181);
@@ -254,7 +254,8 @@ export const TextBox = styled.div`
 export const Text = styled.p`
   font-size: 15px;
   color: rgb(65,87,122);
-  padding: 10px;
+  padding: 8px;
+  margin: 0;
 `;
 
 export const AboutPageLink = styled.a`

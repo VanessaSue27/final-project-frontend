@@ -4,7 +4,7 @@ import DatePicker from 'react-datepicker';
 import TimePicker from 'react-time-picker';
 import 'react-datepicker/dist/react-datepicker.css';
 
-import { Dropdown, Section, InputField, UserForm, SubmitButton, FormLabel, Title, SubTitle } from 'styled-components/GlobalStyles';
+import { Dropdown, Section, InputField, UserForm, SubmitButton, FormLabel, Title, SubTitle } from 'styled-components/MainStyles';
 import { Instructions } from 'styled-components/DashBoardStyles';
 import { user } from '../reducer/user';
 import { LogInPage } from './LogInPage';

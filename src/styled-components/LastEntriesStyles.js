@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 export const EntriesSection = styled.div`
   width: 100%;
@@ -23,8 +23,8 @@ export const EntryCard = styled.div`
   border-radius: 16px;
   margin: 10px;
   padding: 20px;
-  text-align:left;
-  background-color:rgb(255,255,255, 0.4);
+  text-align: left;
+  background-color: rgb(255,255,255, 0.4);
   -webkit-box-shadow: 2px 2px 22px 2px rgba(180,194,216,0.5); 
   box-shadow: 2px 2px 22px 2px rgba(180,194,216,0.5);
 
@@ -41,12 +41,12 @@ export const EntriesTitle = styled.h3`
 `;
 
 export const EntriesText = styled.p`
-  color:rgb(81,109,153);
+  color: rgb(81,109,153);
   font-size: 18px;
 `;
 
 export const ButtonsContainer = styled.div`
-  display:flex;
+  display: flex;
   flex-direction: row; 
   justify-content: flex-end;
 
@@ -54,6 +54,7 @@ export const ButtonsContainer = styled.div`
     justify-content: center;
   }
 `;
+
 export const DeleteButton = styled.button`
   box-sizing: border-box;
   display: inline-block;
@@ -67,7 +68,7 @@ export const DeleteButton = styled.button`
   font-family: 'Roboto Slab', sans-serif;
   font-size: 18px;
   background: rgb(240,96,122);
-  color: #fff;
+  color: rgb(253,253,253);
   border: none;
   border-radius: 10px;
     &:hover {
@@ -88,7 +89,7 @@ export const EditButton = styled.button`
   font-family: 'Roboto Slab', sans-serif;
   font-size: 18px;
   background: rgb(63,177,181);
-  color: #fff;
+  color: rgb(253,253,253);
   border: none;
   border-radius: 10px;
     &:hover {

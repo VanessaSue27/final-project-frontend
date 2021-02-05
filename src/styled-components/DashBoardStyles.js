@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import background from '../assets/background.jpg'
 
 export const PageSection = styled.main`
@@ -68,7 +68,7 @@ export const HeaderContainer = styled.div`
 
   @media (max-width: 668px) {
     width: 100%;
-    margin-left:0;
+    margin-left: 0;
     margin-bottom:1px;
     padding: 0;
   };
@@ -81,8 +81,8 @@ export const HeaderContainer = styled.div`
 `;
 
 export const ImageContainer = styled.div`
-  display:flex;
-  justify-content:left;  
+  display: flex;
+  justify-content: left;  
   align-items: center;
   cursor: pointer;
 `;
@@ -212,7 +212,7 @@ export const SideBarButton = styled.button`
   border-radius: 20px;
   padding: 10px;
   margin-top: 20px;
-  margin-bottom:40px;
+  margin-bottom: 40px;
   font-family: 'Roboto Slab', sans-serif;
   font-size: 20px;
   color: rgb(240,96,122);
@@ -249,7 +249,7 @@ export const LogOutButton = styled.button`
   font-family: 'Roboto Slab', sans-serif;
   font-size: 20px;
   background: rgb(240,96,122);
-  color: #fff;
+  color: rgb(253,253,253);
   border: none;
     &:hover {
       background: rgb(63,177,181);

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Instructions, RandomFact, RandomImage, MainContentContainer } from '../styled-components/DashBoardStyles';
-import { Title } from '../styled-components/GlobalStyles';
+import { Title } from '../styled-components/MainStyles';
 import appreciation from '../assets/appreciation.svg';
 import balloons from '../assets/balloons.png';
 import rocket2 from '../assets/rocket2.png';
