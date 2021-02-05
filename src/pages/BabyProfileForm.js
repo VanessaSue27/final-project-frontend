@@ -5,6 +5,7 @@ import TimePicker from 'react-time-picker';
 import 'react-datepicker/dist/react-datepicker.css';
 
 import { Dropdown, Section, InputField, UserForm, SubmitButton, FormLabel, Title, SubTitle } from 'styled-components/GlobalStyles';
+import { Instructions } from 'styled-components/DashBoardStyles';
 import { user } from '../reducer/user';
 import { LogInPage } from './LogInPage';
 
@@ -58,6 +59,7 @@ export const BabyProfileForm = () => {
           <UserForm onSubmit={handleSubmit}>
             <Title>{`Welcome, ${username}!`}</Title>
             <SubTitle> Build your infant profile here!</SubTitle>
+            <Instructions>All fields are mandatory. Only one Infant profile per account</Instructions>
             <FormLabel htmlFor="nameInput">
                 Baby name
               <InputField
@@ -83,7 +85,7 @@ export const BabyProfileForm = () => {
               </Dropdown>
             </FormLabel>
 
-              Date of Birth
+            <FormLabel>Date of Birth</FormLabel>
             <DatePicker
               selected={dateOfBirth}
               onChange={(dateOfBirth) => setDateOfBirth(dateOfBirth)}

@@ -119,6 +119,7 @@ export const SubmitButton = styled.button`
      width: 90%;
      margin-top: 10px;
      margin-bottom: 20px;
+     padding:5px;
   }
 `;
 
@@ -282,4 +283,12 @@ export const PersonalImage = styled.img`
   height: 200px;
    padding: 10px;
   border-radius: 120px;
+`;
+
+export const WeightGraphContainer = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+margin: 20px;
+text-align: center;
 `;

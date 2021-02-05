@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { Line } from 'react-chartjs-2';
 
+import { Text, WeightGraphContainer } from '../styled-components/GlobalStyles';
+import { DailyEntryTitle } from '../styled-components/DailyEntriesFormStyles';
+
 export const WeightHistory = () => {
   const [chartData, setChartData] = useState({});
   const accessToken = useSelector((store) => store.user.accessToken);
@@ -56,36 +59,44 @@ export const WeightHistory = () => {
     weightChart();
   });
   return (
-    <div className="weight-chart">
-      <div>
-        <Line
-          data={chartData}
-          options={{
-            responsive: true,
-            title: { text: 'Weight', display: false },
-            scales: {
-              yAxes: [
-                {
-                  ticks: {
-                    autoSkip: true,
-                    maxTicksLimit: 10,
-                    beginAtZero: true
-                  },
-                  gridLines: {
-                    display: true
+    <>
+      <div className="weight-chart">
+        <WeightGraphContainer>
+          <DailyEntryTitle>Weight Graph</DailyEntryTitle>
+          <Text>
+            We are aware that weight variation in an infant can be stressful, but keep in mind
+            that these can depend on so many factors! Also, did you know that full term babies normally lose
+            some weight in the first days? This is due to extra fluids loss.
+          </Text>
+          <Line
+            data={chartData}
+            options={{
+              responsive: true,
+              title: { text: 'Weight', display: false },
+              scales: {
+                yAxes: [
+                  {
+                    ticks: {
+                      autoSkip: true,
+                      maxTicksLimit: 10,
+                      beginAtZero: true
+                    },
+                    gridLines: {
+                      display: true
+                    }
                   }
-                }
-              ],
-              xAxes: [
-                {
-                  gridLines: {
-                    display: false
+                ],
+                xAxes: [
+                  {
+                    gridLines: {
+                      display: false
+                    }
                   }
-                }
-              ]
-            }
-          }} />
+                ]
+              }
+            }} />
+        </WeightGraphContainer>
       </div>
-    </div>
+    </>
   );
 };
