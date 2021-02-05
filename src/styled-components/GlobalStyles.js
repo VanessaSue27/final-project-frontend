@@ -237,21 +237,35 @@ display: flex;
 margin-left: 10%;
 flex-direction: column;
 justify-content: center;
+
+  @media (max-width: 668px){
+    width: 100%;
+    margin: 0;
+  }
 `;
 
 export const TextBox = styled.div`
   display: flex; 
   flex-direction: column;
+  align-items: center;
   padding: 5px;
 `;
 
 export const Text = styled.p`
   font-size: 15px;
   color: rgb(65,87,122);
+  padding: 10px;
 `;
 
 export const AboutPageLink = styled.a`
-text-decoration: none;
+  text-decoration: none;
+  font-size: 18px;
+  color: rgb(67,138,204);
+  cursor: pointer;
+
+  @media (max-width: 668px){
+    font-size: 15px;
+   }
 `;
 
 export const Divider = styled.div`
@@ -270,19 +284,33 @@ export const Divider = styled.div`
 export const RocketCardImage = styled.img`
   width: 40%;
   padding: 10px;
+
+  @media (max-width: 668px){
+    display: none;
+   }
 `;
 
 export const CardImage = styled.img`
   width: 150px;
   height: 150px;
   padding: 10px;
+
+  @media (max-width: 668px){
+    width: 75px;
+    height: 75px;
+   }
 `;
 
 export const PersonalImage = styled.img`
   width: 200px;
   height: 200px;
-   padding: 10px;
+  padding: 10px;
   border-radius: 120px;
+
+  @media (max-width: 668px){
+    width: 100px;
+    height: 100px;
+   }
 `;
 
 export const WeightGraphContainer = styled.div`
