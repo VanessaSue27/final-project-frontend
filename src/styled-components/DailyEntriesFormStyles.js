@@ -2,7 +2,7 @@ import styled from 'styled-components/macro';
 
 export const DailyEntryForm = styled.form`
   width: 100%;
-  height: 72vh;
+  height: 60vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -12,7 +12,7 @@ export const DailyEntryForm = styled.form`
   box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5);
   border-radius: 20px;
 
-  @media (min-width: 320px) and (max-width: 1023px) { 
+  @media (max-width: 668px) and (max-width: 1023px) { 
     height: 53vh;
   }
 `;

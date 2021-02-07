@@ -14,7 +14,7 @@ export const StyledBurger = styled.button`
   border-radius: 4px;
   cursor: pointer;
   padding: 0;
-  z-index: 1;
+  z-index: 5;
   &:focus {
     outline: none;
   };
@@ -29,6 +29,7 @@ export const StyledBurger = styled.button`
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 1px;
+    z-index: 5;
     :first-child {
       transform: ${({ open }) => (open ? 'rotate(45deg)' : 'rotate(0)')};
     }
@@ -48,7 +49,7 @@ export const StyledBurger = styled.button`
 
 export const StyledMenu = styled.nav`
   display: flex;
-  z-index: 5;
+  z-index: 1;
   flex-direction: column;
   justify-content: center;
   background-color: rgb(253,253,253, 0.5);

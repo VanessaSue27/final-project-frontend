@@ -21,7 +21,7 @@ export const MainSection = styled.div`
   flex-direction: column;
 
   @media (min-width: 320px) and (max-width: 1023px) {
-    width:100%;
+    width: 100%;
   };
 `;
 
