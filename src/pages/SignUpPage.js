@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { user } from '../reducer/user';
-import rocket from '../assets/rocket.jpg'
+
 import { InputSection, Form, Button, LandingImage, UserInput, InputLabel, ButtonLink, AboutPageButton } from '../styled-components/SignUpAndLoginStyles';
 import { Title, SubTitle, ErrorMessage } from '../styled-components/MainStyles';
+import rocket from '../assets/rocket.jpg';
 
 const SIGNUP_URL = 'https://time-capsule-final.herokuapp.com/users';
 
@@ -46,40 +47,38 @@ export const SignUpPage = () => {
   };
 
   return (
-    <>
-      <InputSection>
-        <Form onSubmit={handleSignUp}>
-          <Title>Time Capsule Sign Up</Title>
-          <InputLabel>
-              Username
-          </InputLabel>
-          <UserInput
-            id="usernameInput"
-            type="text"
-            value={name}
-            onChange={(event) => setName(event.target.value)}
-            minLength="3"
-            maxLength="20"
-            required />
-          <InputLabel>
-              Password
-          </InputLabel>
-          <UserInput
-            id="passwordInput"
-            type="password"
-            value={password}
-            onChange={(event) => setPassword(event.target.value)}
-            minLength="5"
-            maxLength="50"
-            required />
-          <Button type="submit">SIGN UP</Button>
-          {error && <ErrorMessage>{`${error}`}</ErrorMessage>}
-          <SubTitle>Already a user?</SubTitle>
-          <ButtonLink to="/">LOG IN</ButtonLink>
-          <AboutPageButton to="/about">Learn more about Time Capsule</AboutPageButton>
-        </Form>
-        <LandingImage src={rocket} alt="rocket" />
-      </InputSection>
-    </>
+    <InputSection>
+      <Form onSubmit={handleSignUp}>
+        <Title>Time Capsule Sign Up</Title>
+        <InputLabel>
+          Username
+        </InputLabel>
+        <UserInput
+          id="usernameInput"
+          type="text"
+          value={name}
+          onChange={(event) => setName(event.target.value)}
+          minLength="3"
+          maxLength="20"
+          required />
+        <InputLabel>
+          Password
+        </InputLabel>
+        <UserInput
+          id="passwordInput"
+          type="password"
+          value={password}
+          onChange={(event) => setPassword(event.target.value)}
+          minLength="5"
+          maxLength="50"
+          required />
+        <Button type="submit">SIGN UP</Button>
+        {error && <ErrorMessage>{`${error}`}</ErrorMessage>}
+        <SubTitle>Already a user?</SubTitle>
+        <ButtonLink to="/">LOG IN</ButtonLink>
+        <AboutPageButton to="/about">Learn more about Time Capsule</AboutPageButton>
+      </Form>
+      <LandingImage src={rocket} alt="rocket" />
+    </InputSection>
   );
 };

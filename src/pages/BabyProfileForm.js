@@ -6,8 +6,9 @@ import 'react-datepicker/dist/react-datepicker.css';
 
 import { Dropdown, Section, InputField, UserForm, SubmitButton, FormLabel, Title, SubTitle } from 'styled-components/MainStyles';
 import { Instructions } from 'styled-components/DashBoardStyles';
-import { user } from '../reducer/user';
 import { LogInPage } from './LogInPage';
+
+import { user } from '../reducer/user';
 
 const PROFILE_URL = 'https://time-capsule-final.herokuapp.com/profiles';
 
@@ -43,8 +44,6 @@ export const BabyProfileForm = () => {
         }
       })
       .then((json) => {
-        // Shows in console a message saying the profile was saved successfully
-        console.log(json);
         window.location.href = '/dashboard';
       })
       .catch((error) => {
@@ -54,89 +53,87 @@ export const BabyProfileForm = () => {
 
   if (accessToken) {
     return (
-      <>
-        <Section>
-          <UserForm onSubmit={handleSubmit}>
-            <Title>{`Welcome, ${username}!`}</Title>
-            <SubTitle> Build your infant profile here!</SubTitle>
-            <Instructions>All fields are mandatory. Only one Infant profile per account</Instructions>
-            <FormLabel htmlFor="nameInput">
-                Baby name
-              <InputField
-                id="nameInput"
-                type="text"
-                value={babyName}
-                onChange={(event) => setBabyName(event.target.value)}
-                minLength="3"
-                maxLength="20"
-                required />
-            </FormLabel>
-
-            <FormLabel>
-                Sex
-              <Dropdown
-                value={sex}
-                onChange={(event) => setSex(event.target.value)}
-                required>
-                <option value="">Select</option>
-                <option value="Female">Female</option>
-                <option value="Male">Male</option>
-                <option value="Not Disclosed"> Prefer not to disclose</option>
-              </Dropdown>
-            </FormLabel>
-
-            <FormLabel>Date of Birth</FormLabel>
-            <DatePicker
-              selected={dateOfBirth}
-              onChange={(dateOfBirth) => setDateOfBirth(dateOfBirth)}
-              showWeekNumbers
+      <Section>
+        <UserForm onSubmit={handleSubmit}>
+          <Title>{`Welcome, ${username}!`}</Title>
+          <SubTitle> Build your infant profile here!</SubTitle>
+          <Instructions>All fields are mandatory. Only one Infant profile per account</Instructions>
+          <FormLabel htmlFor="nameInput">
+              Baby name
+            <InputField
+              id="nameInput"
+              type="text"
+              value={babyName}
+              onChange={(event) => setBabyName(event.target.value)}
+              minLength="3"
+              maxLength="20"
               required />
+          </FormLabel>
 
-            <FormLabel>
-              Time of Birth
-              <TimePicker
-                onChange={(timeOfBirth) => setTimeOfBirth(timeOfBirth)}
-                value={timeOfBirth}
-                closeClock
-                disableClock
-                required />
-            </FormLabel>
+          <FormLabel>
+              Sex
+            <Dropdown
+              value={sex}
+              onChange={(event) => setSex(event.target.value)}
+              required>
+              <option value="">Select</option>
+              <option value="Female">Female</option>
+              <option value="Male">Male</option>
+              <option value="Not Disclosed"> Prefer not to disclose</option>
+            </Dropdown>
+          </FormLabel>
 
-            <FormLabel>
-              Gestational age (in weeks)
-              <InputField
-                type="number"
-                min="23"
-                max="50"
-                value={gestationalAge}
-                onChange={(event) => setGestationalAge(event.target.value)}
-                required />
-            </FormLabel>
+          <FormLabel>Date of Birth</FormLabel>
+          <DatePicker
+            selected={dateOfBirth}
+            onChange={(dateOfBirth) => setDateOfBirth(dateOfBirth)}
+            showWeekNumbers
+            required />
 
-            <FormLabel>
-              Weight (in grams)
-              <InputField
-                type="number"
-                min="500"
-                value={weight}
-                onChange={(event) => setWeight(event.target.value)}
-                required />
-            </FormLabel>
+          <FormLabel>
+            Time of Birth
+            <TimePicker
+              onChange={(timeOfBirth) => setTimeOfBirth(timeOfBirth)}
+              value={timeOfBirth}
+              closeClock
+              disableClock
+              required />
+          </FormLabel>
 
-            <FormLabel>
-              Length (in cm)
-              <InputField
-                type="number"
-                min="10"
-                max="200"
-                value={length}
-                onChange={(event) => setLength(event.target.value)}
-                required />
-            </FormLabel>
-            <SubmitButton type="submit">CREATE PROFILE</SubmitButton>
-          </UserForm>
-        </Section>
-      </>
+          <FormLabel>
+            Gestational age (in weeks)
+            <InputField
+              type="number"
+              min="23"
+              max="50"
+              value={gestationalAge}
+              onChange={(event) => setGestationalAge(event.target.value)}
+              required />
+          </FormLabel>
+
+          <FormLabel>
+            Weight (in grams)
+            <InputField
+              type="number"
+              min="500"
+              value={weight}
+              onChange={(event) => setWeight(event.target.value)}
+              required />
+          </FormLabel>
+
+          <FormLabel>
+            Length (in cm)
+            <InputField
+              type="number"
+              min="10"
+              max="200"
+              value={length}
+              onChange={(event) => setLength(event.target.value)}
+              required />
+          </FormLabel>
+          <SubmitButton type="submit">CREATE PROFILE</SubmitButton>
+        </UserForm>
+      </Section>
     );
   } else {
     return (

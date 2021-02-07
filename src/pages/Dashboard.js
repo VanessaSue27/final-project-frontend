@@ -5,8 +5,8 @@ import { LogInPage } from './LogInPage';
 import { Sidebar } from '../dashboard-components/Sidebar';
 import { BabyProfileHeader } from '../dashboard-components/BabyProfileHeader';
 import { DashboardMainContent } from '../dashboard-components/DashboardMainContent';
-import { PageSection, MainHeader, MainSection } from '../styled-components/DashBoardStyles';
 import { HamburgerMenu } from '../dashboard-components/HamburgerMenu';
+import { PageSection, MainHeader, MainSection } from '../styled-components/DashBoardStyles';
 
 export const Dashboard = () => {
   const accessToken = useSelector((store) => store.user.accessToken);
@@ -14,17 +14,15 @@ export const Dashboard = () => {
 
   if (accessToken) {
     return (
-      <>
-        <PageSection>
-          <HamburgerMenu />
-          <Sidebar />
-          <MainSection>
-            <MainHeader>{`Hello, ${username}! Welcome to the Time Capsule 🚀`}</MainHeader>
-            <BabyProfileHeader />
-            <DashboardMainContent />
-          </MainSection>
-        </PageSection>
-      </>
+      <PageSection>
+        <HamburgerMenu />
+        <Sidebar />
+        <MainSection>
+          <MainHeader>{`Hello, ${username}! Welcome to the Time Capsule 🚀`}</MainHeader>
+          <BabyProfileHeader />
+          <DashboardMainContent />
+        </MainSection>
+      </PageSection>
     );
   } else {
     return (
