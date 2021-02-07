@@ -12,14 +12,12 @@ export const DashboardMainContent = () => {
   const dashboardContent = useSelector((store) => store.user.dashboardContent);
 
   return (
-    <>
-      <DashboardMainContainer>
-        {dashboardContent === 'home' && <DashboardHome />}
-        {dashboardContent === 'add-new-entry' && <AddNewEntry />}
-        {dashboardContent === 'last-entries' && <LastEntries />}
-        {dashboardContent === 'weight-history' && <WeightHistory />}
-        {dashboardContent === 'edit-entry' && <EditEntryPage />}
-      </DashboardMainContainer>
-    </>
+    <DashboardMainContainer>
+      {dashboardContent === 'home' && <DashboardHome />}
+      {dashboardContent === 'add-new-entry' && <AddNewEntry />}
+      {dashboardContent === 'last-entries' && <LastEntries />}
+      {dashboardContent === 'weight-history' && <WeightHistory />}
+      {dashboardContent === 'edit-entry' && <EditEntryPage />}
+    </DashboardMainContainer>
   );
 };

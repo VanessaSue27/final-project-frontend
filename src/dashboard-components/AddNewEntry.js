@@ -3,8 +3,9 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { user } from '../reducer/user';
+
 import { FormLabel, InputField, SubmitButton, ErrorMessage } from '../styled-components/MainStyles';
-import { CheckboxesContainer, CheckboxLabel, DailyEntryForm, DailyEntryTitle, DailyReflectionText, TextArea } from '../styled-components/DailyEntriesFormStyles'
+import { CheckboxesContainer, CheckboxLabel, DailyEntryForm, DailyEntryTitle, DailyReflectionText, TextArea } from '../styled-components/DailyEntriesFormStyles';
 
 const POSTENTRY_URL = 'https://time-capsule-final.herokuapp.com/entries';
 
@@ -65,43 +66,41 @@ export const AddNewEntry = () => {
   };
 
   return (
-    <>
-      <DailyEntryForm onSubmit={handleSubmit}>
-        <DailyEntryTitle>Create Daily Entry</DailyEntryTitle>
-        <FormLabel>Which activities have you done today?</FormLabel>
-        <CheckboxesContainer>
-          {activities.map((item) => (
-            <CheckboxLabel className="checkbox-container" htmlFor={`activities-${item}`} key={item}>
-              <input
-                id={`activities-${item}`}
-                name="daily-activities"
-                type="checkbox"
-                checked={dailyActivities.includes(item)}
-                onChange={() => onTypeChange(item)} />
-              {item}
-              <span className="custom-checkbox" />
-            </CheckboxLabel>
-          ))}
-        </CheckboxesContainer>
-        {checkboxRequired && <ErrorMessage>Please choose one of the options above!</ErrorMessage>}
-        <FormLabel>
-              Weight (in grams)
-          <InputField
-            type="number"
-            min="500"
-            value={dailyWeight}
-            onChange={(event) => setDailyWeight(event.target.value)}
-            required />
-        </FormLabel>
-        <DailyReflectionText>Daily Reflection</DailyReflectionText>
-        <TextArea
-          rows="3"
-          maxLength="300"
-          placeholder="Write a reflection, thought, milestone or anything else you want to treasure!"
-          onChange={(event) => setDailyReflection(event.target.value)} />
-        {error && <ErrorMessage>{`${error}`}</ErrorMessage>}
-        <SubmitButton type="submit">ADD ENTRY</SubmitButton>
-      </DailyEntryForm>
-    </>
+    <DailyEntryForm onSubmit={handleSubmit}>
+      <DailyEntryTitle>Create Daily Entry</DailyEntryTitle>
+      <FormLabel>Which activities have you done today?</FormLabel>
+      <CheckboxesContainer>
+        {activities.map((item) => (
+          <CheckboxLabel className="checkbox-container" htmlFor={`activities-${item}`} key={item}>
+            <input
+              id={`activities-${item}`}
+              name="daily-activities"
+              type="checkbox"
+              checked={dailyActivities.includes(item)}
+              onChange={() => onTypeChange(item)} />
+            {item}
+            <span className="custom-checkbox" />
+          </CheckboxLabel>
+        ))}
+      </CheckboxesContainer>
+      {checkboxRequired && <ErrorMessage>Please choose one of the options above!</ErrorMessage>}
+      <FormLabel>
+        Weight (in grams)
+        <InputField
+          type="number"
+          min="500"
+          value={dailyWeight}
+          onChange={(event) => setDailyWeight(event.target.value)}
+          required />
+      </FormLabel>
+      <DailyReflectionText>Daily Reflection</DailyReflectionText>
+      <TextArea
+        rows="3"
+        maxLength="300"
+        placeholder="Write a reflection, thought, milestone or anything else you want to treasure!"
+        onChange={(event) => setDailyReflection(event.target.value)} />
+      {error && <ErrorMessage>{`${error}`}</ErrorMessage>}
+      <SubmitButton type="submit">ADD ENTRY</SubmitButton>
+    </DailyEntryForm>
   );
 };

@@ -5,6 +5,7 @@ import moment from 'moment';
 import swal from 'sweetalert';
 
 import { user } from '../reducer/user';
+
 import { EntriesSection, EntriesTitle, EntryCard, DeleteButton, EditButton, ButtonsContainer, EntriesText } from '../styled-components/LastEntriesStyles';
 
 export const LastEntries = () => {
@@ -51,18 +52,9 @@ export const LastEntries = () => {
         }
         return res.json();
       })
-      .then((json) => {
-        // console logs a message saying the entry was deleted successfully
-        console.log(json);
-      })
       .catch((error) => {
         dispatch(user.actions.setErrorMessage({ errorMessage: error.toString() }));
       });
-  };
-
-  const handleEdit = (entry) => {
-    dispatch(user.actions.setDashboardContent({ dashboardContent: 'edit-entry' }));
-    dispatch(user.actions.setEntry({ entry }));
   };
 
   const handleClick = (entryId) => {
@@ -72,37 +64,42 @@ export const LastEntries = () => {
       buttons: true,
       dangerMode: true,
       icon: 'warning'
-    }).then((willDelete) => {
-      if (willDelete) {
-        handleDelete(entryId)
-        swal({
-          title: 'Entry deleted successfully',
-          icon: 'success',
-          buttons: true
-        }).then(() => {
-          window.location.reload();
-        });
-      }
-    });
+    })
+      .then((willDelete) => {
+        if (willDelete) {
+          handleDelete(entryId);
+          swal({
+            title: 'Entry deleted successfully',
+            icon: 'success',
+            buttons: true
+          })
+            .then(() => {
+              window.location.reload();
+            });
+        }
+      });
+  };
+
+  const handleEdit = (entry) => {
+    dispatch(user.actions.setDashboardContent({ dashboardContent: 'edit-entry' }));
+    dispatch(user.actions.setEntry({ entry }));
   };
 
   return (
-    <>
-      <EntriesSection>
-        <EntriesTitle>Latest 5 Entries</EntriesTitle>
-        {entriesData.map((entry) => (
-          <EntryCard key={entry._id}>
-            <EntriesText>{`Entry created on:  ${moment(entry.createdAt).format('MMMM DD, YYYY')}`}</EntriesText>
-            <EntriesText>{`Daily Activities:  ${entry.dailyActivities.join(', ')}`}</EntriesText>
-            <EntriesText>{`Daily Weight:  ${entry.dailyWeight} grams`}</EntriesText>
-            <EntriesText>{`Daily Reflection:  ${entry.dailyReflection}`}</EntriesText>
-            <ButtonsContainer>
-              <EditButton type="button" onClick={() => handleEdit(entry)}>Edit</EditButton>
-              <DeleteButton type="button" onClick={() => handleClick(entry._id)}>Delete</DeleteButton>
-            </ButtonsContainer>
-          </EntryCard>
-        ))}
-      </EntriesSection>
-    </>
+    <EntriesSection>
+      <EntriesTitle>Latest 5 Entries</EntriesTitle>
+      {entriesData.map((entry) => (
+        <EntryCard key={entry._id}>
+          <EntriesText>{`Entry created on:  ${moment(entry.createdAt).format('MMMM DD, YYYY')}`}</EntriesText>
+          <EntriesText>{`Daily Activities:  ${entry.dailyActivities.join(', ')}`}</EntriesText>
+          <EntriesText>{`Daily Weight:  ${entry.dailyWeight} grams`}</EntriesText>
+          <EntriesText>{`Daily Reflection:  ${entry.dailyReflection}`}</EntriesText>
+          <ButtonsContainer>
+            <EditButton type="button" onClick={() => handleEdit(entry)}>Edit</EditButton>
+            <DeleteButton type="button" onClick={() => handleClick(entry._id)}>Delete</DeleteButton>
+          </ButtonsContainer>
+        </EntryCard>
+      ))}
+    </EntriesSection>
   );
 };

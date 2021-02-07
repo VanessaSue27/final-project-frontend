@@ -3,18 +3,19 @@ import { useDispatch, useSelector } from 'react-redux';
 import moment from 'moment';
 
 import { user } from '../reducer/user';
-import robot from '../assets/robot.png';
+
 import { HeaderContainer, HeaderTitle, HeaderText, ProfileImage, ImageContainer, HeaderTextContainer } from '../styled-components/DashBoardStyles';
 import { UploadButton, ImageErrorMessage } from '../styled-components/MainStyles';
+import robot from '../assets/robot.png';
 
 export const BabyProfileHeader = () => {
-  const dispatch = useDispatch();
   const accessToken = useSelector((store) => store.user.accessToken);
   const [babyProfileData, setBabyProfileData] = useState({});
   const [imageError, setImageError] = useState('');
   // eslint-disable-next-line no-unused-vars
   const [profileImage, setProfileImage] = useState();
   const { createdAt, babyName, gestationalAge, timeOfBirth, dateOfBirth, profileImageUrl } = babyProfileData;
+  const dispatch = useDispatch();
   const imageInput = useRef()
 
   const GETPROFILE_URL = 'https://time-capsule-final.herokuapp.com/profiles';
@@ -45,7 +46,7 @@ export const BabyProfileHeader = () => {
   }, []);
 
   const uploadImage = () => {
-    const formData = new FormData()
+    const formData = new FormData();
     formData.append('image', imageInput.current.files[0]);
 
     fetch(IMAGE_URL, {
@@ -60,7 +61,7 @@ export const BabyProfileHeader = () => {
         return res.json();
       })
       .then(() => {
-        window.location.reload()
+        window.location.reload();
       })
       .catch((error) => {
         setImageError(error.toString());
@@ -72,7 +73,7 @@ export const BabyProfileHeader = () => {
       <HeaderContainer>
         <ImageContainer>
           <label htmlFor="profilepic-button">
-            {profileImageUrl ? (<ProfileImage src={`${profileImageUrl}`} alt="profile-pic" />) : (<ProfileImage src={robot} alt="robot" />)}
+            {profileImageUrl ? <ProfileImage src={`${profileImageUrl}`} alt="profile-pic" /> : <ProfileImage src={robot} alt="robot" />}
           </label>
         </ImageContainer>
         <input

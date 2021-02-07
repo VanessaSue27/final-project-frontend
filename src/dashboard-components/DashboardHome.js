@@ -30,7 +30,7 @@ const randomImages = [
   mother,
   motherBaby,
   party
-]
+];
 
 export const DashboardHome = () => {
   const randomImage = randomImages[Math.floor(Math.random() * randomImages.length)];
@@ -44,7 +44,6 @@ export const DashboardHome = () => {
         <RandomFact>{`${randomIndex}`}</RandomFact>
         <RandomImage src={`${randomImage}`} alt="greeting" />
       </MainContentContainer>
-
     </>
   )
 };
