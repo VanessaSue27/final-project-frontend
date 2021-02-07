@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro';
-import background from '../assets/background.jpg'
+import background from '../assets/background.jpg';
 
 export const PageSection = styled.main`
   width: 100%;
@@ -95,8 +95,7 @@ export const HeaderTextContainer = styled.div`
   @media (max-width: 668px) {
   margin-left: 20px;
   padding-bottom: 5px;
-}
-
+  }
 `;
 
 export const HeaderText = styled.p`
@@ -119,7 +118,7 @@ export const ProfileImage = styled.img`
     padding: 0;
     margin-left: 10px;
     border-radius: 50px;
-}
+  }
 `;
 
 export const Instructions = styled.p`

@@ -37,7 +37,7 @@ export const EntriesTitle = styled.h3`
   font-size: 40px;
   color: rgb(240,96,122);
   margin-top: 10px;
-  margin-bottom:0;
+  margin-bottom: 0;
 `;
 
 export const EntriesText = styled.p`

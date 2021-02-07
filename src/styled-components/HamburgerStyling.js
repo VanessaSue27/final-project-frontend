@@ -1,4 +1,4 @@
-import styled from 'styled-components/macro'
+import styled from 'styled-components/macro';
 
 export const StyledBurger = styled.button`
   position: absolute;
@@ -44,7 +44,8 @@ export const StyledBurger = styled.button`
   @media (min-width: 1024px) {
       display: none;
   };
-`
+`;
+
 export const StyledMenu = styled.nav`
   display: flex;
   z-index: 5;

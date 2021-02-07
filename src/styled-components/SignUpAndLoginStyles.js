@@ -1,8 +1,8 @@
 import styled from 'styled-components/macro';
 import { Link } from 'react-router-dom';
 
-import rocket from '../assets/rocket.jpg'
-import background from '../assets/background.jpg'
+import rocket from '../assets/rocket.jpg';
+import background from '../assets/background.jpg';
 
 export const InputSection = styled.div`
   width: 100%;
@@ -123,9 +123,9 @@ export const LandingImage = styled.img`
   object-fit: cover;
 
   @media (max-width: 768px) {
-   display:none;
+   display: none;
   }
-`
+`;
 
 export const UserInput = styled.input`
   width: 80%;
@@ -134,10 +134,10 @@ export const UserInput = styled.input`
   border-radius: 20px;
   font-size: 20px;
   text-align: center;
-  border:none;
+  border: none;
   -webkit-box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5); 
   box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5);
-`
+`;
 
 export const InputLabel = styled.label`
   display: flex;
@@ -150,4 +150,4 @@ export const InputLabel = styled.label`
   font-size: 25px;
   border-radius: 20px;
   margin: 10px;
-`
+`;

@@ -41,7 +41,6 @@ export const Title = styled.h1`
   margin-top: 20px;
   margin-bottom: 10px;
 
-
   @media (max-width: 668px) { 
     font-size: 25px;
     margin:0;
@@ -219,24 +218,24 @@ export const UploadButton = styled.button`
       cursor: pointer
     }
 
-   @media (max-width: 668px){
+  @media (max-width: 668px) {
     width: 100px;
     margin-left: -125px;
     margin-top: 150px;
    }
 
-  @media (min-width: 768px) and (max-width: 1023px){
+  @media (min-width: 768px) and (max-width: 1023px) {
     margin-left: -138px;
     margin-top: 155px;
   }
 `;
 
 export const MainContainer = styled.div`
-width: 80%;
-display: flex; 
-margin-left: 10%;
-flex-direction: column;
-justify-content: center;
+  width: 80%;
+  display: flex; 
+  margin-left: 10%;
+  flex-direction: column;
+  justify-content: center;
 
   @media (max-width: 668px){
     width: 100%;
@@ -315,9 +314,9 @@ export const PersonalImage = styled.img`
 `;
 
 export const WeightGraphContainer = styled.div`
-display: flex;
-flex-direction: column;
-justify-content: center;
-margin: 20px;
-text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px;
+  text-align: center;
 `;
