@@ -2,7 +2,6 @@ import styled from 'styled-components/macro';
 
 export const DailyEntryForm = styled.form`
   width: 100%;
-  height: 60vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
