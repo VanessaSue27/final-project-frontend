@@ -17,8 +17,6 @@ export const WeightHistory = () => {
     const weightArray = [];
     const dateArray = [];
 
-    // In the fetch we send a GET request with headers that has the access token, since
-    // this is a restricted endpoint
     fetch(WEIGHT_DATA, {
       method: 'GET',
       headers: {
@@ -29,15 +27,13 @@ export const WeightHistory = () => {
       .then((response) => {
         return response.json()
       }).then((data) => {
-      // when we receive the data we push it to the empty arrays and do a for loop
-      // to iterate it and we also reverse the array this is because our latest entries
-      // are being sorted by descending order in the backend that affects
-      // our the weights are displayed in the chart
-      // the older entries are displayed first which is totally counter intuitive
-      // how charts are usually displayed.
+      // when we receive the data we push it to the empty arrays and do a for...of loop
+      // to iterate it and we also reverse the array since our latest entries
+      // are being sorted by descending order in the backend and we want to show them in
+      // ascending order in this chart
         for (const weights of data.reverse()) {
           weightArray.push(weights.dailyWeight);
-          // the new Date is used to create a date object and then we format it with toDateString.
+          // the new Date is used to create a date object and then we format it with toDateString
           dateArray.push(new Date(weights.createdAt).toDateString());
         }
         setChartData({
@@ -64,8 +60,9 @@ export const WeightHistory = () => {
         <WeightGraphContainer>
           <DailyEntryTitle>Weight Graph</DailyEntryTitle>
           <Text>
-            We are aware that weight variation in an infant can be stressful, but keep in mind           that these can depend on so many factors! Also, did you know that full term babies normally lose
-            some weight in the first days? This is due to extra fluids loss.
+            We are aware that weight variation in an infant can be stressful, but keep in mind
+            that these can depend on so many factors! Also, did you know that full term babies
+            normally lose some weight in the first days? This is due to extra fluids loss.
           </Text>
           <Line
             data={chartData}
