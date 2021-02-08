@@ -12,11 +12,11 @@ export const DailyEntryForm = styled.form`
   border-radius: 20px;
 
   @media (max-width: 668px) { 
-    height: 45vh;
+    height: 53vh;
   }
 
   @media (min-width: 768px) and (max-width: 1023px) { 
-    height: 50vh;
+    height: 55vh;
   }
 `;
 
