@@ -142,10 +142,14 @@ export const DashboardMainContainer = styled.div`
 `;
 
 export const MainContentContainer = styled.div`
-display: flex; 
+display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+
+@media (max-width: 668px) { 
+    height: 53vh;
+  }
 `;
 
 export const RandomFact = styled.h3`

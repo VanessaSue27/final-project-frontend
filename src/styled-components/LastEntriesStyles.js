@@ -9,7 +9,7 @@ export const EntriesSection = styled.div`
   overflow-y: scroll;
 
   @media (max-width: 668px) { 
-    height: 45vh;
+    height: 60vh;
   }
 
   @media (min-width: 768px) and (max-width: 1023px) { 
