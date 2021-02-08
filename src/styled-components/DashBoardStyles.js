@@ -104,6 +104,10 @@ export const HeaderText = styled.p`
   text-align: left;
   line-height: 0;
   font-family: 'Roboto Slab', sans-serif;
+
+  @media (max-width: 320px) {
+  font-size: 12px;
+  }
 `;
 
 export const ProfileImage = styled.img`
