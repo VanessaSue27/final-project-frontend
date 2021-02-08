@@ -55,44 +55,40 @@ export const WeightHistory = () => {
     weightChart();
   });
   return (
-    <>
-      <div className="weight-chart">
-        <WeightGraphContainer>
-          <DailyEntryTitle>Weight Graph</DailyEntryTitle>
-          <Text>
+    <WeightGraphContainer>
+      <DailyEntryTitle>Weight Graph</DailyEntryTitle>
+      <Text>
             We are aware that weight variation in an infant can be stressful, but keep in mind
             that these can depend on so many factors! Also, did you know that full term babies
             normally lose some weight in the first days? This is due to extra fluids loss.
-          </Text>
-          <Line
-            data={chartData}
-            options={{
-              responsive: true,
-              title: { text: 'Weight', display: false },
-              scales: {
-                yAxes: [
-                  {
-                    ticks: {
-                      autoSkip: true,
-                      maxTicksLimit: 10,
-                      beginAtZero: true
-                    },
-                    gridLines: {
-                      display: true
-                    }
-                  }
-                ],
-                xAxes: [
-                  {
-                    gridLines: {
-                      display: false
-                    }
-                  }
-                ]
+      </Text>
+      <Line
+        data={chartData}
+        options={{
+          responsive: true,
+          title: { text: 'Weight', display: false },
+          scales: {
+            yAxes: [
+              {
+                ticks: {
+                  autoSkip: true,
+                  maxTicksLimit: 10,
+                  beginAtZero: true
+                },
+                gridLines: {
+                  display: true
+                }
               }
-            }} />
-        </WeightGraphContainer>
-      </div>
-    </>
+            ],
+            xAxes: [
+              {
+                gridLines: {
+                  display: false
+                }
+              }
+            ]
+          }
+        }} />
+    </WeightGraphContainer>
   );
 };

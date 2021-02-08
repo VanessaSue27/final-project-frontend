@@ -11,8 +11,12 @@ export const DailyEntryForm = styled.form`
   box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5);
   border-radius: 20px;
 
-  @media (max-width: 668px) and (max-width: 1023px) { 
-    height: 53vh;
+  @media (max-width: 668px) { 
+    height: 45vh;
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) { 
+    height: 50vh;
   }
 `;
 
@@ -52,7 +56,7 @@ export const DailyEntryTitle = styled.h3`
   };
 
   @media (min-width: 669px) and (max-width: 1023px) {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   };
 `;
 

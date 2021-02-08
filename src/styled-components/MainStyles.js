@@ -157,27 +157,31 @@ export const ErrorMessage = styled.p`
   box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5);
   border-radius: 16px;
   padding: 8px;
+  margin: 0;
 
   @media (max-width: 668px) {
     font-size: 15px;
-    margin-top: 15px;
+    margin-top: 10px;
     margin-bottom: 0;
     padding: 5px;
   }
 
   @media (min-width: 768px) and (max-width: 1023px){
     font-size: 15px;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-bottom: 0;
     padding: 5px;
   }
 `;
 
 export const ImageErrorMessage = styled.div`
-  width: 35%;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 45%;
   font-size: 15px;
+  margin-left: 10%;
   margin-top: 10px;
-  margin-left: 550px;
   font-family: 'Roboto Slab', sans-serif;
   text-align: center;
   color: rgb(255,255,255);
@@ -195,7 +199,8 @@ export const ImageErrorMessage = styled.div`
   }
 
   @media (min-width: 669px) and (max-width: 1023px) { 
-   margin-left: 30%;
+   width: 55%;
+   margin-left: 5%;
   }
 `;
 
