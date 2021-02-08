@@ -16,7 +16,7 @@ export const DailyEntryForm = styled.form`
   }
 
   @media (min-width: 768px) and (max-width: 1023px) { 
-    height: 55vh;
+    height: 60vh;
   }
 `;
 
@@ -98,5 +98,9 @@ export const TextArea = styled.textarea`
     margin-left: 10px;
     margin-right: 10px;
     font-size: 15px;
+  };
+
+  @media (min-width: 669px) and (max-width: 1023px) {
+    height: 75px;
   };
 `;
