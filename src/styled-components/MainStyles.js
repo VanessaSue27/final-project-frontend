@@ -324,4 +324,8 @@ export const WeightGraphContainer = styled.div`
   justify-content: center;
   margin: 20px;
   text-align: center;
+
+  @media (max-width: 668px){
+    height: 55vh;
+   }
 `;

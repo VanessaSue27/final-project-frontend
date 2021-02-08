@@ -70,6 +70,7 @@ export const EditEntryPage = () => {
   return (
     <DailyEntryForm onSubmit={handleEdit}>
       <DailyEntryTitle>{`Editing entry from: ${moment(entry.createdAt).format('MMMM DD, YYYY')}`}</DailyEntryTitle>
+      <FormLabel>Which activities have you done today?</FormLabel>
       <CheckboxesContainer>
         {activities.map((item) => (
           <CheckboxLabel className="checkbox-container" htmlFor={`activities-${item}`} key={item}>
