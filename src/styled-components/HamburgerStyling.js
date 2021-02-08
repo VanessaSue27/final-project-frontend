@@ -102,7 +102,7 @@ export const BurgerButton = styled.button`
   color: rgb(240,96,122);
   border: none;
     &:hover {
-      background: rgb(63,177,181);
+      background: rgb(99,195,255);
       color: rgb(253,253,253);
       border-radius: 10px;
       cursor: pointer

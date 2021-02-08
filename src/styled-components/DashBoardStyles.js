@@ -68,7 +68,6 @@ export const HeaderContainer = styled.div`
 
   @media (max-width: 668px) {
     width: 100%;
-    height: 55%;
     margin-left: 0;
     margin-bottom:1px;
     padding: 0;
