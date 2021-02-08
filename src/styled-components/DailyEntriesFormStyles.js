@@ -10,14 +10,6 @@ export const DailyEntryForm = styled.form`
   -webkit-box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5); 
   box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5);
   border-radius: 20px;
-
-  @media (max-width: 668px) { 
-    height: 57vh;
-  }
-
-  @media (min-width: 768px) and (max-width: 1023px) { 
-    height: 60vh;
-  }
 `;
 
 export const CheckboxesContainer = styled.div`
