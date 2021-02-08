@@ -188,9 +188,9 @@ export const HeaderTitle = styled.h2`
 export const SidebarContainer = styled.div`
   display: flex;
   flex-direction: column;
-  height: 90%; /* Full-height: remove this if you want "auto" height */
-  width: 300px; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  height: 90%; 
+  width: 300px; 
+  position: fixed;
   top: 5%;
   bottom: 5%;
   margin-left: 20px;
@@ -222,7 +222,7 @@ export const SideBarButton = styled.button`
   color: rgb(240,96,122);
   border: none;
     &:hover {
-      background: rgb(63,177,181);
+      background: rgb(99,195,255);
       color: rgb(253,253,253);
       border-radius: 10px;
       cursor: pointer

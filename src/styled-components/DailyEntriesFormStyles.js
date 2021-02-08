@@ -48,7 +48,7 @@ export const DailyEntryTitle = styled.h3`
   };
 
   @media (min-width: 669px) and (max-width: 1023px) {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   };
 `;
 

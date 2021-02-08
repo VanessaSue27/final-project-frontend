@@ -322,7 +322,7 @@ export const WeightGraphContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 20px;
+  margin: 10px;
   text-align: center;
 
   @media (max-width: 668px){
