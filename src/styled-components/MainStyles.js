@@ -211,7 +211,8 @@ export const UploadButton = styled.button`
   width: 120px;
   height: 25px;
   border-radius: 20px;
-  margin-left: -195px;
+  margin-left: -145px;
+  margin-top: 155px;
   font-family: 'Roboto Slab', sans-serif;
   font-size: 12px;
   background: rgb(240,96,122);
@@ -224,12 +225,13 @@ export const UploadButton = styled.button`
 
   @media (max-width: 668px) {
     width: 100px;
-    margin-left: -145px;
-    margin-bottom: 10px;
+    margin-left: -125px;
+    margin-top: 150px;
    }
 
   @media (min-width: 768px) and (max-width: 1023px) {
-    margin-left: -200px;
+    margin-left: -138px;
+    margin-top: 155px;
   }
 `;
 

@@ -75,6 +75,7 @@ export const BabyProfileHeader = () => {
           <label htmlFor="profilepic-button">
             {profileImageUrl ? <ProfileImage src={`${profileImageUrl}`} alt="profile-pic" /> : <ProfileImage src={robot} alt="robot" />}
           </label>
+          <UploadButton type="submit" onClick={uploadImage}>Upload</UploadButton>
         </ImageContainer>
         <input
           type="file"
@@ -90,7 +91,6 @@ export const BabyProfileHeader = () => {
           <HeaderText>{`Time of Birth: ${timeOfBirth}`}</HeaderText>
           <HeaderText>{`Date of Birth: ${moment(dateOfBirth).format('MMMM DD, YYYY')}`}</HeaderText>
           <HeaderText>{`${babyName} is ${moment(dateOfBirth).fromNow(true)} old.`}</HeaderText>
-          <UploadButton type="submit" onClick={uploadImage}>Upload</UploadButton>
         </HeaderTextContainer>
       </HeaderContainer>
       {imageError && <ImageErrorMessage>{imageError}</ImageErrorMessage>}
