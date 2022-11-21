@@ -33,5 +33,7 @@ We have also developed the Backend for this application which consists of a **RE
 
 You can find the repository for it here: https://github.com/VanessaSue27/final-project-backend
 
+**⚠ UPDATE:** Due to the removal of Heroku's free dynos (where we had our server hosted), we had to shut this server down, so the app is not fully functional momentarily 💔
+
 ## View it Live!
 Here you can have a look at what **Time Capsule**🚀 is all about, super proud to present it to you at: https://time-capsule-final.netlify.app/
